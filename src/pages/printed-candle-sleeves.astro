@@ -1,0 +1,202 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import QuoteForm from '../components/QuoteForm.astro';
+
+const productSchema = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Printed Candle Sleeves",
+  "description": "Fully custom printed candle sleeves with vivid full-color CMYK printing and a wide range of premium finishing options for candle brands of every size.",
+  "brand": { "@type": "Brand", "name": "The Candle Sleeves" },
+  "offers": { "@type": "Offer", "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What printing methods do you use for candle sleeves?",
+      "acceptedAnswer": { "@type": "Answer", "text": "We primarily use high-quality digital and offset CMYK printing, which produces vivid, accurate full-color results across any design. For specialist applications, we also support flexographic printing (particularly for corrugated) and screen printing for specific requirements." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I ensure my brand colors are accurately printed?",
+      "acceptedAnswer": { "@type": "Answer", "text": "For precise color accuracy, provide your Pantone (PMS) color references alongside your CMYK values. We calibrate our printing process to match your specified colors as closely as possible. Digital proofs are provided for approval before production begins." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I print a full wraparound design on my candle sleeve?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Full wrap-around printing is one of our most popular configurations — allowing your design to flow continuously around the entire sleeve surface for maximum visual impact from every viewing angle." }
+    },
+    {
+      "@type": "Question",
+      "name": "What file format should I submit for artwork?",
+      "acceptedAnswer": { "@type": "Answer", "text": "We accept PDF, AI (Adobe Illustrator), EPS, high-resolution PNG (300dpi minimum), and JPG files. Vector formats (AI, EPS, PDF) are strongly preferred for best print quality and color accuracy." }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer design services if I don't have artwork ready?",
+      "acceptedAnswer": { "@type": "Answer", "text": "While we are primarily a manufacturing company, our packaging specialists can provide guidance and basic artwork setup services. For full brand design work, we recommend working with a graphic designer who can supply print-ready files to our specifications." }
+    }
+  ]
+};
+---
+
+<Layout
+  title="Printed Candle Sleeves | Full Color Custom Print | The Candle Sleeves"
+  description="Custom full-color printed candle sleeves with CMYK printing and premium finishes. Any design, any quantity. Get a free quote from The Candle Sleeves today."
+  canonical="https://thecandlesleeves.com/printed-candle-sleeves"
+  schema={[productSchema, faqSchema]}
+>
+  <div class="container section--sm">
+    <Breadcrumbs crumbs={[{label:'Home',href:'/'},{label:'Products',href:'/products'},{label:'Printed Candle Sleeves'}]} />
+  </div>
+
+  <section class="section section--cream">
+    <div class="container">
+      <div class="product-layout">
+        <div class="product-image-wrap">
+          <img src="/images/products/candle-gift-sleeves.jpg" alt="Custom full-color printed candle sleeves" width="600" height="600" />
+        </div>
+        <div class="product-info">
+          <span class="section-label">Custom Printing</span>
+          <h1>Printed Candle Sleeves</h1>
+          <p style="font-size:1.1rem;color:var(--gray);margin-bottom:1.5rem;">Your candle brand has a story to tell — and our custom printed candle sleeves are the canvas to tell it on. From full-bleed photographic printing to intricate illustrated designs, bold typographic statements to delicate botanical motifs, our precision CMYK printing delivers your vision with color accuracy and detail quality that makes your product shine on every shelf it occupies.</p>
+          <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+            <a href="/quote" class="btn btn--primary">Get a Free Quote &rarr;</a>
+            <a href="/products" class="btn btn--outline">View All Products</a>
+          </div>
+          <div style="margin-top:2rem;display:flex;flex-direction:column;gap:0.5rem;">
+            <div style="font-size:0.9rem;color:var(--gray);">&#10003;&nbsp; Full-color CMYK &amp; Pantone printing</div>
+            <div style="font-size:0.9rem;color:var(--gray);">&#10003;&nbsp; Full wrap-around design capability</div>
+            <div style="font-size:0.9rem;color:var(--gray);">&#10003;&nbsp; Digital proof approval before print</div>
+            <div style="font-size:0.9rem;color:var(--gray);">&#10003;&nbsp; All premium finishes available</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container container--narrow">
+      <h2>The Science Behind Great Candle Sleeve Printing</h2>
+      <p>Print quality is not simply a matter of having a good printer — it is the result of a carefully controlled process that encompasses substrate selection, ink formulation, color management, press calibration, and finishing application. At The Candle Sleeves, we manage every stage of this process with precision because we understand that your brand's visual identity is only as good as the printing that renders it.</p>
+      <p>Our CMYK printing process uses high-quality process inks applied in carefully controlled densities to produce accurate, vivid color reproduction across your design. For colors where exact accuracy is critical — brand colors, specific product hues — we offer Pantone color matching, which uses pre-mixed spot inks to achieve a specific reference color with maximum fidelity. Every print run produces a digital proof for your approval before we proceed to production, ensuring you know exactly what you will receive.</p>
+
+      <h2>Design Strategies for Maximum Print Impact</h2>
+      <p>Not all designs translate equally well from screen to print on candle packaging. Our packaging specialists are available to review your artwork and provide recommendations that will maximize the impact of your printed sleeve. High-contrast designs with bold color blocks work particularly well at the small viewing distances of retail shelf browsing. Fine detail is achievable but requires attention to minimum type sizes and line weights. Photography prints beautifully on coated stock at 300dpi or higher resolution. We also advise on bleed, safe zones, and fold line placement to ensure your design works perfectly within the structure of the finished sleeve.</p>
+    </div>
+  </section>
+
+  <section class="section section--beige">
+    <div class="container">
+      <h2 class="text-center section-title">Why Choose Custom Printed Candle Sleeves</h2>
+      <div class="grid-3" style="margin-top:2rem;">
+        <div class="icon-box" style="flex-direction:column;background:var(--white);border-radius:var(--radius-lg);padding:1.75rem;box-shadow:var(--shadow);">
+          <div class="icon-box__icon" style="margin-bottom:1rem;">&#127914;</div>
+          <div class="icon-box__title">Vivid Color Accuracy</div>
+          <div class="icon-box__text">Our calibrated CMYK printing delivers precise, vivid color reproduction that faithfully represents your brand's visual identity across every unit in the production run.</div>
+        </div>
+        <div class="icon-box" style="flex-direction:column;background:var(--white);border-radius:var(--radius-lg);padding:1.75rem;box-shadow:var(--shadow);">
+          <div class="icon-box__icon" style="margin-bottom:1rem;">&#127760;</div>
+          <div class="icon-box__title">360-Degree Design Canvas</div>
+          <div class="icon-box__text">Full wrap-around printing creates a seamless visual experience at every viewing angle — maximizing your brand storytelling space on every surface of the sleeve.</div>
+        </div>
+        <div class="icon-box" style="flex-direction:column;background:var(--white);border-radius:var(--radius-lg);padding:1.75rem;box-shadow:var(--shadow);">
+          <div class="icon-box__icon" style="margin-bottom:1rem;">&#128209;</div>
+          <div class="icon-box__title">Digital Proof Approval</div>
+          <div class="icon-box__text">Every order receives a detailed digital proof for your review and approval before production begins — ensuring no surprises and complete confidence in the final result.</div>
+        </div>
+        <div class="icon-box" style="flex-direction:column;background:var(--white);border-radius:var(--radius-lg);padding:1.75rem;box-shadow:var(--shadow);">
+          <div class="icon-box__icon" style="margin-bottom:1rem;">&#9881;</div>
+          <div class="icon-box__title">Works with All Substrates</div>
+          <div class="icon-box__text">Full-color printing can be applied across our entire material range — cardboard, kraft, rigid board, and corrugated — giving you complete design flexibility with any substrate choice.</div>
+        </div>
+        <div class="icon-box" style="flex-direction:column;background:var(--white);border-radius:var(--radius-lg);padding:1.75rem;box-shadow:var(--shadow);">
+          <div class="icon-box__icon" style="margin-bottom:1rem;">&#128200;</div>
+          <div class="icon-box__title">Scalable at Any Quantity</div>
+          <div class="icon-box__text">Our printing process delivers consistent quality from short artisan runs to high-volume national production orders — the same color and quality standards at every scale.</div>
+        </div>
+        <div class="icon-box" style="flex-direction:column;background:var(--white);border-radius:var(--radius-lg);padding:1.75rem;box-shadow:var(--shadow);">
+          <div class="icon-box__icon" style="margin-bottom:1rem;">&#127775;</div>
+          <div class="icon-box__title">Combine with Premium Finishes</div>
+          <div class="icon-box__text">Printed sleeves work beautifully combined with foil stamping, spot UV, embossing, and premium lamination to create packaging with multiple levels of visual and tactile impact.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--cream">
+    <div class="container container--narrow">
+      <h2>Specifications</h2>
+      <table class="spec-table">
+        <thead>
+          <tr><th>Specification</th><th>Details</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Printing Process</td><td>Digital CMYK, offset CMYK, flexographic</td></tr>
+          <tr><td>Color Matching</td><td>CMYK process; Pantone (PMS) spot color available</td></tr>
+          <tr><td>Print Coverage</td><td>Up to full bleed, wrap-around coverage</td></tr>
+          <tr><td>Resolution</td><td>Minimum 300dpi for artwork files</td></tr>
+          <tr><td>Accepted File Formats</td><td>AI, EPS, PDF, PNG (300dpi+), JPG (300dpi+)</td></tr>
+          <tr><td>Finishes</td><td>Matte, gloss, soft-touch, spot UV, foil, embossing</td></tr>
+          <tr><td>Sizing</td><td>Fully custom to your product dimensions</td></tr>
+          <tr><td>Production Time</td><td>7 – 12 business days after artwork approval</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container container--narrow">
+      <h2>Related Printing Applications</h2>
+      <p>Custom printing is the foundation of all our candle sleeve products. Whether you're creating <a href="/black-candle-sleeves" class="internal-link">black candle sleeves</a> with white ink and gold foil, <a href="/white-candle-sleeves" class="internal-link">white candle sleeves</a> with full-color photography, or <a href="/kraft-candle-sleeves" class="internal-link">kraft candle sleeves</a> with earthy illustrated designs, our printing process brings every concept to life with precision and consistency. Visit <a href="/products" class="internal-link">our full product range</a> to explore all sleeve options.</p>
+    </div>
+  </section>
+
+  <section class="section section--cream">
+    <div class="container container--narrow">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-item">
+        <div class="faq-question">What printing methods do you use?</div>
+        <div class="faq-answer">We primarily use high-quality digital and offset CMYK printing for vivid, accurate full-color results. Flexographic printing is used for corrugated applications. Pantone spot color matching is available for precise brand color accuracy.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">How do I ensure accurate brand color printing?</div>
+        <div class="faq-answer">Provide your Pantone (PMS) color references alongside CMYK values. We calibrate printing to match your specified colors as closely as possible, and provide digital proofs for approval before production.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Can I print a full wraparound design?</div>
+        <div class="faq-answer">Yes. Full wrap-around printing is one of our most popular configurations, allowing your design to flow continuously around the entire sleeve for maximum visual impact from every angle.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">What file format should I submit?</div>
+        <div class="faq-answer">We accept PDF, AI, EPS, high-resolution PNG (300dpi+), and JPG (300dpi+). Vector formats are strongly preferred for the best print quality and scalability.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Do you offer design services?</div>
+        <div class="faq-answer">Our packaging specialists can provide guidance and basic artwork setup. For full brand design, we recommend working with a graphic designer who can supply print-ready files to our technical specifications.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-banner">
+    <div class="container text-center">
+      <h2>Bring Your Candle Brand Vision to Life</h2>
+      <p>Request a free quote for your custom printed candle sleeves — any design, any quantity, delivered nationwide.</p>
+      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+        <a href="/quote" class="btn btn--dark" style="background:white;color:var(--gold-dark);">Request Free Quote &rarr;</a>
+        <a href="/contact" class="btn btn--outline">Talk to Our Print Team</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--cream" id="quote">
+    <div class="container container--narrow">
+      <QuoteForm title="Get Your Printed Candle Sleeve Quote" subtitle="Share your design brief and specs. Our team will respond with a detailed print quote within 24 hours." />
+    </div>
+  </section>
+</Layout>

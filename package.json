@@ -9,9 +9,16 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
+    "start": "node dist/server/entry.mjs",
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^6.3.6"
+    "@astrojs/node": "^10.1.1",
+    "@astrojs/sitemap": "^3.7.2",
+    "astro": "^6.3.6",
+    "nodemailer": "^8.0.7"
+  },
+  "devDependencies": {
+    "@types/nodemailer": "^8.0.0"
   }
 }

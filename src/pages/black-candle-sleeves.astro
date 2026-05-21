@@ -1,0 +1,221 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import QuoteForm from '../components/QuoteForm.astro';
+
+const productSchema = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Black Candle Sleeves",
+  "description": "Custom black candle sleeves in matte and gloss finishes. Bold, sophisticated packaging for premium candle brands. Available in all sizes with full-color printing options.",
+  "brand": { "@type": "Brand", "name": "The Candle Sleeves" },
+  "offers": { "@type": "Offer", "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What finishes are available for black candle sleeves?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Our black candle sleeves are available with matte lamination for a sleek, modern look, gloss lamination for high shine, soft-touch coating for a velvety feel, gold or silver foil stamping, spot UV coating, and embossing or debossing for tactile detail." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I print colors on a black candle sleeve?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Full-color CMYK printing works on black-coated sleeves. For the most impactful results, we recommend lighter ink colors, metallic foils, or spot UV that contrast beautifully against the black background." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the minimum order quantity for black candle sleeves?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Minimum order quantities depend on the specific finish and size selected. Contact us for a tailored quote based on your project requirements. We accommodate both small-batch and large production runs." }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does production take for black candle sleeves?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Standard production is 7 to 12 business days after artwork approval. Rush production options may be available — please contact us to discuss your timeline." }
+    },
+    {
+      "@type": "Question",
+      "name": "Are black candle sleeves suitable for luxury candle brands?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Absolutely. Black candle sleeves with premium finishes such as gold foil stamping, soft-touch lamination, and embossing are among the most popular choices for luxury and high-end candle brands seeking bold, sophisticated retail packaging." }
+    }
+  ]
+};
+---
+
+<Layout
+  title="Black Candle Sleeves | Custom Matte & Gloss | The Candle Sleeves"
+  description="Order custom black candle sleeves with matte, gloss, or soft-touch finishes. Bold, premium packaging for luxury candle brands. Fast USA delivery. Free quote."
+  canonical="https://thecandlesleeves.com/black-candle-sleeves"
+  schema={[productSchema, faqSchema]}
+>
+  <div class="container section--sm">
+    <Breadcrumbs crumbs={[{label:'Home',href:'/'},{label:'Products',href:'/products'},{label:'Black Candle Sleeves'}]} />
+  </div>
+
+  <!-- Product Intro -->
+  <section class="section section--cream">
+    <div class="container">
+      <div class="product-layout">
+        <div class="product-image-wrap">
+          <img src="/images/products/candle-gift-sleeves.jpg" alt="Custom black candle sleeves with premium finish" width="600" height="600" />
+        </div>
+        <div class="product-info">
+          <span class="section-label">Custom Packaging</span>
+          <h1>Black Candle Sleeves</h1>
+          <p class="hero__sub" style="font-size:1.1rem;color:var(--gray);margin-bottom:1.5rem;">Bold, sophisticated, and unmistakably premium — black candle sleeves command attention on any retail shelf. Whether you choose a dramatic matte finish, a high-gloss lacquer, or a luxurious soft-touch coating, our custom black sleeves transform your candle into a statement product.</p>
+          <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+            <a href="/quote" class="btn btn--primary">Get a Free Quote &rarr;</a>
+            <a href="/products" class="btn btn--outline">View All Products</a>
+          </div>
+          <div style="margin-top:2rem;display:flex;flex-direction:column;gap:0.5rem;">
+            <div style="font-size:0.9rem;color:var(--gray);">&#10003;&nbsp; Available in matte, gloss &amp; soft-touch</div>
+            <div style="font-size:0.9rem;color:var(--gray);">&#10003;&nbsp; Foil stamping &amp; embossing options</div>
+            <div style="font-size:0.9rem;color:var(--gray);">&#10003;&nbsp; Custom sizing for any candle jar</div>
+            <div style="font-size:0.9rem;color:var(--gray);">&#10003;&nbsp; Fast USA nationwide delivery</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Detailed Description -->
+  <section class="section">
+    <div class="container container--narrow">
+      <h2>Why Black Candle Sleeves Define Premium Packaging</h2>
+      <p>Black has long been the color of sophistication, authority, and luxury in the world of branding — and candle packaging is no exception. Our custom black candle sleeves are engineered to deliver that immediate visual impact the moment a customer sees your product. Whether displayed in a boutique, a spa, a hotel gift shop, or an online store, black packaging communicates that what's inside is worth experiencing.</p>
+      <p>The versatility of black as a base color is remarkable. A matte black sleeve with debossed text and gold foil logo delivers quiet luxury that whispers premium quality. A gloss black sleeve with full-color photographic printing creates vibrant contrast that stands out in a crowded display. A soft-touch black sleeve with spot UV accents invites customers to pick up your product and feel the difference. We work with you to select the right combination of material and finish to match your brand identity precisely.</p>
+
+      <h2>Material Options for Black Candle Sleeves</h2>
+      <p>Our black candle sleeves are available on a range of premium substrates. Standard coated cardboard (300gsm to 450gsm) delivers excellent print results and structural rigidity for most retail applications. For brands seeking the ultimate in tactile luxury, our rigid chipboard sleeves in black provide a thick, substantial feel that signals premium quality without a single word being printed. We also offer black kraft-coated board for brands that want the drama of black with an underlying sustainable material story. All materials are custom-cut to your exact jar dimensions.</p>
+    </div>
+  </section>
+
+  <!-- Benefits -->
+  <section class="section section--beige">
+    <div class="container">
+      <h2 class="text-center section-title">Key Benefits of Black Candle Sleeves</h2>
+      <div class="grid-3" style="margin-top:2rem;">
+        <div class="icon-box" style="flex-direction:column;background:var(--white);border-radius:var(--radius-lg);padding:1.75rem;box-shadow:var(--shadow);">
+          <div class="icon-box__icon" style="margin-bottom:1rem;">&#127775;</div>
+          <div class="icon-box__title">Luxury Brand Perception</div>
+          <div class="icon-box__text">Black packaging immediately elevates perceived product value. Customers associate black with premium, high-end products across virtually every category.</div>
+        </div>
+        <div class="icon-box" style="flex-direction:column;background:var(--white);border-radius:var(--radius-lg);padding:1.75rem;box-shadow:var(--shadow);">
+          <div class="icon-box__icon" style="margin-bottom:1rem;">&#127760;</div>
+          <div class="icon-box__title">Versatile Design Canvas</div>
+          <div class="icon-box__text">Black backgrounds make gold, silver, white, and metallic printing truly pop. Your brand colors and typography will stand out with maximum contrast and impact.</div>
+        </div>
+        <div class="icon-box" style="flex-direction:column;background:var(--white);border-radius:var(--radius-lg);padding:1.75rem;box-shadow:var(--shadow);">
+          <div class="icon-box__icon" style="margin-bottom:1rem;">&#127914;</div>
+          <div class="icon-box__title">Striking Shelf Presence</div>
+          <div class="icon-box__text">In a sea of light-colored packaging, black candle sleeves command instant attention. Your product will stand out and invite customers to reach for it first.</div>
+        </div>
+        <div class="icon-box" style="flex-direction:column;background:var(--white);border-radius:var(--radius-lg);padding:1.75rem;box-shadow:var(--shadow);">
+          <div class="icon-box__icon" style="margin-bottom:1rem;">&#9881;</div>
+          <div class="icon-box__title">Multiple Finish Choices</div>
+          <div class="icon-box__text">From matte to gloss to soft-touch, each finish creates a distinctly different mood and aesthetic — all achievable in black for your specific brand vision.</div>
+        </div>
+        <div class="icon-box" style="flex-direction:column;background:var(--white);border-radius:var(--radius-lg);padding:1.75rem;box-shadow:var(--shadow);">
+          <div class="icon-box__icon" style="margin-bottom:1rem;">&#128230;</div>
+          <div class="icon-box__title">Ideal for Gift Collections</div>
+          <div class="icon-box__text">Black candle sleeves are a natural choice for premium gift collections, holiday packaging, and special edition lines that need to convey exceptional value.</div>
+        </div>
+        <div class="icon-box" style="flex-direction:column;background:var(--white);border-radius:var(--radius-lg);padding:1.75rem;box-shadow:var(--shadow);">
+          <div class="icon-box__icon" style="margin-bottom:1rem;">&#10003;</div>
+          <div class="icon-box__title">Custom to Your Dimensions</div>
+          <div class="icon-box__text">Every sleeve is precision-cut and scored to fit your specific jar or container — ensuring a snug, professional fit that holds its shape throughout the product lifecycle.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Spec Table -->
+  <section class="section section--cream">
+    <div class="container container--narrow">
+      <h2>Product Specifications</h2>
+      <table class="spec-table">
+        <thead>
+          <tr><th>Specification</th><th>Details</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Materials Available</td><td>Coated cardboard, rigid chipboard, black-coated kraft</td></tr>
+          <tr><td>Paper Weight</td><td>300gsm – 450gsm (cardboard); 1.5mm – 2.5mm (rigid)</td></tr>
+          <tr><td>Printing</td><td>Full-color CMYK, white ink, metallic inks</td></tr>
+          <tr><td>Finishes</td><td>Matte lamination, gloss lamination, soft-touch, spot UV</td></tr>
+          <tr><td>Special Effects</td><td>Gold/silver foil stamping, embossing, debossing</td></tr>
+          <tr><td>Sizing</td><td>Fully custom to your jar dimensions</td></tr>
+          <tr><td>Production Time</td><td>7 – 12 business days after artwork approval</td></tr>
+          <tr><td>Shipping</td><td>Nationwide USA delivery</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Use Cases -->
+  <section class="section">
+    <div class="container container--narrow">
+      <h2>Ideal Use Cases for Black Candle Sleeves</h2>
+      <ol>
+        <li><strong>Luxury retail collections</strong> — Boutique candle lines priced at the premium end of the market</li>
+        <li><strong>Holiday and gift sets</strong> — Seasonal packaging that commands a premium gift price</li>
+        <li><strong>Hotel and spa amenities</strong> — Sophisticated branding for hospitality-grade candle products</li>
+        <li><strong>Limited edition releases</strong> — Create urgency and collector appeal through dramatic packaging</li>
+        <li><strong>Men's grooming and lifestyle brands</strong> — Black appeals strongly to masculine aesthetic sensibilities</li>
+        <li><strong>Subscription boxes</strong> — Premium unboxing experience that keeps subscribers excited each month</li>
+      </ol>
+
+      <h2 style="margin-top:2rem;">Why Choose The Candle Sleeves for Black Packaging</h2>
+      <p>At <a href="/" class="internal-link">The Candle Sleeves</a>, we specialize exclusively in candle sleeve packaging — which means every recommendation we make is informed by deep expertise in what works for candle brands specifically. Our black sleeves are produced on high-quality coated stocks with color-calibrated printing to ensure that your brand's identity is rendered faithfully even on the deepest black backgrounds.</p>
+      <p>Browse our related products including <a href="/luxury-candle-sleeves" class="internal-link">luxury candle sleeves</a> with premium foil finishes, and <a href="/printed-candle-sleeves" class="internal-link">fully printed candle sleeves</a> for vibrant full-color designs. We also offer <a href="/candle-gift-sleeves" class="internal-link">candle gift sleeves</a> that combine beautifully with a black base for holiday collections.</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section--cream">
+    <div class="container container--narrow">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-item">
+        <div class="faq-question">What finishes are available for black candle sleeves?</div>
+        <div class="faq-answer">Our black candle sleeves are available with matte lamination, gloss lamination, soft-touch coating, gold or silver foil stamping, spot UV coating, and embossing or debossing. Each finish creates a distinctly different premium look and feel.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Can I print colors on a black candle sleeve?</div>
+        <div class="faq-answer">Yes. Full-color CMYK printing works on black-coated sleeves. For maximum impact, lighter ink colors, white ink, and metallic foils contrast beautifully against the black background.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">What is the minimum order quantity?</div>
+        <div class="faq-answer">Minimum quantities vary by product configuration and finish selection. Contact us for a tailored quote — we accommodate both small-batch and high-volume production runs.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">How long does production take?</div>
+        <div class="faq-answer">Standard production is 7 to 12 business days after artwork approval. Rush production options are available — please contact us to discuss your specific timeline.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Are black candle sleeves suitable for luxury brands?</div>
+        <div class="faq-answer">Absolutely. Black candle sleeves with gold foil stamping, soft-touch lamination, and embossing are among our most popular luxury packaging choices, perfect for high-end boutique and retail candle brands.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="cta-banner">
+    <div class="container text-center">
+      <h2>Ready to Create Your Black Candle Sleeves?</h2>
+      <p>Request a free quote today and our packaging specialists will guide you through every step of the design and production process.</p>
+      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+        <a href="/quote" class="btn btn--dark" style="background:white;color:var(--gold-dark);">Request Free Quote &rarr;</a>
+        <a href="/contact" class="btn btn--outline">Contact a Specialist</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote Form -->
+  <section class="section section--cream" id="quote">
+    <div class="container container--narrow">
+      <QuoteForm title="Get Your Black Candle Sleeve Quote" subtitle="Tell us about your black candle sleeve project and we'll provide a detailed quote within 24 hours." />
+    </div>
+  </section>
+</Layout>

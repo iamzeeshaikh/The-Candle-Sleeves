@@ -1,0 +1,203 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import QuoteForm from '../components/QuoteForm.astro';
+
+const productSchema = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Candle Jar Sleeves",
+  "description": "Custom candle jar sleeves precision-fitted for glass containers of every shape and size. Full-color printing, premium finishes, and bespoke dieline for your exact jar.",
+  "brand": { "@type": "Brand", "name": "The Candle Sleeves" },
+  "offers": { "@type": "Offer", "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can candle jar sleeves fit any jar shape?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. We create bespoke dielines custom-fitted to your specific jar dimensions — whether round, square, oval, tapered, or any other shape. We measure your jar precisely to ensure a perfect, snug fit." }
+    },
+    {
+      "@type": "Question",
+      "name": "Do candle jar sleeves affect the candle's scent or safety?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No. Our candle jar sleeves are designed to wrap the exterior of the glass container only and do not contact the candle wax or wick. They are produced with materials safe for use around candle products." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I add a window to my candle jar sleeve to show the candle inside?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. We can incorporate die-cut window panels into your jar sleeve design, allowing customers to see the candle's color, texture, or fragrance label through the packaging." }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the most popular finishes for candle jar sleeves?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Matte lamination and soft-touch coating are very popular for an upscale, tactile feel. Gold foil stamping adds a luxury touch. Gloss lamination gives vibrant, glossy color reproduction. The right finish depends on your brand aesthetic." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I submit my jar dimensions for a custom fit?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Simply include your jar's height, diameter (at the widest point), and base dimensions in the quote form. You can also send us a physical sample jar to use for dieline creation." }
+    }
+  ]
+};
+---
+
+<Layout
+  title="Candle Jar Sleeves | Custom Fit & Full Color | The Candle Sleeves"
+  description="Precision-fitted custom candle jar sleeves for glass containers of every size. Full-color printing, premium finishes, bespoke dieline. Get your free quote today."
+  canonical="https://thecandlesleeves.com/candle-jar-sleeves"
+  schema={[productSchema, faqSchema]}
+>
+  <div class="container section--sm">
+    <Breadcrumbs crumbs={[{label:'Home',href:'/'},{label:'Products',href:'/products'},{label:'Candle Jar Sleeves'}]} />
+  </div>
+
+  <section class="section section--cream">
+    <div class="container">
+      <div class="product-layout">
+        <div class="product-image-wrap">
+          <img src="/images/products/candle-jar-sleeves.jpg" alt="Custom candle jar sleeves precision-fitted for glass containers" width="600" height="600" />
+        </div>
+        <div class="product-info">
+          <span class="section-label">Custom Packaging</span>
+          <h1>Candle Jar Sleeves</h1>
+          <p style="font-size:1.1rem;color:var(--gray);margin-bottom:1.5rem;">Your glass candle jars are beautiful on the inside — our custom candle jar sleeves make them just as beautiful on the outside. Each sleeve is precision-fitted to your exact jar dimensions using a bespoke dieline, wrapping your container with a snug, professional finish that protects the glass and promotes your brand with every glance.</p>
+          <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+            <a href="/quote" class="btn btn--primary">Get a Free Quote &rarr;</a>
+            <a href="/products" class="btn btn--outline">View All Products</a>
+          </div>
+          <div style="margin-top:2rem;display:flex;flex-direction:column;gap:0.5rem;">
+            <div style="font-size:0.9rem;color:var(--gray);">&#10003;&nbsp; Bespoke dieline for your jar</div>
+            <div style="font-size:0.9rem;color:var(--gray);">&#10003;&nbsp; Round, square, oval &amp; tapered jars</div>
+            <div style="font-size:0.9rem;color:var(--gray);">&#10003;&nbsp; Premium print &amp; finish options</div>
+            <div style="font-size:0.9rem;color:var(--gray);">&#10003;&nbsp; Optional die-cut window panels</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container container--narrow">
+      <h2>The Importance of a Perfect-Fitting Candle Jar Sleeve</h2>
+      <p>A jar sleeve that doesn't fit perfectly is worse than no sleeve at all. It wrinkles, slides, looks cheap, and communicates to customers that quality was not a priority. At The Candle Sleeves, we solve this problem by creating a completely bespoke dieline for every jar sleeve we produce. Whether your jar is a classic round apothecary style, a square vessel, an oval shape, or a tapered design, we measure it with precision and build the sleeve structure from scratch to fit it perfectly.</p>
+      <p>The fit also has functional implications beyond aesthetics. A well-fitted jar sleeve maintains its position during transport, retail handling, and customer inspection — consistently presenting your brand at its best. It provides a layer of protection for the glass exterior against fingerprints, minor scratches, and surface contact during stacking and shelving.</p>
+
+      <h2>Printing and Branding on Candle Jar Sleeves</h2>
+      <p>Candle jar sleeves offer generous, contiguous print real estate — allowing for full-circumference designs that tell your complete brand story in one uninterrupted visual. Our full-color CMYK printing delivers vivid, accurate reproduction of your brand colors, photography, illustrations, and typography. The cylindrical nature of jar sleeves creates a 360-degree canvas that is unique in packaging — every angle a customer views the product from reveals a new element of your design.</p>
+    </div>
+  </section>
+
+  <section class="section section--beige">
+    <div class="container">
+      <h2 class="text-center section-title">Benefits of Custom Candle Jar Sleeves</h2>
+      <div class="grid-3" style="margin-top:2rem;">
+        <div class="icon-box" style="flex-direction:column;background:var(--white);border-radius:var(--radius-lg);padding:1.75rem;box-shadow:var(--shadow);">
+          <div class="icon-box__icon" style="margin-bottom:1rem;">&#128269;</div>
+          <div class="icon-box__title">Perfect Custom Fit</div>
+          <div class="icon-box__text">A bespoke dieline creates a sleeve that fits your specific jar with precision — no gaps, no wrinkles, no sliding. A professional result every single time.</div>
+        </div>
+        <div class="icon-box" style="flex-direction:column;background:var(--white);border-radius:var(--radius-lg);padding:1.75rem;box-shadow:var(--shadow);">
+          <div class="icon-box__icon" style="margin-bottom:1rem;">&#127760;</div>
+          <div class="icon-box__title">360-Degree Brand Canvas</div>
+          <div class="icon-box__text">The full circumference of your jar becomes a continuous design opportunity — maximizing your brand storytelling space in every direction.</div>
+        </div>
+        <div class="icon-box" style="flex-direction:column;background:var(--white);border-radius:var(--radius-lg);padding:1.75rem;box-shadow:var(--shadow);">
+          <div class="icon-box__icon" style="margin-bottom:1rem;">&#128293;</div>
+          <div class="icon-box__title">Compatible with All Jar Types</div>
+          <div class="icon-box__text">Round, square, oval, tapered — we produce custom sleeves for every glass candle jar profile on the market, as well as non-standard custom shapes.</div>
+        </div>
+        <div class="icon-box" style="flex-direction:column;background:var(--white);border-radius:var(--radius-lg);padding:1.75rem;box-shadow:var(--shadow);">
+          <div class="icon-box__icon" style="margin-bottom:1rem;">&#128272;</div>
+          <div class="icon-box__title">Glass Protection</div>
+          <div class="icon-box__text">Sleeves protect the glass exterior from fingerprints, scratches, and surface damage during retail handling, shipping, and customer inspection.</div>
+        </div>
+        <div class="icon-box" style="flex-direction:column;background:var(--white);border-radius:var(--radius-lg);padding:1.75rem;box-shadow:var(--shadow);">
+          <div class="icon-box__icon" style="margin-bottom:1rem;">&#127773;</div>
+          <div class="icon-box__title">Optional Window Panels</div>
+          <div class="icon-box__text">Die-cut window panels can be added to let the candle's color, texture, or label show through the sleeve, adding intrigue and visual interest.</div>
+        </div>
+        <div class="icon-box" style="flex-direction:column;background:var(--white);border-radius:var(--radius-lg);padding:1.75rem;box-shadow:var(--shadow);">
+          <div class="icon-box__icon" style="margin-bottom:1rem;">&#127775;</div>
+          <div class="icon-box__title">Premium Finish Options</div>
+          <div class="icon-box__text">Elevate your jar sleeves with matte or gloss lamination, soft-touch coating, gold foil stamping, spot UV, embossing, and more.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--cream">
+    <div class="container container--narrow">
+      <h2>Specifications</h2>
+      <table class="spec-table">
+        <thead>
+          <tr><th>Specification</th><th>Details</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Compatible Jar Types</td><td>Round, square, oval, tapered, custom shapes</td></tr>
+          <tr><td>Materials</td><td>Coated cardboard (300–450gsm), kraft, rigid board</td></tr>
+          <tr><td>Printing</td><td>Full-color CMYK, up to 360-degree wrap design</td></tr>
+          <tr><td>Finishes</td><td>Matte, gloss, soft-touch, spot UV</td></tr>
+          <tr><td>Special Effects</td><td>Foil stamping, embossing, die-cut windows</td></tr>
+          <tr><td>Dieline</td><td>Custom bespoke for your exact jar dimensions</td></tr>
+          <tr><td>Production Time</td><td>7 – 12 business days after artwork approval</td></tr>
+          <tr><td>Delivery</td><td>Nationwide USA</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container container--narrow">
+      <h2>Related Products & Resources</h2>
+      <p>If you're looking for jar-specific display solutions, also consider our <a href="/window-candle-sleeves" class="internal-link">window candle sleeves</a> for product visibility, or explore <a href="/cardboard-candle-sleeves" class="internal-link">cardboard candle sleeves</a> for a more structured box-style approach. Our full range is available at <a href="/products" class="internal-link">thecandlesleeves.com/products</a>.</p>
+      <p>At <a href="/" class="internal-link">The Candle Sleeves</a>, we understand that every candle jar is different — and every brand deserves packaging that fits and represents them perfectly. Our custom dieline service ensures your jar sleeves are never generic and always professional.</p>
+    </div>
+  </section>
+
+  <section class="section section--cream">
+    <div class="container container--narrow">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-item">
+        <div class="faq-question">Can candle jar sleeves fit any jar shape?</div>
+        <div class="faq-answer">Yes. We create bespoke dielines custom-fitted to your specific jar — round, square, oval, tapered, or any other profile. We measure precisely to ensure a perfect, snug fit.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Do candle jar sleeves affect the candle's safety?</div>
+        <div class="faq-answer">No. Our jar sleeves wrap the exterior of the glass container and do not contact the wax or wick. They are produced with materials safe for use around candle products.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Can I add a window to my candle jar sleeve?</div>
+        <div class="faq-answer">Yes. We can incorporate die-cut window panels so customers can see the candle's color or texture through the packaging — adding visual intrigue and transparency.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">What are popular finishes for candle jar sleeves?</div>
+        <div class="faq-answer">Matte lamination and soft-touch coating are popular for upscale appeal. Gloss lamination gives vibrant color reproduction. Gold foil stamping adds a luxury accent. The best choice depends on your brand aesthetic.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">How do I provide my jar dimensions?</div>
+        <div class="faq-answer">Include your jar's height, diameter at the widest point, and base dimensions in the quote form. You can also send a physical jar sample for our team to measure directly for the most accurate dieline.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-banner">
+    <div class="container text-center">
+      <h2>Get a Perfect-Fitting Candle Jar Sleeve Quote</h2>
+      <p>Share your jar dimensions and brand vision — our specialists will create a custom solution that fits and impresses.</p>
+      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+        <a href="/quote" class="btn btn--dark" style="background:white;color:var(--gold-dark);">Request Free Quote &rarr;</a>
+        <a href="/contact" class="btn btn--outline">Contact Our Team</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--cream" id="quote">
+    <div class="container container--narrow">
+      <QuoteForm title="Get Your Candle Jar Sleeve Quote" subtitle="Tell us about your jar and brand requirements. We'll respond with a tailored quote within 24 hours." />
+    </div>
+  </section>
+</Layout>

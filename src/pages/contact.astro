@@ -1,0 +1,159 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ContactForm from '../components/ContactForm.astro';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How quickly do you respond to inquiries?",
+      "acceptedAnswer": { "@type": "Answer", "text": "We respond to all inquiries within 24 business hours. For urgent matters, please call us directly at (503) 358-0443." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I visit your facility in Bloomington, IL?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes, visits can be arranged by appointment. Please contact us in advance so we can ensure a packaging specialist is available to meet with you." }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer design assistance for custom packaging?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Absolutely. Our in-house packaging specialists provide design consultation and can help you create artwork that maximizes your brand impact on the shelf." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the best way to get a quote?",
+      "acceptedAnswer": { "@type": "Answer", "text": "The fastest way is to fill out our online quote form at thecandlesleeves.com/quote. Alternatively, email us at Info@thecandlesleeves.com or call (503) 358-0443." }
+    }
+  ]
+};
+---
+
+<Layout
+  title="Contact The Candle Sleeves | Custom Packaging Inquiries"
+  description="Get in touch with The Candle Sleeves. Contact our packaging specialists by phone, email, or our online form. We respond within 24 hours. Bloomington, IL."
+  canonical="https://thecandlesleeves.com/contact"
+  schema={faqSchema}
+>
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="section-label">Get In Touch</span>
+      <h1>Contact The Candle Sleeves</h1>
+      <p>Have a question about custom candle packaging? Ready to start your order? Our specialists are here to help.</p>
+    </div>
+  </section>
+
+  <!-- Contact Info Cards -->
+  <section class="section section--cream">
+    <div class="container">
+      <div class="grid-3" style="margin-bottom:4rem;">
+        <div class="card" style="text-align:center;">
+          <div class="card__body" style="padding:2.5rem 2rem;">
+            <div style="font-size:2.5rem;margin-bottom:1rem;">&#9993;</div>
+            <h3 style="margin-bottom:0.5rem;">Email Us</h3>
+            <p style="color:var(--gray);font-size:0.9rem;margin-bottom:1rem;">For quotes, product questions, and general inquiries.</p>
+            <a href="mailto:Info@thecandlesleeves.com" class="internal-link" style="font-size:1rem;">Info@thecandlesleeves.com</a>
+          </div>
+        </div>
+        <div class="card" style="text-align:center;">
+          <div class="card__body" style="padding:2.5rem 2rem;">
+            <div style="font-size:2.5rem;margin-bottom:1rem;">&#128222;</div>
+            <h3 style="margin-bottom:0.5rem;">Call Us</h3>
+            <p style="color:var(--gray);font-size:0.9rem;margin-bottom:1rem;">Speak directly with a packaging specialist.</p>
+            <a href="tel:+15033580443" class="internal-link" style="font-size:1rem;">(503) 358-0443</a>
+          </div>
+        </div>
+        <div class="card" style="text-align:center;">
+          <div class="card__body" style="padding:2.5rem 2rem;">
+            <div style="font-size:2.5rem;margin-bottom:1rem;">&#128205;</div>
+            <h3 style="margin-bottom:0.5rem;">Visit Us</h3>
+            <p style="color:var(--gray);font-size:0.9rem;margin-bottom:1rem;">2975 Coburn Hollow Road<br />Bloomington, IL 61701</p>
+            <span style="font-size:0.85rem;color:var(--gray);">By appointment only</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Form + Sidebar -->
+      <div class="grid-2" style="gap:4rem;align-items:start;">
+        <div>
+          <h2 style="margin-bottom:0.5rem;">Send Us a Message</h2>
+          <p style="color:var(--gray);margin-bottom:2rem;">Fill in the form below and a member of our team will respond within 24 business hours.</p>
+          <ContactForm />
+        </div>
+        <div>
+          <div style="background:var(--white);border-radius:var(--radius-lg);padding:2rem;box-shadow:var(--shadow);margin-bottom:2rem;">
+            <h3 style="margin-bottom:1.25rem;">Business Hours</h3>
+            <table style="width:100%;border-collapse:collapse;">
+              <tr style="border-bottom:1px solid var(--border);">
+                <td style="padding:0.6rem 0;font-weight:600;color:var(--brown);">Monday – Friday</td>
+                <td style="padding:0.6rem 0;text-align:right;color:var(--gray);">9:00 AM – 6:00 PM CT</td>
+              </tr>
+              <tr style="border-bottom:1px solid var(--border);">
+                <td style="padding:0.6rem 0;font-weight:600;color:var(--brown);">Saturday</td>
+                <td style="padding:0.6rem 0;text-align:right;color:var(--gray);">10:00 AM – 2:00 PM CT</td>
+              </tr>
+              <tr>
+                <td style="padding:0.6rem 0;font-weight:600;color:var(--brown);">Sunday</td>
+                <td style="padding:0.6rem 0;text-align:right;color:var(--gray);">Closed</td>
+              </tr>
+            </table>
+          </div>
+          <div style="background:var(--beige);border-radius:var(--radius-lg);padding:2rem;">
+            <h3 style="margin-bottom:1rem;">Quick Links</h3>
+            <ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:0.6rem;">
+              <li><a href="/quote" class="internal-link">&#8594; Request a Free Quote</a></li>
+              <li><a href="/products" class="internal-link">&#8594; Browse All Products</a></li>
+              <li><a href="/about" class="internal-link">&#8594; About The Candle Sleeves</a></li>
+              <li><a href="/shipping-policy" class="internal-link">&#8594; Shipping Policy</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Map Placeholder -->
+  <section class="section--sm section--dark">
+    <div class="container text-center">
+      <h2 style="color:var(--gold-light);margin-bottom:0.5rem;">Serving Candle Brands Across the USA</h2>
+      <p style="color:rgba(250,246,239,0.8);">Based in Bloomington, IL — shipping to all 50 US states with fast, reliable delivery.</p>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section">
+    <div class="container container--narrow">
+      <div class="text-center mb-4">
+        <span class="section-label">Common Questions</span>
+        <h2 class="section-title">Contact FAQs</h2>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">How quickly do you respond to inquiries?</div>
+        <div class="faq-answer">We respond to all inquiries within 24 business hours. For urgent matters, please call us directly at (503) 358-0443 during business hours.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Can I visit your facility in Bloomington, IL?</div>
+        <div class="faq-answer">Yes, visits can be arranged by appointment. Please contact us in advance so we can ensure a packaging specialist is available to meet with you and discuss your needs.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Do you offer design assistance for custom packaging?</div>
+        <div class="faq-answer">Absolutely. Our in-house packaging specialists provide design consultation and can help you create artwork that maximizes your brand impact. We provide digital proofs for approval before production begins.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">What is the best way to get a quote?</div>
+        <div class="faq-answer">The fastest way is to fill out our <a href="/quote" class="internal-link">online quote form</a>. Alternatively, email us at Info@thecandlesleeves.com or call (503) 358-0443 and we'll get you a quote within 24 hours.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="cta-banner">
+    <div class="container text-center">
+      <h2>Ready to Start Your Custom Packaging Project?</h2>
+      <p>Skip the contact form and go straight to requesting your free, no-obligation custom quote.</p>
+      <a href="/quote" class="btn btn--dark" style="background:white;color:var(--gold-dark);">Request Free Quote &rarr;</a>
+    </div>
+  </section>
+</Layout>

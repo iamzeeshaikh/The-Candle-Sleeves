@@ -1,0 +1,202 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import QuoteForm from '../components/QuoteForm.astro';
+
+const productSchema = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Window Candle Sleeves",
+  "description": "Custom window candle sleeves with transparent panels that showcase the candle inside. Ideal for retail display brands that want product visibility and premium presentation.",
+  "brand": { "@type": "Brand", "name": "The Candle Sleeves" },
+  "offers": { "@type": "Offer", "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What material is used for the transparent window panel in candle sleeves?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Window panels are typically made from crystal-clear PET or OPP film adhered to the die-cut opening from the interior. These materials provide excellent clarity, are resistant to moisture, and maintain their transparency throughout the product's shelf life." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can the window shape be customized?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Window shapes are created through die cutting, so virtually any shape is possible — circular, oval, rectangular, arch-topped, star-shaped, or custom silhouettes that complement your brand's design language." }
+    },
+    {
+      "@type": "Question",
+      "name": "Are window candle sleeves still printable around the window?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Full-color printing covers all areas of the sleeve except the window opening itself. Many brands use the window as a design element, framing it with printed motifs, text, or decorative borders that enhance the visual impact of the product reveal." }
+    },
+    {
+      "@type": "Question",
+      "name": "Do window candle sleeves protect the candle from dust and damage?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. The window film provides a protective barrier over the opening, preventing dust, fingerprints, and minor surface contacts from reaching the candle while still allowing full visual access. The sleeve structure itself protects the remainder of the candle jar surface." }
+    },
+    {
+      "@type": "Question",
+      "name": "Are eco-friendly window options available?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. We offer biodegradable and compostable window film options as alternatives to standard PET, supporting brands with specific sustainability packaging commitments. Please specify your eco-friendly requirements when requesting a quote." }
+    }
+  ]
+};
+---
+
+<Layout
+  title="Window Candle Sleeves | Display Packaging | The Candle Sleeves"
+  description="Custom window candle sleeves with transparent panels for product visibility. Ideal for retail displays. Custom printed and available in all sizes. Free quote today."
+  canonical="https://thecandlesleeves.com/window-candle-sleeves"
+  schema={[productSchema, faqSchema]}
+>
+  <div class="container section--sm">
+    <Breadcrumbs crumbs={[{label:'Home',href:'/'},{label:'Products',href:'/products'},{label:'Window Candle Sleeves'}]} />
+  </div>
+
+  <section class="section section--cream">
+    <div class="container">
+      <div class="product-layout">
+        <div class="product-image-wrap">
+          <img src="/images/products/candle-gift-sleeves.jpg" alt="Custom window candle sleeves with transparent display panel" width="600" height="600" />
+        </div>
+        <div class="product-info">
+          <span class="section-label">Display Packaging</span>
+          <h1>Window Candle Sleeves</h1>
+          <p style="font-size:1.1rem;color:var(--gray);margin-bottom:1.5rem;">Let your candle speak for itself. Our window candle sleeves feature precision die-cut transparent panels that allow customers to see — and in some cases even sense the fragrance of — the candle inside the packaging. For brands with beautiful candles, a window sleeve is the most honest and compelling sales tool available, turning the product's own appearance into its most powerful marketing asset.</p>
+          <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+            <a href="/quote" class="btn btn--primary">Get a Free Quote &rarr;</a>
+            <a href="/products" class="btn btn--outline">View All Products</a>
+          </div>
+          <div style="margin-top:2rem;display:flex;flex-direction:column;gap:0.5rem;">
+            <div style="font-size:0.9rem;color:var(--gray);">&#10003;&nbsp; Crystal-clear PET/OPP window film</div>
+            <div style="font-size:0.9rem;color:var(--gray);">&#10003;&nbsp; Any window shape via die cutting</div>
+            <div style="font-size:0.9rem;color:var(--gray);">&#10003;&nbsp; Full-color printing around window</div>
+            <div style="font-size:0.9rem;color:var(--gray);">&#10003;&nbsp; Eco-friendly film options available</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container container--narrow">
+      <h2>The Psychology of Transparency in Retail Packaging</h2>
+      <p>In retail packaging, transparency works at two levels simultaneously — visual and psychological. At the visual level, a window panel reveals the product's color, texture, form, and in some cases even its fragrance character through visual cues like botanical inclusions or layers. This immediate sensory access answers the customer's most immediate questions about the product without requiring them to open the packaging or read extensive copy. It shortens the path to purchase decision significantly.</p>
+      <p>At the psychological level, transparency communicates confidence and honesty. A brand that shows you the product inside the packaging is a brand that is proud of what they've made and has nothing to hide. This unconscious trust signal is particularly powerful in the candle market, where wax color, crystal inclusions, and fragrance herb decorations are part of the product's premium appeal. A window sleeve says: "Look at this — we made something beautiful, and we want you to see it."</p>
+
+      <h2>Design Strategies for Window Candle Sleeves</h2>
+      <p>The placement, shape, and size of the window in your candle sleeve is a critical design decision that significantly affects the product's retail appeal. A wide central window that reveals most of the candle surface creates maximum visual impact but leaves less print area for brand communication. A smaller, strategically placed window creates intrigue — like a keyhole that invites curiosity about what's beyond. A shaped window (an arch, a diamond, a circular portal) makes the viewing experience itself a design element. Our packaging specialists work with you to find the window placement and shape that best serves your specific product's visual character and your brand's communication needs.</p>
+    </div>
+  </section>
+
+  <section class="section section--beige">
+    <div class="container">
+      <h2 class="text-center section-title">Benefits of Window Candle Sleeves</h2>
+      <div class="grid-3" style="margin-top:2rem;">
+        <div class="icon-box" style="flex-direction:column;background:var(--white);border-radius:var(--radius-lg);padding:1.75rem;box-shadow:var(--shadow);">
+          <div class="icon-box__icon" style="margin-bottom:1rem;">&#128269;</div>
+          <div class="icon-box__title">Direct Product Visibility</div>
+          <div class="icon-box__text">Customers can see the candle's actual color, texture, and quality before purchase — building confidence and driving conversion at point of sale without extensive sales copy.</div>
+        </div>
+        <div class="icon-box" style="flex-direction:column;background:var(--white);border-radius:var(--radius-lg);padding:1.75rem;box-shadow:var(--shadow);">
+          <div class="icon-box__icon" style="margin-bottom:1rem;">&#129309;</div>
+          <div class="icon-box__title">Builds Customer Trust</div>
+          <div class="icon-box__text">Transparency in packaging communicates brand confidence and honesty — powerfully differentiated in a market where customers are increasingly skeptical of misleading product representations.</div>
+        </div>
+        <div class="icon-box" style="flex-direction:column;background:var(--white);border-radius:var(--radius-lg);padding:1.75rem;box-shadow:var(--shadow);">
+          <div class="icon-box__icon" style="margin-bottom:1rem;">&#127914;</div>
+          <div class="icon-box__title">Enhanced Visual Retail Display</div>
+          <div class="icon-box__text">Window sleeves create dynamic retail displays where the candle's own beauty contributes to the visual merchandising — no additional props or presentation materials required.</div>
+        </div>
+        <div class="icon-box" style="flex-direction:column;background:var(--white);border-radius:var(--radius-lg);padding:1.75rem;box-shadow:var(--shadow);">
+          <div class="icon-box__icon" style="margin-bottom:1rem;">&#127760;</div>
+          <div class="icon-box__title">Custom Window Shapes</div>
+          <div class="icon-box__text">Die cutting allows any window shape — circular, arch, star, custom silhouette — making the window itself a design feature that reinforces your brand's visual identity.</div>
+        </div>
+        <div class="icon-box" style="flex-direction:column;background:var(--white);border-radius:var(--radius-lg);padding:1.75rem;box-shadow:var(--shadow);">
+          <div class="icon-box__icon" style="margin-bottom:1rem;">&#127775;</div>
+          <div class="icon-box__title">Full Printable Sleeve Area</div>
+          <div class="icon-box__text">All areas outside the window panel are fully printable — allowing rich brand design, product information, and visual storytelling to complement the product reveal.</div>
+        </div>
+        <div class="icon-box" style="flex-direction:column;background:var(--white);border-radius:var(--radius-lg);padding:1.75rem;box-shadow:var(--shadow);">
+          <div class="icon-box__icon" style="margin-bottom:1rem;">&#9855;</div>
+          <div class="icon-box__title">Eco Film Options</div>
+          <div class="icon-box__text">Biodegradable and compostable window film alternatives are available for brands with sustainability commitments — combining product visibility with environmental responsibility.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--cream">
+    <div class="container container--narrow">
+      <h2>Specifications</h2>
+      <table class="spec-table">
+        <thead>
+          <tr><th>Specification</th><th>Details</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Sleeve Material</td><td>Coated cardboard (300–450gsm), kraft, rigid options</td></tr>
+          <tr><td>Window Film</td><td>Crystal-clear PET, OPP; biodegradable film available</td></tr>
+          <tr><td>Window Shape</td><td>Any shape via custom die cut</td></tr>
+          <tr><td>Printing</td><td>Full-color CMYK on all non-window areas</td></tr>
+          <tr><td>Finishes</td><td>Matte, gloss, soft-touch, spot UV, foil, embossing</td></tr>
+          <tr><td>Sizing</td><td>Fully custom to your product dimensions</td></tr>
+          <tr><td>Production Time</td><td>10 – 14 business days after artwork approval</td></tr>
+          <tr><td>Delivery</td><td>Nationwide USA</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container container--narrow">
+      <h2>Window Sleeves and Product Showcasing</h2>
+      <p>Window candle sleeves are especially impactful for candles with distinctive visual features — colored wax, crystal or botanical inclusions, layered designs, or embedded fragrance elements. They work beautifully across our <a href="/cardboard-candle-sleeves" class="internal-link">cardboard candle sleeve</a> substrates, our <a href="/kraft-candle-sleeves" class="internal-link">kraft candle sleeves</a> for a natural aesthetic, and our <a href="/white-candle-sleeves" class="internal-link">white candle sleeves</a> for clean contemporary presentation. For holiday and gifting applications, window sleeves combined with our <a href="/candle-gift-sleeves" class="internal-link">candle gift sleeve</a> structural formats create a premium display-and-gift solution. Explore all options at <a href="/" class="internal-link">thecandlesleeves.com</a>.</p>
+    </div>
+  </section>
+
+  <section class="section section--cream">
+    <div class="container container--narrow">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-item">
+        <div class="faq-question">What material is used for the transparent window panel?</div>
+        <div class="faq-answer">Window panels use crystal-clear PET or OPP film adhered to the die-cut opening from the interior. These materials provide excellent clarity, moisture resistance, and maintain transparency throughout the product's shelf life.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Can the window shape be customized?</div>
+        <div class="faq-answer">Yes. Window shapes are created through die cutting — virtually any shape is possible, from circular and oval to arch-topped, star-shaped, or custom silhouettes that complement your brand design.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Are window candle sleeves still printable?</div>
+        <div class="faq-answer">Yes. Full-color printing covers all areas of the sleeve except the window opening. Many brands frame the window with printed motifs or decorative borders that enhance the visual impact of the product reveal.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Do window sleeves protect the candle from dust?</div>
+        <div class="faq-answer">Yes. The window film provides a protective barrier over the opening, preventing dust and fingerprints from reaching the candle while still allowing full visual access to the product.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Are eco-friendly window film options available?</div>
+        <div class="faq-answer">Yes. Biodegradable and compostable window film alternatives are available for brands with sustainability commitments — supporting product visibility while reducing environmental impact.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-banner">
+    <div class="container text-center">
+      <h2>Let Your Candle's Beauty Sell Itself</h2>
+      <p>Request a free window candle sleeve quote and showcase the visual quality of your product with transparent packaging.</p>
+      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+        <a href="/quote" class="btn btn--dark" style="background:white;color:var(--gold-dark);">Request Free Quote &rarr;</a>
+        <a href="/contact" class="btn btn--outline">Contact Our Team</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--cream" id="quote">
+    <div class="container container--narrow">
+      <QuoteForm title="Get Your Window Candle Sleeve Quote" subtitle="Tell us about your candle and window design requirements. We'll respond with a tailored quote within 24 hours." />
+    </div>
+  </section>
+</Layout>

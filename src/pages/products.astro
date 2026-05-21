@@ -1,0 +1,156 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { products } from '../data/products';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Custom Candle Sleeves — All Products",
+  "description": "Browse all 14 custom candle sleeve product types from The Candle Sleeves.",
+  "url": "https://thecandlesleeves.com/products",
+  "numberOfItems": products.length,
+  "itemListElement": products.map((p, i) => ({
+    "@type": "ListItem",
+    "position": i + 1,
+    "name": p.name,
+    "url": `https://thecandlesleeves.com/${p.slug}`
+  }))
+};
+---
+
+<Layout
+  title="All Custom Candle Sleeves | 14 Types | The Candle Sleeves"
+  description="Browse all 14 custom candle sleeve products — from luxury foil-stamped sleeves to eco-friendly kraft wraps. Free quotes, fast USA delivery. The Candle Sleeves."
+  canonical="https://thecandlesleeves.com/products"
+  schema={schema}
+>
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="section-label">Our Products</span>
+      <h1>All Custom Candle Sleeve Products</h1>
+      <p>14 distinct candle sleeve types, all fully customizable to your exact dimensions, material, print, and finish preferences.</p>
+    </div>
+  </section>
+
+  <!-- Intro -->
+  <section class="section--sm section--cream">
+    <div class="container container--narrow text-center">
+      <p style="font-size:1.05rem;color:var(--gray);">Whether you're launching a new candle line or rebranding an established one, The Candle Sleeves has the right packaging solution for your needs. Every product below is custom-manufactured to your specifications — no off-the-shelf templates. Browse by type and click through for full specifications, materials, and pricing information.</p>
+    </div>
+  </section>
+
+  <!-- All Products Grid -->
+  <section class="section">
+    <div class="container">
+      <div class="text-center mb-4">
+        <span class="section-label">Browse All 14 Types</span>
+        <h2 class="section-title">Custom Candle Sleeve Collections</h2>
+      </div>
+      <div class="grid-4">
+        {products.map(product => (
+          <a href={`/${product.slug}`} class="product-card">
+            <img
+              src={product.image}
+              alt={`${product.name} — Custom Packaging by The Candle Sleeves`}
+              class="product-card__img"
+              width="400"
+              height="400"
+              loading="lazy"
+              onerror="this.src='/images/products/candle-gift-sleeves.jpg'"
+            />
+            <div class="product-card__body">
+              <div class="product-card__name">{product.name}</div>
+              <div class="product-card__desc">{product.tagline}</div>
+              <span class="product-card__link">View Product &#8594;</span>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Materials Overview -->
+  <section class="section section--beige">
+    <div class="container">
+      <div class="text-center mb-4">
+        <span class="section-label">Materials & Finishes</span>
+        <h2 class="section-title">Premium Options Across Every Product</h2>
+        <p class="section-sub">Every candle sleeve we produce can be tailored with your choice of material substrate and finishing treatment.</p>
+      </div>
+      <div class="grid-2" style="gap:3rem;">
+        <div>
+          <h3 style="margin-bottom:1.25rem;">Material Substrates</h3>
+          <ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:0.6rem;">
+            <li style="padding:0.75rem 1rem;background:var(--white);border-radius:var(--radius);border-left:3px solid var(--gold);font-size:0.92rem;"><strong style="color:var(--brown);">Coated Cardboard</strong> — 300gsm to 450gsm, ideal for most retail applications</li>
+            <li style="padding:0.75rem 1rem;background:var(--white);border-radius:var(--radius);border-left:3px solid var(--gold);font-size:0.92rem;"><strong style="color:var(--brown);">Natural Kraft</strong> — Uncoated recycled texture, perfect for artisan aesthetics</li>
+            <li style="padding:0.75rem 1rem;background:var(--white);border-radius:var(--radius);border-left:3px solid var(--gold);font-size:0.92rem;"><strong style="color:var(--brown);">Corrugated Board</strong> — Double-wall fluting for shipping and heavy-duty protection</li>
+            <li style="padding:0.75rem 1rem;background:var(--white);border-radius:var(--radius);border-left:3px solid var(--gold);font-size:0.92rem;"><strong style="color:var(--brown);">Rigid Chipboard</strong> — 2mm+ board for luxury, rigid-construction sleeves</li>
+            <li style="padding:0.75rem 1rem;background:var(--white);border-radius:var(--radius);border-left:3px solid var(--gold);font-size:0.92rem;"><strong style="color:var(--brown);">Recycled / FSC-Certified</strong> — Sustainable options with full eco credentials</li>
+          </ul>
+        </div>
+        <div>
+          <h3 style="margin-bottom:1.25rem;">Printing & Finishing</h3>
+          <ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:0.6rem;">
+            <li style="padding:0.75rem 1rem;background:var(--white);border-radius:var(--radius);border-left:3px solid var(--gold);font-size:0.92rem;"><strong style="color:var(--brown);">Full-Color CMYK Printing</strong> — Vibrant, accurate brand colors</li>
+            <li style="padding:0.75rem 1rem;background:var(--white);border-radius:var(--radius);border-left:3px solid var(--gold);font-size:0.92rem;"><strong style="color:var(--brown);">Gold & Silver Foil Stamping</strong> — Metallic accents for premium appeal</li>
+            <li style="padding:0.75rem 1rem;background:var(--white);border-radius:var(--radius);border-left:3px solid var(--gold);font-size:0.92rem;"><strong style="color:var(--brown);">Embossing & Debossing</strong> — Raised or recessed tactile texture</li>
+            <li style="padding:0.75rem 1rem;background:var(--white);border-radius:var(--radius);border-left:3px solid var(--gold);font-size:0.92rem;"><strong style="color:var(--brown);">Spot UV Coating</strong> — Selective gloss on matte backgrounds</li>
+            <li style="padding:0.75rem 1rem;background:var(--white);border-radius:var(--radius);border-left:3px solid var(--gold);font-size:0.92rem;"><strong style="color:var(--brown);">Soft-Touch Lamination</strong> — Velvety matte finish for luxury products</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Us -->
+  <section class="section section--dark">
+    <div class="container">
+      <div class="grid-2" style="gap:4rem;align-items:center;">
+        <div>
+          <span class="section-label">Why Choose Us</span>
+          <h2 style="color:var(--gold-light);">The Candle Packaging Specialists</h2>
+          <p style="color:rgba(250,246,239,0.85);margin-bottom:1.5rem;">We don't make generic boxes. We are specialists in candle sleeve packaging, and that focus translates directly into better outcomes for your brand. Our team understands the unique challenges of candle packaging — from scent-safe materials to structural requirements for jar fitment.</p>
+          <div style="display:flex;flex-direction:column;gap:1rem;">
+            <div class="icon-box">
+              <div class="icon-box__icon" style="background:rgba(201,168,76,0.15);">&#10003;</div>
+              <div>
+                <div class="icon-box__title" style="color:var(--gold-light);">Free quote within 24 hours</div>
+                <div class="icon-box__text" style="color:rgba(250,246,239,0.7);">Submit your specs and we'll have a detailed, competitive quote back to you by the next business day.</div>
+              </div>
+            </div>
+            <div class="icon-box">
+              <div class="icon-box__icon" style="background:rgba(201,168,76,0.15);">&#10003;</div>
+              <div>
+                <div class="icon-box__title" style="color:var(--gold-light);">Custom sizing for every candle jar</div>
+                <div class="icon-box__text" style="color:rgba(250,246,239,0.7);">We create bespoke dielines to fit your exact jar or container — no standard template that almost fits.</div>
+              </div>
+            </div>
+            <div class="icon-box">
+              <div class="icon-box__icon" style="background:rgba(201,168,76,0.15);">&#10003;</div>
+              <div>
+                <div class="icon-box__title" style="color:var(--gold-light);">Nationwide USA delivery</div>
+                <div class="icon-box__text" style="color:rgba(250,246,239,0.7);">We ship to all 50 states with reliable carriers, providing tracking on every order.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <img src="/images/products/die-cut-candle-sleeves.jpg" alt="Custom die cut candle sleeves precision packaging" style="border-radius:var(--radius-lg);box-shadow:var(--shadow-lg);width:100%;" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="cta-banner">
+    <div class="container text-center">
+      <h2>Not Sure Which Product is Right for You?</h2>
+      <p>Our packaging specialists will help you choose the perfect sleeve type for your brand and budget. Get in touch for a free consultation.</p>
+      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+        <a href="/quote" class="btn btn--dark" style="background:white;color:var(--gold-dark);">Get a Free Quote &rarr;</a>
+        <a href="/contact" class="btn btn--outline">Talk to a Specialist</a>
+      </div>
+    </div>
+  </section>
+</Layout>

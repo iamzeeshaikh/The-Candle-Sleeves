@@ -1,0 +1,202 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import QuoteForm from '../components/QuoteForm.astro';
+
+const productSchema = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "White Candle Sleeves",
+  "description": "Crisp custom white candle sleeves offering the perfect blank canvas for full-color printing and premium brand customization. Clean, elegant, and versatile.",
+  "brand": { "@type": "Brand", "name": "The Candle Sleeves" },
+  "offers": { "@type": "Offer", "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why is white a popular choice for candle sleeve packaging?",
+      "acceptedAnswer": { "@type": "Answer", "text": "White provides a neutral, bright foundation that enhances the vibrancy and accuracy of full-color printing. It works with any brand color palette, communicates cleanliness and purity, and projects a fresh, contemporary aesthetic that suits a wide range of candle brand identities." }
+    },
+    {
+      "@type": "Question",
+      "name": "Does white candle sleeve packaging look premium?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Absolutely. With the right finish treatment, white candle sleeves can be deeply premium. Soft-touch matte coating on white creates a beautiful, clean luxury look. Embossed logos on white project quiet confidence. Gold foil on white is a classic luxury combination used by the world's most prestigious brands." }
+    },
+    {
+      "@type": "Question",
+      "name": "Are white candle sleeves suitable for minimalist brand aesthetics?",
+      "acceptedAnswer": { "@type": "Answer", "text": "White is the ideal foundation for minimalist candle branding — allowing negative space to work as a design element and letting your typography, logo, and key brand elements command full attention without visual competition." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I print full-color photography on white candle sleeves?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. White is the ideal substrate for full-color photographic printing — producing the most accurate, vivid color reproduction possible since the white background does not influence ink color perception the way tinted substrates can." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the minimum order for white candle sleeves?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Minimum order quantities vary by size, material weight, and finish selection. Contact us for a specific quote and minimum quantity information for your project requirements." }
+    }
+  ]
+};
+---
+
+<Layout
+  title="White Candle Sleeves | Clean & Custom Printed | The Candle Sleeves"
+  description="Custom white candle sleeves for any brand aesthetic. Perfect for full-color printing and a clean, elegant look. Premium finishes available. Request your free quote today."
+  canonical="https://thecandlesleeves.com/white-candle-sleeves"
+  schema={[productSchema, faqSchema]}
+>
+  <div class="container section--sm">
+    <Breadcrumbs crumbs={[{label:'Home',href:'/'},{label:'Products',href:'/products'},{label:'White Candle Sleeves'}]} />
+  </div>
+
+  <section class="section section--cream">
+    <div class="container">
+      <div class="product-layout">
+        <div class="product-image-wrap">
+          <img src="/images/products/white-candle-sleeves.jpg" alt="Custom white candle sleeves with clean elegant finish" width="600" height="600" />
+        </div>
+        <div class="product-info">
+          <span class="section-label">Clean & Elegant</span>
+          <h1>White Candle Sleeves</h1>
+          <p style="font-size:1.1rem;color:var(--gray);margin-bottom:1.5rem;">White is the color of limitless possibility in packaging — a clean, bright canvas that works with any brand palette and amplifies any design. Our custom white candle sleeves provide the ideal foundation for full-color printing, minimalist branding, and luxury finishing, offering versatility that makes them among our most universally applicable candle packaging solutions.</p>
+          <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+            <a href="/quote" class="btn btn--primary">Get a Free Quote &rarr;</a>
+            <a href="/products" class="btn btn--outline">View All Products</a>
+          </div>
+          <div style="margin-top:2rem;display:flex;flex-direction:column;gap:0.5rem;">
+            <div style="font-size:0.9rem;color:var(--gray);">&#10003;&nbsp; Perfect for full-color photography</div>
+            <div style="font-size:0.9rem;color:var(--gray);">&#10003;&nbsp; Ideal for minimalist brand aesthetics</div>
+            <div style="font-size:0.9rem;color:var(--gray);">&#10003;&nbsp; Gold foil &amp; embossing on white</div>
+            <div style="font-size:0.9rem;color:var(--gray);">&#10003;&nbsp; Works with any brand color palette</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container container--narrow">
+      <h2>Why White Is the Most Versatile Candle Packaging Choice</h2>
+      <p>In a market where packaging trends cycle with fashion seasons, white endures as a consistently strong choice because it transcends trend. A white candle sleeve never looks dated the way a specific color-trend choice can. It works equally well in a minimalist Scandinavian-aesthetic spa boutique, a maximalist full-color gift collection, or a luxury floral brand with photography-driven packaging. This versatility makes white the safe choice — in the best possible sense of the phrase.</p>
+      <p>From a technical printing standpoint, white is the superior substrate for maximum color vibrancy and accuracy. Because white reflects light across the full visible spectrum without adding any color bias, inks printed on white stock appear at their truest, most vibrant values. Blues are bluer, reds are richer, and photographic skin tones are more natural on white than on any tinted substrate. This makes white the preferred choice for brands whose packaging design relies on photographic imagery or complex color gradients.</p>
+
+      <h2>White as a Luxury Statement</h2>
+      <p>White packaging has a long and distinguished history in luxury branding — from the iconic white packaging of high-end skincare brands to the crisp white gift boxes of luxury jewelers. On a white candle sleeve, a blind-embossed logo projects exceptional quiet confidence — the mark of a brand so assured of its quality that it needs no color decoration to command premium perception. Gold foil on white is one of the most classically beautiful packaging combinations in existence, used by prestige brands from Paris to New York. Our white candle sleeves deliver this full range of luxury application potential.</p>
+    </div>
+  </section>
+
+  <section class="section section--beige">
+    <div class="container">
+      <h2 class="text-center section-title">Why Choose White Candle Sleeves</h2>
+      <div class="grid-3" style="margin-top:2rem;">
+        <div class="icon-box" style="flex-direction:column;background:var(--white);border-radius:var(--radius-lg);padding:1.75rem;box-shadow:var(--shadow);">
+          <div class="icon-box__icon" style="margin-bottom:1rem;">&#127914;</div>
+          <div class="icon-box__title">Maximum Color Vibrancy</div>
+          <div class="icon-box__text">White provides the optimal substrate for accurate, vivid full-color printing — producing the most faithful reproduction of photography, brand colors, and complex designs.</div>
+        </div>
+        <div class="icon-box" style="flex-direction:column;background:var(--white);border-radius:var(--radius-lg);padding:1.75rem;box-shadow:var(--shadow);">
+          <div class="icon-box__icon" style="margin-bottom:1rem;">&#9999;</div>
+          <div class="icon-box__title">Universal Design Compatibility</div>
+          <div class="icon-box__text">White works with every brand aesthetic — from minimalist and clinical to maximalist and illustrative — making it the most broadly applicable base for candle packaging design.</div>
+        </div>
+        <div class="icon-box" style="flex-direction:column;background:var(--white);border-radius:var(--radius-lg);padding:1.75rem;box-shadow:var(--shadow);">
+          <div class="icon-box__icon" style="margin-bottom:1rem;">&#127775;</div>
+          <div class="icon-box__title">Timeless Luxury Aesthetic</div>
+          <div class="icon-box__text">White with gold foil, embossing, or soft-touch finish is a classically premium packaging combination used by the world's most prestigious brands across categories.</div>
+        </div>
+        <div class="icon-box" style="flex-direction:column;background:var(--white);border-radius:var(--radius-lg);padding:1.75rem;box-shadow:var(--shadow);">
+          <div class="icon-box__icon" style="margin-bottom:1rem;">&#127760;</div>
+          <div class="icon-box__title">Minimalist Brand Support</div>
+          <div class="icon-box__text">Minimalist candle brands thrive on white — allowing negative space, typography, and logo to work without competition from background color, projecting confident simplicity.</div>
+        </div>
+        <div class="icon-box" style="flex-direction:column;background:var(--white);border-radius:var(--radius-lg);padding:1.75rem;box-shadow:var(--shadow);">
+          <div class="icon-box__icon" style="margin-bottom:1rem;">&#9881;</div>
+          <div class="icon-box__title">All Finishes Compatible</div>
+          <div class="icon-box__text">Every premium finish in our range — foil, embossing, spot UV, soft-touch, matte, gloss — works beautifully with white as the base, giving you complete design freedom.</div>
+        </div>
+        <div class="icon-box" style="flex-direction:column;background:var(--white);border-radius:var(--radius-lg);padding:1.75rem;box-shadow:var(--shadow);">
+          <div class="icon-box__icon" style="margin-bottom:1rem;">&#128197;</div>
+          <div class="icon-box__title">Seasonal Adaptability</div>
+          <div class="icon-box__text">White packaging adapts beautifully to seasonal design themes — winter whites, spring florals, summer botanicals — making it a year-round versatile packaging choice.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--cream">
+    <div class="container container--narrow">
+      <h2>Specifications</h2>
+      <table class="spec-table">
+        <thead>
+          <tr><th>Specification</th><th>Details</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Material</td><td>White coated cardboard (SBS), white rigid board</td></tr>
+          <tr><td>Weight Range</td><td>300gsm – 450gsm (cardboard); rigid options available</td></tr>
+          <tr><td>Printing</td><td>Full-color CMYK, Pantone, photographic quality</td></tr>
+          <tr><td>Finishes</td><td>Matte, gloss, soft-touch, spot UV, satin</td></tr>
+          <tr><td>Special Effects</td><td>Gold/silver foil stamping, embossing, debossing, die-cut</td></tr>
+          <tr><td>Whiteness Level</td><td>High-white coated stock for maximum brightness</td></tr>
+          <tr><td>Sizing</td><td>Fully custom to your product dimensions</td></tr>
+          <tr><td>Production Time</td><td>7 – 12 business days after artwork approval</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container container--narrow">
+      <h2>White Candle Sleeves in the Wider Range</h2>
+      <p>White candle sleeves are the natural counterpart to our <a href="/black-candle-sleeves" class="internal-link">black candle sleeves</a> for brands that want to offer both dark and light colorway options in their product range. They pair beautifully with <a href="/luxury-candle-sleeves" class="internal-link">luxury candle sleeve</a> finishes for premium positioning, and work perfectly as a foundation for our <a href="/printed-candle-sleeves" class="internal-link">custom printed candle sleeves</a> program. Visit <a href="/products" class="internal-link">our full product range</a> or <a href="/" class="internal-link">The Candle Sleeves homepage</a> for a comprehensive overview.</p>
+    </div>
+  </section>
+
+  <section class="section section--cream">
+    <div class="container container--narrow">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-item">
+        <div class="faq-question">Why is white a popular choice for candle sleeve packaging?</div>
+        <div class="faq-answer">White provides a neutral, bright foundation that enhances full-color printing accuracy and vibrancy. It works with any brand palette, communicates cleanliness and purity, and suits a wide range of candle brand identities from minimalist to maximalist.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Does white candle sleeve packaging look premium?</div>
+        <div class="faq-answer">Absolutely. With the right finish, white is deeply premium. Soft-touch matte on white creates a clean luxury look. Blind emboss projects quiet confidence. Gold foil on white is a classically prestigious combination used by luxury brands worldwide.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Are white candle sleeves suitable for minimalist aesthetics?</div>
+        <div class="faq-answer">Yes. White is the ideal foundation for minimalist candle branding — allowing negative space to function as a design element and letting typography and logo command full attention without visual competition.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Can I print full-color photography on white candle sleeves?</div>
+        <div class="faq-answer">Yes. White is the ideal substrate for photographic printing — producing the most accurate, vivid color reproduction since the white background does not influence ink color perception.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">What is the minimum order?</div>
+        <div class="faq-answer">Minimum order quantities vary by size, weight, and finish selection. Contact us or submit a quote request for specific minimums based on your project requirements.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-banner">
+    <div class="container text-center">
+      <h2>Create Clean, Elegant Candle Packaging</h2>
+      <p>Request a free white candle sleeve quote and discover how a pure white canvas elevates your brand's visual identity.</p>
+      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+        <a href="/quote" class="btn btn--dark" style="background:white;color:var(--gold-dark);">Request Free Quote &rarr;</a>
+        <a href="/contact" class="btn btn--outline">Contact Our Team</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--cream" id="quote">
+    <div class="container container--narrow">
+      <QuoteForm title="Get Your White Candle Sleeve Quote" subtitle="Tell us about your white candle sleeve project and we'll respond with a tailored quote within 24 hours." />
+    </div>
+  </section>
+</Layout>

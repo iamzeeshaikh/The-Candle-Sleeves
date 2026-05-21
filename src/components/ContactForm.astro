@@ -1,0 +1,73 @@
+---
+---
+<div id="contact-success" class="alert alert--success" style="display:none;">
+  Thank you for reaching out! We'll respond within 24 hours.
+</div>
+<div id="contact-error" class="alert alert--error" style="display:none;">
+  Something went wrong. Please try again or email us at Info@thecandlesleeves.com
+</div>
+
+<form id="contact-form" class="contact-form" enctype="multipart/form-data">
+  <div class="form-row">
+    <div class="form-group">
+      <label class="form-label" for="c-name">Full Name *</label>
+      <input class="form-control" type="text" id="c-name" name="name" required placeholder="Your full name" />
+    </div>
+    <div class="form-group">
+      <label class="form-label" for="c-email">Email Address *</label>
+      <input class="form-control" type="email" id="c-email" name="email" required placeholder="your@email.com" />
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group">
+      <label class="form-label" for="c-phone">Phone Number</label>
+      <input class="form-control" type="tel" id="c-phone" name="phone" placeholder="(555) 000-0000" />
+    </div>
+    <div class="form-group">
+      <label class="form-label" for="c-company">Company Name</label>
+      <input class="form-control" type="text" id="c-company" name="company" placeholder="Your company" />
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="form-label" for="c-subject">Subject *</label>
+    <input class="form-control" type="text" id="c-subject" name="subject" required placeholder="How can we help?" />
+  </div>
+  <div class="form-group">
+    <label class="form-label" for="c-message">Message *</label>
+    <textarea class="form-control" id="c-message" name="message" rows="5" required placeholder="Write your message here..."></textarea>
+  </div>
+  <button type="submit" class="btn btn--primary w-full" id="contact-submit">
+    Send Message &rarr;
+  </button>
+</form>
+
+<script>
+const form = document.getElementById('contact-form') as HTMLFormElement;
+const successMsg = document.getElementById('contact-success')!;
+const errorMsg = document.getElementById('contact-error')!;
+const submitBtn = document.getElementById('contact-submit') as HTMLButtonElement;
+
+form?.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Sending...';
+  const fd = new FormData(form);
+  fd.set('formType', 'contact');
+  try {
+    const res = await fetch('/api/contact', { method: 'POST', body: fd });
+    if (res.ok) {
+      form.reset();
+      successMsg.style.display = 'block';
+      errorMsg.style.display = 'none';
+      successMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    } else {
+      errorMsg.style.display = 'block';
+    }
+  } catch {
+    errorMsg.style.display = 'block';
+  } finally {
+    submitBtn.disabled = false;
+    submitBtn.textContent = 'Send Message →';
+  }
+});
+</script>

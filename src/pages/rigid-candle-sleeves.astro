@@ -1,0 +1,202 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import QuoteForm from '../components/QuoteForm.astro';
+
+const productSchema = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Rigid Candle Sleeves",
+  "description": "Custom rigid candle sleeves made from thick chipboard for maximum structural integrity and premium shelf presence. The choice of luxury and high-end retail candle brands.",
+  "brand": { "@type": "Brand", "name": "The Candle Sleeves" },
+  "offers": { "@type": "Offer", "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What thickness of rigid board is available for candle sleeves?",
+      "acceptedAnswer": { "@type": "Answer", "text": "We offer rigid chipboard from 1.0mm to 3.0mm for candle sleeve applications. The most popular thicknesses for premium candle brands are 1.5mm and 2.0mm, which provide an excellent balance of rigidity and weight." }
+    },
+    {
+      "@type": "Question",
+      "name": "How is rigid candle packaging different from standard cardboard?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Rigid packaging uses thick chipboard (1mm+ thickness) compared to the thinner, flexible cardboard (0.3–0.45mm) of standard sleeves. Rigid sleeves do not flex or fold — they hold their shape permanently, conveying a substantially more premium, substantive product quality." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can rigid candle sleeves be printed and finished?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Rigid chipboard is wrapped with a printed paper or board liner, allowing full-color printing, foil stamping, embossing, and all premium finish options. The result is structural rigidity with a beautifully finished exterior." }
+    },
+    {
+      "@type": "Question",
+      "name": "Are rigid candle sleeves suitable for shipping?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Rigid sleeves provide excellent product protection and structural integrity for both retail and shipping applications. For e-commerce shipping, they should be placed inside a suitable outer shipping carton for maximum transit protection." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the minimum order for rigid candle sleeves?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Rigid candle sleeves are more labor-intensive to produce than standard sleeves, which typically means higher minimum quantities than flexible cardboard options. Please contact us for specific minimum quantities based on your project specifications." }
+    }
+  ]
+};
+---
+
+<Layout
+  title="Rigid Candle Sleeves | Solid & Premium Construction | The Candle Sleeves"
+  description="Custom rigid candle sleeves for premium retail display. Thick chipboard construction, custom printing, and luxury finishes. Contact The Candle Sleeves for a free quote."
+  canonical="https://thecandlesleeves.com/rigid-candle-sleeves"
+  schema={[productSchema, faqSchema]}
+>
+  <div class="container section--sm">
+    <Breadcrumbs crumbs={[{label:'Home',href:'/'},{label:'Products',href:'/products'},{label:'Rigid Candle Sleeves'}]} />
+  </div>
+
+  <section class="section section--cream">
+    <div class="container">
+      <div class="product-layout">
+        <div class="product-image-wrap">
+          <img src="/images/products/candle-gift-sleeves.jpg" alt="Premium rigid candle sleeves with thick chipboard construction" width="600" height="600" />
+        </div>
+        <div class="product-info">
+          <span class="section-label">Premium Construction</span>
+          <h1>Rigid Candle Sleeves</h1>
+          <p style="font-size:1.1rem;color:var(--gray);margin-bottom:1.5rem;">When your candle brand demands packaging with unyielding substance and permanent premium presence, rigid candle sleeves are the answer. Constructed from thick chipboard that holds its shape without compression or flex, rigid sleeves communicate luxury at the tactile level — the moment a customer picks one up, the weight and firmness tell them everything they need to know about what's inside.</p>
+          <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+            <a href="/quote" class="btn btn--primary">Get a Free Quote &rarr;</a>
+            <a href="/products" class="btn btn--outline">View All Products</a>
+          </div>
+          <div style="margin-top:2rem;display:flex;flex-direction:column;gap:0.5rem;">
+            <div style="font-size:0.9rem;color:var(--gray);">&#10003;&nbsp; 1.0mm – 3.0mm chipboard options</div>
+            <div style="font-size:0.9rem;color:var(--gray);">&#10003;&nbsp; Wrapped with premium printed liner</div>
+            <div style="font-size:0.9rem;color:var(--gray);">&#10003;&nbsp; Foil, embossing &amp; all premium finishes</div>
+            <div style="font-size:0.9rem;color:var(--gray);">&#10003;&nbsp; Never bends, holds shape permanently</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container container--narrow">
+      <h2>Why Rigid Construction Elevates Candle Packaging</h2>
+      <p>The physical experience of handling a product is among the most powerful influences on purchase decisions and brand perception. A rigid candle sleeve that feels solid and substantial in the hand communicates investment, quality, and confidence in the product inside — before a single word of copy is read. This is the fundamental reason why the world's most prestigious brands, from luxury perfumers to high-end department store exclusives, use rigid packaging as their primary format.</p>
+      <p>Rigid candle sleeves are constructed from thick grey chipboard (the same material used in hardcover book construction) wrapped with a high-quality printed paper or board liner. The chipboard provides the structural backbone — the permanent, unwavering shape that never compresses, bends, or distorts. The wrapper provides the visual canvas — full-color printing, luxury finishes, foil accents, and tactile coatings that express your brand's visual identity.</p>
+
+      <h2>Structural Design for Rigid Candle Sleeves</h2>
+      <p>The construction of rigid candle sleeves requires a more complex structural engineering approach than flexible cardboard. The chipboard core must be precisely scored and formed to create clean, sharp corners and edges. The wrapper paper must be cut, folded, and adhered with precision to create a perfectly smooth, wrinkle-free exterior. This additional construction complexity is why rigid sleeves require more production time and investment — but the result, a finished sleeve that presents like a luxury accessory rather than mere packaging, fully justifies that investment for the right brand positioning.</p>
+    </div>
+  </section>
+
+  <section class="section section--beige">
+    <div class="container">
+      <h2 class="text-center section-title">The Case for Rigid Candle Sleeves</h2>
+      <div class="grid-3" style="margin-top:2rem;">
+        <div class="icon-box" style="flex-direction:column;background:var(--white);border-radius:var(--radius-lg);padding:1.75rem;box-shadow:var(--shadow);">
+          <div class="icon-box__icon" style="margin-bottom:1rem;">&#128293;</div>
+          <div class="icon-box__title">Permanent Shape Retention</div>
+          <div class="icon-box__text">Rigid sleeves never flex, compress, or distort — maintaining perfect shape from production through retail display, delivery, and customer use, consistently presenting your brand at its best.</div>
+        </div>
+        <div class="icon-box" style="flex-direction:column;background:var(--white);border-radius:var(--radius-lg);padding:1.75rem;box-shadow:var(--shadow);">
+          <div class="icon-box__icon" style="margin-bottom:1rem;">&#11088;</div>
+          <div class="icon-box__title">Unmistakable Premium Feel</div>
+          <div class="icon-box__text">The weight and firmness of thick chipboard construction communicates premium quality at the tactile level — the most instinctive and powerful form of product perception.</div>
+        </div>
+        <div class="icon-box" style="flex-direction:column;background:var(--white);border-radius:var(--radius-lg);padding:1.75rem;box-shadow:var(--shadow);">
+          <div class="icon-box__icon" style="margin-bottom:1rem;">&#127775;</div>
+          <div class="icon-box__title">Full Luxury Finishing</div>
+          <div class="icon-box__text">The wrapped liner accepts all premium finishes — foil stamping, embossing, soft-touch coating, spot UV — for a complete luxury packaging specification on a premium structural foundation.</div>
+        </div>
+        <div class="icon-box" style="flex-direction:column;background:var(--white);border-radius:var(--radius-lg);padding:1.75rem;box-shadow:var(--shadow);">
+          <div class="icon-box__icon" style="margin-bottom:1rem;">&#128230;</div>
+          <div class="icon-box__title">Superior Product Protection</div>
+          <div class="icon-box__text">The rigid construction provides excellent protection for fragile glass candle containers — preventing damage from compression during stacking, shipping, and retail handling.</div>
+        </div>
+        <div class="icon-box" style="flex-direction:column;background:var(--white);border-radius:var(--radius-lg);padding:1.75rem;box-shadow:var(--shadow);">
+          <div class="icon-box__icon" style="margin-bottom:1rem;">&#128873;</div>
+          <div class="icon-box__title">Collector & Gift Appeal</div>
+          <div class="icon-box__text">Rigid packaging is often retained and reused by customers long after the candle is finished — extending your brand's physical presence in the customer's home or office.</div>
+        </div>
+        <div class="icon-box" style="flex-direction:column;background:var(--white);border-radius:var(--radius-lg);padding:1.75rem;box-shadow:var(--radius-lg);box-shadow:var(--shadow);">
+          <div class="icon-box__icon" style="margin-bottom:1rem;">&#127914;</div>
+          <div class="icon-box__title">Standout Retail Presence</div>
+          <div class="icon-box__text">On a retail shelf, rigid packaging visually and physically stands apart from flexible alternatives — dominating its section and inviting premium purchase consideration from the right customer.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--cream">
+    <div class="container container--narrow">
+      <h2>Specifications</h2>
+      <table class="spec-table">
+        <thead>
+          <tr><th>Specification</th><th>Details</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Core Material</td><td>Grey chipboard 1.0mm, 1.5mm, 2.0mm, 2.5mm, 3.0mm</td></tr>
+          <tr><td>Wrapper Material</td><td>Premium coated paper or board, kraft-faced options</td></tr>
+          <tr><td>Printing</td><td>Full-color CMYK on wrapper, Pantone matching</td></tr>
+          <tr><td>Finishes</td><td>Matte, gloss, soft-touch, spot UV, foil stamping, embossing</td></tr>
+          <tr><td>Closure Options</td><td>Tuck-end, magnetic, ribbon pull, bespoke</td></tr>
+          <tr><td>Sizing</td><td>Fully custom to your product dimensions</td></tr>
+          <tr><td>Production Time</td><td>10 – 15 business days after artwork approval</td></tr>
+          <tr><td>Delivery</td><td>Nationwide USA</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container container--narrow">
+      <h2>Rigid Sleeves in the Context of Your Range</h2>
+      <p>Rigid candle sleeves represent the pinnacle of our structural packaging range, sitting above our <a href="/cardboard-candle-sleeves" class="internal-link">cardboard candle sleeves</a> in weight, permanence, and premium positioning. They are the natural partner to our <a href="/luxury-candle-sleeves" class="internal-link">luxury candle sleeves</a> finishing program and our <a href="/black-candle-sleeves" class="internal-link">black candle sleeves</a> for dramatic retail impact. For brands building a comprehensive premium packaging system across multiple product lines, visit <a href="/" class="internal-link">The Candle Sleeves</a> to discuss a complete packaging consultation.</p>
+    </div>
+  </section>
+
+  <section class="section section--cream">
+    <div class="container container--narrow">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-item">
+        <div class="faq-question">What thickness of rigid board is available?</div>
+        <div class="faq-answer">We offer chipboard from 1.0mm to 3.0mm. The most popular thicknesses for premium candle brands are 1.5mm and 2.0mm, offering an excellent balance of rigidity, weight, and cost.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">How is rigid packaging different from standard cardboard?</div>
+        <div class="faq-answer">Rigid packaging uses thick chipboard (1mm+) compared to the thinner, flexible cardboard (0.3–0.45mm) of standard sleeves. Rigid sleeves hold their shape permanently — they do not flex, fold, or compress.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Can rigid candle sleeves be printed and finished?</div>
+        <div class="faq-answer">Yes. The rigid core is wrapped with a printed liner, allowing full-color printing, foil stamping, embossing, soft-touch coating, and all premium finishes available across our product range.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Are rigid sleeves suitable for shipping?</div>
+        <div class="faq-answer">Rigid sleeves protect well against compression and handling damage. For e-commerce, we recommend placing them inside a suitable outer shipping carton for complete transit protection.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">What is the minimum order quantity?</div>
+        <div class="faq-answer">Rigid sleeves are more labor-intensive to produce, which typically means higher minimum quantities than flexible sleeves. Contact us for specifics based on your project dimensions and specifications.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-banner">
+    <div class="container text-center">
+      <h2>Build a Candle Brand That Stands Firm</h2>
+      <p>Request a free rigid candle sleeve quote and discover the difference that genuine structural premium makes to your brand's presence.</p>
+      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+        <a href="/quote" class="btn btn--dark" style="background:white;color:var(--gold-dark);">Request Free Quote &rarr;</a>
+        <a href="/contact" class="btn btn--outline">Contact Our Specialists</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--cream" id="quote">
+    <div class="container container--narrow">
+      <QuoteForm title="Get Your Rigid Candle Sleeve Quote" subtitle="Tell us about your product dimensions and packaging vision. We'll respond with a full quote within 24 hours." />
+    </div>
+  </section>
+</Layout>

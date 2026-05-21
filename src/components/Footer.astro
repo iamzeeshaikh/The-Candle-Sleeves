@@ -1,0 +1,149 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer class="footer">
+  <div class="footer__top">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="/" class="footer__logo">
+            <span class="footer__logo-icon">&#9670;</span>
+            <span>The Candle<br><em>Sleeves</em></span>
+          </a>
+          <p class="footer__brand-desc">
+            Premium custom candle sleeve packaging for candle brands across the United States. Quality craftsmanship, fast turnaround, and unmatched print quality.
+          </p>
+          <div class="footer__contact">
+            <a href="mailto:Info@thecandlesleeves.com">&#9993; Info@thecandlesleeves.com</a>
+            <a href="tel:+15033580443">&#9742; (503) 358-0443</a>
+            <p>&#9679; 2975 Coburn Hollow Road, Bloomington, IL 61701</p>
+          </div>
+        </div>
+
+        <div class="footer__col">
+          <h4>Products</h4>
+          <ul>
+            <li><a href="/black-candle-sleeves">Black Candle Sleeves</a></li>
+            <li><a href="/candle-gift-sleeves">Candle Gift Sleeves</a></li>
+            <li><a href="/candle-jar-sleeves">Candle Jar Sleeves</a></li>
+            <li><a href="/cardboard-candle-sleeves">Cardboard Candle Sleeves</a></li>
+            <li><a href="/corrugated-candle-sleeves">Corrugated Candle Sleeves</a></li>
+            <li><a href="/die-cut-candle-sleeves">Die Cut Candle Sleeves</a></li>
+            <li><a href="/eco-friendly-candle-sleeves">Eco Friendly Sleeves</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4>More Products</h4>
+          <ul>
+            <li><a href="/kraft-candle-sleeves">Kraft Candle Sleeves</a></li>
+            <li><a href="/luxury-candle-sleeves">Luxury Candle Sleeves</a></li>
+            <li><a href="/printed-candle-sleeves">Printed Candle Sleeves</a></li>
+            <li><a href="/rigid-candle-sleeves">Rigid Candle Sleeves</a></li>
+            <li><a href="/shipping-candle-sleeves">Shipping Candle Sleeves</a></li>
+            <li><a href="/white-candle-sleeves">White Candle Sleeves</a></li>
+            <li><a href="/window-candle-sleeves">Window Candle Sleeves</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/products">All Products</a></li>
+            <li><a href="/quote">Get a Quote</a></li>
+            <li><a href="/contact">Contact Us</a></li>
+            <li><a href="/privacy-policy">Privacy Policy</a></li>
+            <li><a href="/terms-and-conditions">Terms &amp; Conditions</a></li>
+            <li><a href="/shipping-policy">Shipping Policy</a></li>
+            <li><a href="/refund-policy">Refund Policy</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer__bottom">
+    <div class="container">
+      <p>&copy; {year} The Candle Sleeves. All rights reserved. | Bloomington, IL 61701</p>
+      <div class="footer__legal">
+        <a href="/privacy-policy">Privacy Policy</a>
+        <a href="/terms-and-conditions">Terms &amp; Conditions</a>
+        <a href="/sitemap-index.xml">Sitemap</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+.footer { background: var(--black); color: var(--cream); }
+.footer__top { padding: 4rem 0; }
+.footer__grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 3rem;
+}
+@media(max-width:900px){ .footer__grid { grid-template-columns: 1fr 1fr; gap: 2rem; } }
+@media(max-width:580px){ .footer__grid { grid-template-columns: 1fr; } }
+
+.footer__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+  margin-bottom: 1rem;
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.3;
+}
+.footer__logo em { color: var(--gold-light); font-style: italic; }
+.footer__logo-icon { color: var(--gold); font-size: 1.6rem; }
+.footer__brand-desc { font-size: 0.875rem; color: rgba(250,246,239,0.7); line-height: 1.65; margin-bottom: 1.25rem; }
+.footer__contact { display: flex; flex-direction: column; gap: 0.5rem; }
+.footer__contact a, .footer__contact p {
+  font-size: 0.85rem;
+  color: rgba(250,246,239,0.8);
+  text-decoration: none;
+  margin: 0;
+  transition: color var(--transition);
+}
+.footer__contact a:hover { color: var(--gold-light); }
+
+.footer__col h4 {
+  color: var(--gold-light);
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.footer__col ul { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 0.5rem; }
+.footer__col a {
+  font-size: 0.875rem;
+  color: rgba(250,246,239,0.75);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+.footer__col a:hover { color: var(--gold-light); }
+
+.footer__bottom {
+  border-top: 1px solid rgba(250,246,239,0.1);
+  padding: 1.5rem 0;
+}
+.footer__bottom .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.footer__bottom p { font-size: 0.82rem; color: rgba(250,246,239,0.55); margin: 0; }
+.footer__legal { display: flex; gap: 1.5rem; }
+.footer__legal a { font-size: 0.82rem; color: rgba(250,246,239,0.55); text-decoration: none; }
+.footer__legal a:hover { color: var(--gold-light); }
+</style>

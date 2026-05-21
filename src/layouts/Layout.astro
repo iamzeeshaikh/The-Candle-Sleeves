@@ -1,0 +1,141 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import WhatsAppButton from '../components/WhatsAppButton.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+  ogImage?: string;
+  schema?: object | object[];
+  noindex?: boolean;
+}
+
+const {
+  title,
+  description,
+  canonical,
+  ogImage = '/images/og-default.jpg',
+  schema,
+  noindex = false,
+} = Astro.props;
+
+const canonicalURL = canonical || new URL(Astro.url.pathname, 'https://thecandlesleeves.com').href;
+const schemaArray = schema ? (Array.isArray(schema) ? schema : [schema]) : [];
+
+const baseSchemas = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "The Candle Sleeves",
+    "url": "https://thecandlesleeves.com",
+    "logo": "https://thecandlesleeves.com/images/logo.png",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-503-358-0443",
+      "contactType": "customer service",
+      "email": "Info@thecandlesleeves.com"
+    },
+    "sameAs": []
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "The Candle Sleeves",
+    "image": "https://thecandlesleeves.com/images/og-default.jpg",
+    "telephone": "+1-503-358-0443",
+    "email": "Info@thecandlesleeves.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "2975 Coburn Hollow Road",
+      "addressLocality": "Bloomington",
+      "addressRegion": "IL",
+      "postalCode": "61701",
+      "addressCountry": "US"
+    },
+    "url": "https://thecandlesleeves.com",
+    "priceRange": "$$"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "The Candle Sleeves",
+    "url": "https://thecandlesleeves.com",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://thecandlesleeves.com/products?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  },
+  ...schemaArray
+];
+---
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  {noindex && <meta name="robots" content="noindex, nofollow" />}
+  {!noindex && <meta name="robots" content="index, follow" />}
+  <link rel="canonical" href={canonicalURL} />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={canonicalURL} />
+  <meta property="og:image" content={`https://thecandlesleeves.com${ogImage}`} />
+  <meta property="og:site_name" content="The Candle Sleeves" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={`https://thecandlesleeves.com${ogImage}`} />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Sitemap -->
+  <link rel="sitemap" href="/sitemap-index.xml" />
+
+  <!-- Schema -->
+  {baseSchemas.map(s => (
+    <script type="application/ld+json" set:html={JSON.stringify(s)} />
+  ))}
+
+  <!-- Zendesk Chat -->
+  <script type="text/javascript" is:inline>
+  window.$zopim||(function(d,s){var z=$zopim=function(c){
+  z._.push(c)},$=z.s=
+  d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
+  _.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute('charset','utf-8');
+  $.src='https://v2.zopim.com/?4h3lbyJihoT1mCOqDA0VoQOaVQE9qTOP';z.t=+new Date;$.
+  type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
+  </script>
+</head>
+<body>
+  <Header />
+  <main>
+    <slot />
+  </main>
+  <Footer />
+  <WhatsAppButton />
+</body>
+</html>
+
+<style is:global>
+  @import '../styles/global.css';
+</style>

@@ -1,0 +1,203 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import QuoteForm from '../components/QuoteForm.astro';
+
+const productSchema = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Corrugated Candle Sleeves",
+  "description": "Heavy-duty corrugated candle sleeves for safe shipping and transit protection. Custom printed with brand graphics for a branded unboxing experience.",
+  "brand": { "@type": "Brand", "name": "The Candle Sleeves" },
+  "offers": { "@type": "Offer", "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do corrugated candle sleeves protect candles in shipping?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Corrugated board contains a wavy inner flute layer sandwiched between two flat liner sheets. This structure absorbs impact forces, resists compression, and provides insulation — protecting glass candle jars from breakage during transit." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can corrugated candle sleeves be custom printed?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. We offer full-color flexographic and digital printing directly on corrugated candle sleeves. You can print your logo, brand colors, product information, and design elements directly on the sleeve for a professional branded appearance." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between single-wall and double-wall corrugated sleeves?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Single-wall corrugated has one fluted layer and is lighter, suitable for standard shipping of most candle products. Double-wall has two fluted layers for greater strength and cushioning — ideal for heavy glass jars, long-distance shipping, or fragile luxury candles." }
+    },
+    {
+      "@type": "Question",
+      "name": "Are corrugated candle sleeves suitable for retail display as well as shipping?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Corrugated sleeves are primarily engineered for shipping and transit protection. For retail shelf display, we recommend our cardboard or rigid candle sleeve options, which offer a more premium visual appearance suited to retail environments." }
+    },
+    {
+      "@type": "Question",
+      "name": "How quickly can corrugated candle sleeves be produced?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Standard production is 7 to 12 business days after artwork approval. Rush turnaround options may be available — contact us to discuss your timeline requirements." }
+    }
+  ]
+};
+---
+
+<Layout
+  title="Corrugated Candle Sleeves | Heavy-Duty Protection | The Candle Sleeves"
+  description="Heavy-duty corrugated candle sleeves for safe shipping and retail display. Custom printed, fast turnaround, nationwide USA delivery. Request a free quote today."
+  canonical="https://thecandlesleeves.com/corrugated-candle-sleeves"
+  schema={[productSchema, faqSchema]}
+>
+  <div class="container section--sm">
+    <Breadcrumbs crumbs={[{label:'Home',href:'/'},{label:'Products',href:'/products'},{label:'Corrugated Candle Sleeves'}]} />
+  </div>
+
+  <section class="section section--cream">
+    <div class="container">
+      <div class="product-layout">
+        <div class="product-image-wrap">
+          <img src="/images/products/corrugated-candle-sleeves.jpg" alt="Heavy-duty corrugated candle sleeves for shipping protection" width="600" height="600" />
+        </div>
+        <div class="product-info">
+          <span class="section-label">Custom Packaging</span>
+          <h1>Corrugated Candle Sleeves</h1>
+          <p style="font-size:1.1rem;color:var(--gray);margin-bottom:1.5rem;">Built for the rigors of real-world shipping, our corrugated candle sleeves provide exceptional protection for your glass candle jars in transit — without sacrificing your brand's visual identity. The unique fluted structure of corrugated board absorbs impacts, resists compression, and keeps your candles safe across any shipping distance.</p>
+          <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+            <a href="/quote" class="btn btn--primary">Get a Free Quote &rarr;</a>
+            <a href="/products" class="btn btn--outline">View All Products</a>
+          </div>
+          <div style="margin-top:2rem;display:flex;flex-direction:column;gap:0.5rem;">
+            <div style="font-size:0.9rem;color:var(--gray);">&#10003;&nbsp; Single and double-wall options</div>
+            <div style="font-size:0.9rem;color:var(--gray);">&#10003;&nbsp; Custom brand printing</div>
+            <div style="font-size:0.9rem;color:var(--gray);">&#10003;&nbsp; Impact and compression resistant</div>
+            <div style="font-size:0.9rem;color:var(--gray);">&#10003;&nbsp; Recyclable material</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container container--narrow">
+      <h2>Engineering Protection into Every Candle Shipment</h2>
+      <p>The corrugated structure has been the gold standard for protective packaging for over a century — and for excellent reason. The fluted inner layer acts as a series of small arches, distributing impact forces across the surface rather than concentrating them at a single point. This makes corrugated board significantly more impact-resistant than flat cardboard of equivalent weight. For candle brands shipping fragile glass jars through e-commerce channels, corrugated sleeves are an essential layer of protection against the inevitable bumps and drops of courier delivery.</p>
+      <p>Our corrugated candle sleeves are available in both single-wall and double-wall configurations. Single-wall (one fluted layer) is the right choice for most standard candle jar shipping applications. Double-wall (two fluted layers) provides superior protection for heavy jars, long-distance or international shipping, or particularly fragile luxury candle products where breakage cannot be tolerated.</p>
+
+      <h2>Branded Corrugated Sleeves for E-Commerce Candle Brands</h2>
+      <p>Corrugated packaging used to mean plain brown boxes — but today's e-commerce brands know better. Your shipping packaging is part of your brand experience, and the unboxing moment matters. Our custom-printed corrugated candle sleeves allow you to bring full brand graphics, colors, and messaging to your shipping packaging. When customers receive a beautifully branded corrugated sleeve, it reinforces brand quality and creates a shareable, memorable unboxing experience that can drive organic social media attention.</p>
+    </div>
+  </section>
+
+  <section class="section section--beige">
+    <div class="container">
+      <h2 class="text-center section-title">Benefits of Corrugated Candle Sleeves</h2>
+      <div class="grid-3" style="margin-top:2rem;">
+        <div class="icon-box" style="flex-direction:column;background:var(--white);border-radius:var(--radius-lg);padding:1.75rem;box-shadow:var(--shadow);">
+          <div class="icon-box__icon" style="margin-bottom:1rem;">&#128293;</div>
+          <div class="icon-box__title">Superior Impact Protection</div>
+          <div class="icon-box__text">The fluted structure absorbs and distributes impact forces, dramatically reducing the risk of glass breakage during courier shipping and transit handling.</div>
+        </div>
+        <div class="icon-box" style="flex-direction:column;background:var(--white);border-radius:var(--radius-lg);padding:1.75rem;box-shadow:var(--shadow);">
+          <div class="icon-box__icon" style="margin-bottom:1rem;">&#128230;</div>
+          <div class="icon-box__title">E-Commerce Ready</div>
+          <div class="icon-box__text">Designed for the challenges of modern courier delivery — withstanding compression, stacking, and repeated handling while keeping your candles pristine.</div>
+        </div>
+        <div class="icon-box" style="flex-direction:column;background:var(--white);border-radius:var(--radius-lg);padding:1.75rem;box-shadow:var(--shadow);">
+          <div class="icon-box__icon" style="margin-bottom:1rem;">&#127773;</div>
+          <div class="icon-box__title">Custom Brand Printing</div>
+          <div class="icon-box__text">Full-color printing on corrugated turns functional shipping packaging into a branded experience that communicates quality from the moment the box is opened.</div>
+        </div>
+        <div class="icon-box" style="flex-direction:column;background:var(--white);border-radius:var(--radius-lg);padding:1.75rem;box-shadow:var(--shadow);">
+          <div class="icon-box__icon" style="margin-bottom:1rem;">&#127807;</div>
+          <div class="icon-box__title">Eco-Friendly & Recyclable</div>
+          <div class="icon-box__text">Corrugated board is one of the most widely recycled packaging materials, with high post-consumer recycled content options available for eco-conscious brands.</div>
+        </div>
+        <div class="icon-box" style="flex-direction:column;background:var(--white);border-radius:var(--radius-lg);padding:1.75rem;box-shadow:var(--shadow);">
+          <div class="icon-box__icon" style="margin-bottom:1rem;">&#9881;</div>
+          <div class="icon-box__title">Lightweight Efficiency</div>
+          <div class="icon-box__text">Corrugated delivers excellent strength-to-weight ratio, providing superior protection without adding excessive weight that inflates shipping costs.</div>
+        </div>
+        <div class="icon-box" style="flex-direction:column;background:var(--white);border-radius:var(--radius-lg);padding:1.75rem;box-shadow:var(--shadow);">
+          <div class="icon-box__icon" style="margin-bottom:1rem;">&#128200;</div>
+          <div class="icon-box__title">Reduces Returns & Breakage</div>
+          <div class="icon-box__text">Better protection means fewer broken products, fewer returns, lower replacement costs, and a dramatically improved customer experience.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--cream">
+    <div class="container container--narrow">
+      <h2>Specifications</h2>
+      <table class="spec-table">
+        <thead>
+          <tr><th>Specification</th><th>Details</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Board Type</td><td>Single-wall (B/E flute), Double-wall (BC flute)</td></tr>
+          <tr><td>Liner Material</td><td>Kraft liner, white-top liner, recycled liner</td></tr>
+          <tr><td>Printing</td><td>Flexographic, digital (full-color available)</td></tr>
+          <tr><td>Print Area</td><td>Exterior surfaces, interior printing available on request</td></tr>
+          <tr><td>Sustainability</td><td>Recyclable, FSC-certified &amp; recycled content options</td></tr>
+          <tr><td>Sizing</td><td>Custom to your candle jar dimensions</td></tr>
+          <tr><td>Production Time</td><td>7 – 12 business days after artwork approval</td></tr>
+          <tr><td>Delivery</td><td>Nationwide USA</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container container--narrow">
+      <h2>When to Choose Corrugated vs. Other Sleeve Types</h2>
+      <p>Corrugated candle sleeves are the right choice when your primary concern is transit protection — particularly for e-commerce shipping, subscription box dispatch, or wholesale bulk delivery. For retail shelf display, where visual premium appearance matters most, consider our <a href="/cardboard-candle-sleeves" class="internal-link">cardboard candle sleeves</a> or <a href="/rigid-candle-sleeves" class="internal-link">rigid candle sleeves</a>. For brands looking for a combination of shipping protection and premium appearance, our <a href="/shipping-candle-sleeves" class="internal-link">shipping candle sleeves</a> offer engineered transit solutions with branded presentation.</p>
+      <p>Browse all products at <a href="/products" class="internal-link">The Candle Sleeves product range</a> to find the right solution for your specific use case, or <a href="/" class="internal-link">visit our homepage</a> for an overview of our complete offering.</p>
+    </div>
+  </section>
+
+  <section class="section section--cream">
+    <div class="container container--narrow">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-item">
+        <div class="faq-question">How do corrugated candle sleeves protect candles in shipping?</div>
+        <div class="faq-answer">The fluted inner layer absorbs impact forces and resists compression — protecting glass candle jars from breakage during courier transit, drops, and stacking.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Can corrugated candle sleeves be custom printed?</div>
+        <div class="faq-answer">Yes. We offer full-color flexographic and digital printing directly on corrugated sleeves. Print your logo, brand colors, product information, and design elements for a fully branded shipping experience.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">What is the difference between single-wall and double-wall?</div>
+        <div class="faq-answer">Single-wall has one fluted layer — lighter and suitable for most standard shipping. Double-wall has two fluted layers for greater strength, ideal for heavy jars or long-distance shipping.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Are corrugated sleeves suitable for retail display?</div>
+        <div class="faq-answer">Corrugated sleeves are primarily engineered for shipping protection. For retail shelf display, we recommend our cardboard or rigid candle sleeve options, which offer a more premium visual appearance.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">How quickly can they be produced?</div>
+        <div class="faq-answer">Standard production is 7 to 12 business days after artwork approval. Rush options may be available — contact us to discuss your timeline.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-banner">
+    <div class="container text-center">
+      <h2>Protect Your Candles in Transit</h2>
+      <p>Request a free quote for custom corrugated candle sleeves engineered for your exact product and shipping needs.</p>
+      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+        <a href="/quote" class="btn btn--dark" style="background:white;color:var(--gold-dark);">Request Free Quote &rarr;</a>
+        <a href="/contact" class="btn btn--outline">Contact Our Team</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--cream" id="quote">
+    <div class="container container--narrow">
+      <QuoteForm title="Get Your Corrugated Candle Sleeve Quote" subtitle="Tell us about your candle product and shipping requirements for a tailored corrugated sleeve solution." />
+    </div>
+  </section>
+</Layout>

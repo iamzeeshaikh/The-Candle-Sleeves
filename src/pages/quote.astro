@@ -1,0 +1,124 @@
+---
+import Layout from '../layouts/Layout.astro';
+import QuoteForm from '../components/QuoteForm.astro';
+---
+
+<Layout
+  title="Request a Free Custom Candle Sleeve Quote | The Candle Sleeves"
+  description="Request a free, no-obligation custom candle sleeve quote from The Candle Sleeves. Tell us your specs and we'll respond within 24 hours with competitive pricing."
+  canonical="https://thecandlesleeves.com/quote"
+>
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="section-label">Free Quote</span>
+      <h1>Request Your Custom Candle Sleeve Quote</h1>
+      <p>Tell us about your project and our packaging specialists will respond with a detailed, competitive quote within 24 hours — completely free.</p>
+    </div>
+  </section>
+
+  <!-- Quote Section -->
+  <section class="section section--cream">
+    <div class="container">
+      <div class="grid-2" style="gap:4rem;align-items:start;">
+        <!-- Form -->
+        <div>
+          <QuoteForm
+            title="Get Your Free Quote"
+            subtitle="Complete all relevant fields for the most accurate and fast quote. Our team is ready to help."
+          />
+        </div>
+
+        <!-- Sidebar -->
+        <div style="display:flex;flex-direction:column;gap:2rem;">
+          <!-- Trust badges -->
+          <div style="background:var(--white);border-radius:var(--radius-lg);padding:2rem;box-shadow:var(--shadow);">
+            <h3 style="margin-bottom:1.25rem;">Why Request a Quote with Us?</h3>
+            <div style="display:flex;flex-direction:column;gap:1.25rem;">
+              <div class="icon-box">
+                <div class="icon-box__icon">&#9889;</div>
+                <div>
+                  <div class="icon-box__title">24-Hour Response</div>
+                  <div class="icon-box__text">Every quote request is reviewed and responded to within one business day — often sooner.</div>
+                </div>
+              </div>
+              <div class="icon-box">
+                <div class="icon-box__icon">&#128200;</div>
+                <div>
+                  <div class="icon-box__title">Competitive Pricing</div>
+                  <div class="icon-box__text">We provide transparent, itemized quotes with no hidden fees or surprise charges.</div>
+                </div>
+              </div>
+              <div class="icon-box">
+                <div class="icon-box__icon">&#127775;</div>
+                <div>
+                  <div class="icon-box__title">Expert Recommendations</div>
+                  <div class="icon-box__text">Our specialists will suggest the best material and finish options for your brand vision and budget.</div>
+                </div>
+              </div>
+              <div class="icon-box">
+                <div class="icon-box__icon">&#10003;</div>
+                <div>
+                  <div class="icon-box__title">No Obligation</div>
+                  <div class="icon-box__text">Your quote is completely free with zero commitment to purchase.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Process Steps -->
+          <div style="background:var(--white);border-radius:var(--radius-lg);padding:2rem;box-shadow:var(--shadow);">
+            <h3 style="margin-bottom:1.25rem;">What Happens Next?</h3>
+            <div class="process-steps">
+              <div class="process-step">
+                <div class="step-num">1</div>
+                <div class="step-content">
+                  <h3>Submit Your Form</h3>
+                  <p>Fill in the form with your product details, quantity, and design preferences.</p>
+                </div>
+              </div>
+              <div class="process-step">
+                <div class="step-num">2</div>
+                <div class="step-content">
+                  <h3>We Review & Quote</h3>
+                  <p>A packaging specialist reviews your request and prepares a detailed quote within 24 hours.</p>
+                </div>
+              </div>
+              <div class="process-step">
+                <div class="step-num">3</div>
+                <div class="step-content">
+                  <h3>Design Consultation</h3>
+                  <p>We discuss your design, finalize specifications, and create a digital proof for your approval.</p>
+                </div>
+              </div>
+              <div class="process-step">
+                <div class="step-num">4</div>
+                <div class="step-content">
+                  <h3>Production & Delivery</h3>
+                  <p>Once approved and order placed, production begins and your candle sleeves ship nationwide.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Alternative -->
+          <div style="background:var(--beige);border-radius:var(--radius-lg);padding:1.75rem;">
+            <h3 style="margin-bottom:0.75rem;">Prefer to Talk Directly?</h3>
+            <p style="color:var(--gray);font-size:0.92rem;margin-bottom:1rem;">Our packaging specialists are available by phone or email during business hours.</p>
+            <p style="margin-bottom:0.5rem;"><strong>Phone:</strong> <a href="tel:+15033580443" class="internal-link">(503) 358-0443</a></p>
+            <p style="margin-bottom:0;"><strong>Email:</strong> <a href="mailto:Info@thecandlesleeves.com" class="internal-link">Info@thecandlesleeves.com</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Browse Products -->
+  <section class="cta-banner">
+    <div class="container text-center">
+      <h2>Browse Our Full Product Range</h2>
+      <p>Not sure which sleeve type is right for you? Explore all 14 candle sleeve products before submitting your quote.</p>
+      <a href="/products" class="btn btn--dark" style="background:white;color:var(--gold-dark);">View All Products &rarr;</a>
+    </div>
+  </section>
+</Layout>

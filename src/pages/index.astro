@@ -1,17 +1,422 @@
 ---
+import Layout from '../layouts/Layout.astro';
+import QuoteForm from '../components/QuoteForm.astro';
+import { products } from '../data/products';
 
+const featuredProducts = products.slice(0, 8);
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Custom Candle Sleeves Products",
+  "itemListElement": products.map((p, i) => ({
+    "@type": "ListItem",
+    "position": i + 1,
+    "name": p.name,
+    "url": `https://thecandlesleeves.com/${p.slug}`
+  }))
+};
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout
+  title="Custom Candle Sleeves | Premium Packaging | The Candle Sleeves"
+  description="The Candle Sleeves offers premium custom candle sleeve packaging for USA candle brands. Luxury, eco-friendly, printed & gift sleeves. Request a free quote today."
+  schema={schema}
+>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero__bg"></div>
+    <div class="container hero__inner">
+      <div class="hero__content">
+        <span class="badge badge--gold">USA's Premier Candle Packaging</span>
+        <h1>Elevate Your Candle Brand with Premium <em>Custom Sleeves</em></h1>
+        <p class="hero__sub">
+          From luxury foil-stamped gift sleeves to eco-friendly kraft wraps — we craft candle packaging that sells. Serving candle brands across the United States with precision printing and fast turnaround.
+        </p>
+        <div class="hero__cta">
+          <a href="/quote" class="btn btn--primary">Get a Free Quote &rarr;</a>
+          <a href="/products" class="btn btn--outline">View All Products</a>
+        </div>
+        <div class="hero__trust">
+          <span>&#10003; No Minimums on Custom</span>
+          <span>&#10003; Fast USA Delivery</span>
+          <span>&#10003; 100% Satisfaction</span>
+        </div>
+      </div>
+      <div class="hero__image">
+        <img src="/images/products/candle-gift-sleeves.jpg" alt="Premium custom candle gift sleeves" width="560" height="560" />
+        <div class="hero__badge-float">
+          <strong>14+</strong>
+          <span>Product Types</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="section--sm section--beige">
+    <div class="container">
+      <div class="grid-4">
+        <div class="stat-box">
+          <div class="stat-box__num">500+</div>
+          <div class="stat-box__label">Brands Served</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-box__num">14+</div>
+          <div class="stat-box__label">Sleeve Types</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-box__num">24hr</div>
+          <div class="stat-box__label">Quote Turnaround</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-box__num">100%</div>
+          <div class="stat-box__label">USA Delivery</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST STRIP -->
+  <section class="trust-strip">
+    <div class="container">
+      <div class="trust-strip__grid">
+        <div class="trust-item">
+          <span class="trust-item__icon">&#127957;</span>
+          <div>
+            <strong>Premium Materials</strong>
+            <p>Cardboard, kraft, rigid &amp; eco-friendly stocks</p>
+          </div>
+        </div>
+        <div class="trust-item">
+          <span class="trust-item__icon">&#127775;</span>
+          <div>
+            <strong>Luxury Finishing</strong>
+            <p>Foil stamping, embossing, spot UV &amp; more</p>
+          </div>
+        </div>
+        <div class="trust-item">
+          <span class="trust-item__icon">&#128230;</span>
+          <div>
+            <strong>Fast Nationwide Shipping</strong>
+            <p>Reliable delivery to all 50 US states</p>
+          </div>
+        </div>
+        <div class="trust-item">
+          <span class="trust-item__icon">&#9878;</span>
+          <div>
+            <strong>Expert Design Support</strong>
+            <p>Our packaging specialists guide every order</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS GRID -->
+  <section class="section" id="products">
+    <div class="container">
+      <div class="text-center mb-4">
+        <span class="section-label">Our Products</span>
+        <h2 class="section-title">Custom Candle Sleeve Collections</h2>
+        <p class="section-sub">
+          Whether you need <a href="/luxury-candle-sleeves" class="internal-link">luxury candle sleeves</a> for a high-end boutique or <a href="/eco-friendly-candle-sleeves" class="internal-link">eco-friendly candle sleeves</a> to match your brand values — we have the perfect solution.
+        </p>
+      </div>
+      <div class="grid-4">
+        {featuredProducts.map(product => (
+          <a href={`/${product.slug}`} class="product-card">
+            <img
+              src={product.image}
+              alt={product.name}
+              class="product-card__img"
+              width="400"
+              height="400"
+              loading="lazy"
+              onerror="this.src='/images/products/candle-gift-sleeves.jpg'"
+            />
+            <div class="product-card__body">
+              <div class="product-card__name">{product.name}</div>
+              <div class="product-card__desc">{product.description}</div>
+              <span class="product-card__link">Learn more &#8594;</span>
+            </div>
+          </a>
+        ))}
+      </div>
+      <div class="text-center mt-4">
+        <a href="/products" class="btn btn--outline">View All 14 Products &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US -->
+  <section class="section section--dark">
+    <div class="container">
+      <div class="grid-2" style="gap:4rem;align-items:center;">
+        <div>
+          <span class="section-label">Why The Candle Sleeves?</span>
+          <h2 class="section-title" style="color:var(--gold-light);">Packaging That Tells Your Brand Story</h2>
+          <p style="color:rgba(250,246,239,0.85); margin-bottom:2rem;">
+            At The Candle Sleeves, we believe packaging is the first handshake between your candle brand and your customer. Every sleeve we craft is an opportunity to create a lasting impression — and we take that seriously.
+          </p>
+          <div style="display:flex;flex-direction:column;gap:1.25rem;">
+            <div class="icon-box">
+              <div class="icon-box__icon" style="background:rgba(201,168,76,0.15);">&#127775;</div>
+              <div>
+                <div class="icon-box__title" style="color:var(--gold-light);">Unmatched Print Quality</div>
+                <div class="icon-box__text" style="color:rgba(250,246,239,0.75);">We use the latest CMYK and digital printing technology to produce vivid, color-accurate packaging every single time.</div>
+              </div>
+            </div>
+            <div class="icon-box">
+              <div class="icon-box__icon" style="background:rgba(201,168,76,0.15);">&#9881;</div>
+              <div>
+                <div class="icon-box__title" style="color:var(--gold-light);">Custom to Every Dimension</div>
+                <div class="icon-box__text" style="color:rgba(250,246,239,0.75);">From tea light sleeves to large jar wraps — we produce custom sizing so your packaging fits perfectly.</div>
+              </div>
+            </div>
+            <div class="icon-box">
+              <div class="icon-box__icon" style="background:rgba(201,168,76,0.15);">&#10003;</div>
+              <div>
+                <div class="icon-box__title" style="color:var(--gold-light);">Dedicated Account Support</div>
+                <div class="icon-box__text" style="color:rgba(250,246,239,0.75);">A real packaging expert manages your order from quote to delivery — no confusion, no delays.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <img src="/images/products/candle-jar-sleeves.jpg" alt="Custom candle jar sleeves from The Candle Sleeves" style="border-radius:var(--radius-lg);box-shadow:var(--shadow-lg);width:100%;" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MATERIALS & PRINTING OPTIONS -->
+  <section class="section section--cream">
+    <div class="container">
+      <div class="text-center mb-4">
+        <span class="section-label">Materials &amp; Finishes</span>
+        <h2 class="section-title">Premium Options for Every Brand</h2>
+        <p class="section-sub">We offer a complete range of materials and finishing options so your <a href="/printed-candle-sleeves" class="internal-link">printed candle sleeves</a> look exactly the way you envisioned.</p>
+      </div>
+      <div class="grid-2" style="gap:3rem;">
+        <div>
+          <h3 style="margin-bottom:1.25rem;">Material Options</h3>
+          <ul class="options-list">
+            <li><strong>Premium Cardboard</strong> — 300gsm to 450gsm coated board for structural strength</li>
+            <li><strong>Natural Kraft Paper</strong> — Recyclable, rustic texture for artisan brands</li>
+            <li><strong>Corrugated Board</strong> — Double-wall protection for shipping and transit</li>
+            <li><strong>Rigid Chipboard</strong> — 2mm+ board for luxury, retail-ready packaging</li>
+            <li><strong>Recycled / FSC-Certified</strong> — Sustainable options for eco-conscious brands</li>
+            <li><strong>Custom Thickness</strong> — From lightweight sleeves to heavy-duty wraps</li>
+          </ul>
+        </div>
+        <div>
+          <h3 style="margin-bottom:1.25rem;">Printing &amp; Finishing Options</h3>
+          <ul class="options-list">
+            <li><strong>Full-Color CMYK Printing</strong> — Vivid, accurate colors on every order</li>
+            <li><strong>Gold &amp; Silver Foil Stamping</strong> — Add a premium metallic accent</li>
+            <li><strong>Embossing &amp; Debossing</strong> — Tactile texture that customers can feel</li>
+            <li><strong>Spot UV Coating</strong> — Selective gloss highlights on matte backgrounds</li>
+            <li><strong>Matte &amp; Gloss Lamination</strong> — Protect and enhance your printed design</li>
+            <li><strong>Soft-Touch Coating</strong> — Velvety surface for an ultra-luxury feel</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="section">
+    <div class="container">
+      <div class="grid-2" style="gap:4rem;align-items:start;">
+        <div>
+          <span class="section-label">Our Process</span>
+          <h2 class="section-title">From Quote to Delivery in 4 Simple Steps</h2>
+          <p style="color:var(--gray);margin-bottom:2rem;">We've simplified the custom packaging journey so you can focus on your candle business while we handle everything else.</p>
+          <a href="/quote" class="btn btn--primary">Start Your Order &rarr;</a>
+        </div>
+        <div class="process-steps">
+          <div class="process-step">
+            <div class="step-num">1</div>
+            <div class="step-content">
+              <h3>Request a Free Quote</h3>
+              <p>Fill in our simple quote form with your product details, quantity, and design preferences. We respond within 24 hours.</p>
+            </div>
+          </div>
+          <div class="process-step">
+            <div class="step-num">2</div>
+            <div class="step-content">
+              <h3>Design &amp; Approve Your Artwork</h3>
+              <p>Our design team creates a digital proof of your packaging. You review, request revisions, and approve before we print.</p>
+            </div>
+          </div>
+          <div class="process-step">
+            <div class="step-num">3</div>
+            <div class="step-content">
+              <h3>Production &amp; Quality Check</h3>
+              <p>Your candle sleeves are produced with precision. Every order goes through a rigorous quality inspection before shipping.</p>
+            </div>
+          </div>
+          <div class="process-step">
+            <div class="step-num">4</div>
+            <div class="step-content">
+              <h3>Fast Delivery to Your Door</h3>
+              <p>Your order is carefully packed and shipped nationwide. Tracking information is provided so you know exactly when it arrives.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="section section--beige">
+    <div class="container">
+      <div class="text-center mb-4">
+        <span class="section-label">Customer Reviews</span>
+        <h2 class="section-title">Trusted by Candle Brands Across the USA</h2>
+      </div>
+      <div class="grid-3">
+        <div class="testimonial">
+          <p class="testimonial__text">"The quality of our <a href="/kraft-candle-sleeves" class="internal-link">kraft candle sleeves</a> exceeded every expectation. The print was flawless and delivery was faster than promised."</p>
+          <div class="testimonial__author">Sarah M.</div>
+          <div class="testimonial__role">Founder, Bloom Candle Co. — Portland, OR</div>
+        </div>
+        <div class="testimonial">
+          <p class="testimonial__text">"We switched to The Candle Sleeves for our holiday line and the <a href="/luxury-candle-sleeves" class="internal-link">luxury packaging</a> absolutely elevated our gift sets. Customers loved the unboxing."</p>
+          <div class="testimonial__author">James R.</div>
+          <div class="testimonial__role">Owner, Ember &amp; Oak — Austin, TX</div>
+        </div>
+        <div class="testimonial">
+          <p class="testimonial__text">"Professional, responsive, and the <a href="/eco-friendly-candle-sleeves" class="internal-link">eco-friendly sleeves</a> perfectly aligned with our sustainability values. Couldn't be happier."</p>
+          <div class="testimonial__author">Priya L.</div>
+          <div class="testimonial__role">Creative Director, Green Wick Studio — Seattle, WA</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION -->
+  <section class="section">
+    <div class="container container--narrow">
+      <div class="text-center mb-4">
+        <span class="section-label">FAQs</span>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-question">What is the minimum order quantity for custom candle sleeves?</div>
+          <div class="faq-answer">We work with brands of all sizes. Our minimum order quantities vary by product type, but we strive to accommodate small-batch orders. Contact us for specifics on your required product.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">Can I get a sample before placing a bulk order?</div>
+          <div class="faq-answer">Yes. We offer physical samples and digital proofs before committing to a full production run. This ensures you're 100% satisfied with the design, material, and finish before we proceed.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">What file formats do you accept for artwork?</div>
+          <div class="faq-answer">We accept PDF, AI (Adobe Illustrator), EPS, high-resolution PNG, and JPG files. Vector formats (AI, EPS, PDF) are preferred for best print quality.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">How long does production take?</div>
+          <div class="faq-answer">Standard production takes 7–12 business days after artwork approval. Rush orders may be available — contact us to discuss your timeline.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">Do you ship nationwide across the USA?</div>
+          <div class="faq-answer">Absolutely. We deliver to all 50 US states. Shipping times vary by location, and tracking is provided for every order.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">Can I get custom sizes for my specific candle jars?</div>
+          <div class="faq-answer">Yes. All of our candle sleeves are fully custom-sized to fit your exact jar or container dimensions. We create a dieline specific to your measurements.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUOTE CTA BANNER -->
+  <section class="cta-banner">
+    <div class="container text-center">
+      <span class="badge" style="background:rgba(255,255,255,0.2);color:white;margin-bottom:1rem;">Ready to Elevate Your Brand?</span>
+      <h2>Get Your Custom Candle Sleeves Quote Today</h2>
+      <p>Tell us about your project and our packaging specialists will provide a tailored quote within 24 hours — completely free.</p>
+      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+        <a href="/quote" class="btn btn--dark" style="background:white;color:var(--gold-dark);">Request Free Quote &rarr;</a>
+        <a href="/contact" class="btn btn--outline">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUOTE FORM -->
+  <section class="section section--cream" id="quote">
+    <div class="container container--narrow">
+      <QuoteForm
+        title="Request Your Free Custom Quote"
+        subtitle="Complete the form below and a packaging specialist from The Candle Sleeves will reach out within 24 hours with a detailed, competitive quote."
+      />
+    </div>
+  </section>
+</Layout>
+
+<style>
+.hero {
+  position: relative;
+  background: linear-gradient(135deg, var(--black) 0%, var(--brown) 60%, #2a1a0e 100%);
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none'%3E%3Cg fill='%23C9A84C' fill-opacity='0.04'%3E%3Cpath d='M0 0h40v40H0V0zm40 40h40v40H40V40z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+.hero__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  padding: 5rem 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+.hero__content h1 {
+  color: var(--white);
+  margin: 1rem 0;
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+}
+.hero__content h1 em { color: var(--gold-light); font-style: italic; }
+.hero__sub { color: rgba(250,246,239,0.82); font-size: 1.05rem; line-height: 1.75; margin-bottom: 2rem; max-width: 480px; }
+.hero__cta { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.75rem; }
+.hero__trust { display: flex; gap: 1.25rem; flex-wrap: wrap; }
+.hero__trust span { font-size: 0.82rem; color: rgba(250,246,239,0.7); font-weight: 500; }
+.hero__image { position: relative; }
+.hero__image img { border-radius: var(--radius-lg); box-shadow: 0 20px 60px rgba(0,0,0,0.4); }
+.hero__badge-float {
+  position: absolute;
+  bottom: -1rem;
+  left: -1.5rem;
+  background: var(--gold);
+  color: var(--white);
+  padding: 0.85rem 1.25rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  text-align: center;
+}
+.hero__badge-float strong { display: block; font-family: var(--font-serif); font-size: 1.8rem; line-height: 1; }
+.hero__badge-float span { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; opacity: 0.9; }
+@media(max-width:768px) {
+  .hero__inner { grid-template-columns: 1fr; gap: 2.5rem; }
+  .hero__image { display: none; }
+}
+.trust-strip { background: var(--white); padding: 2rem 0; border-bottom: 1px solid var(--border); }
+.trust-strip__grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 1.5rem; }
+@media(max-width:900px){ .trust-strip__grid { grid-template-columns: repeat(2,1fr); } }
+@media(max-width:520px){ .trust-strip__grid { grid-template-columns: 1fr; } }
+.trust-item { display: flex; gap: 0.9rem; align-items: center; }
+.trust-item__icon { font-size: 1.8rem; flex-shrink: 0; }
+.trust-item strong { display: block; font-size: 0.9rem; color: var(--brown); margin-bottom: 0.15rem; }
+.trust-item p { font-size: 0.8rem; color: var(--gray); margin: 0; line-height: 1.4; }
+.options-list { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 0.75rem; }
+.options-list li { padding: 0.75rem 1rem; background: var(--white); border-radius: var(--radius); border-left: 3px solid var(--gold); font-size: 0.92rem; color: var(--gray); }
+.options-list li strong { color: var(--brown); }
+</style>

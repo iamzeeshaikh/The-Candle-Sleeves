@@ -1,0 +1,202 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import QuoteForm from '../components/QuoteForm.astro';
+
+const productSchema = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Eco Friendly Candle Sleeves",
+  "description": "Sustainable eco-friendly candle sleeves made from FSC-certified and recycled materials. Beautiful natural aesthetics for environmentally responsible candle brands.",
+  "brand": { "@type": "Brand", "name": "The Candle Sleeves" },
+  "offers": { "@type": "Offer", "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What makes candle sleeves eco-friendly?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Our eco-friendly candle sleeves use FSC-certified board sourced from responsibly managed forests, post-consumer recycled fiber content, water-based inks, and biodegradable or compostable coating options. We minimize plastic content and prioritize materials with high recyclability rates." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can eco-friendly candle sleeves still have premium print quality?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Our eco-friendly substrates support full-color printing with water-based inks that deliver excellent color accuracy and vibrancy. Eco-friendly does not mean low quality — our sustainable sleeves look and feel premium while maintaining environmental credentials." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I get FSC certification documentation for my order?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. We can provide FSC Chain of Custody documentation for orders using FSC-certified materials, which you can use to support your brand's sustainability claims and certifications." }
+    },
+    {
+      "@type": "Question",
+      "name": "Are eco-friendly candle sleeves more expensive?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Eco-friendly substrates are generally comparable in cost to standard cardboard, with some premium options (such as seed paper or specific natural fibers) carrying a modest premium. Most brands find the sustainability benefit well worth the marginal cost difference." }
+    },
+    {
+      "@type": "Question",
+      "name": "What finish options are available for eco-friendly sleeves?",
+      "acceptedAnswer": { "@type": "Answer", "text": "We offer water-based matte and satin coatings, biodegradable lamination, aqueous coating, and uncoated natural finishes. We avoid plastic-based laminates where possible, though gloss lamination can be provided on request where appearance is the priority." }
+    }
+  ]
+};
+---
+
+<Layout
+  title="Eco Friendly Candle Sleeves | Sustainable Packaging | The Candle Sleeves"
+  description="Sustainable eco-friendly candle sleeves made from FSC-certified and recycled materials. Beautiful, ethical packaging for green candle brands. Free quote available."
+  canonical="https://thecandlesleeves.com/eco-friendly-candle-sleeves"
+  schema={[productSchema, faqSchema]}
+>
+  <div class="container section--sm">
+    <Breadcrumbs crumbs={[{label:'Home',href:'/'},{label:'Products',href:'/products'},{label:'Eco Friendly Candle Sleeves'}]} />
+  </div>
+
+  <section class="section section--cream">
+    <div class="container">
+      <div class="product-layout">
+        <div class="product-image-wrap">
+          <img src="/images/products/candle-gift-sleeves.jpg" alt="Eco-friendly candle sleeves made from sustainable materials" width="600" height="600" />
+        </div>
+        <div class="product-info">
+          <span class="section-label">Sustainable Packaging</span>
+          <h1>Eco Friendly Candle Sleeves</h1>
+          <p style="font-size:1.1rem;color:var(--gray);margin-bottom:1.5rem;">For brands whose values extend beyond the product to the planet, our eco-friendly candle sleeves provide a beautiful, sustainable packaging solution without compromise. Made from FSC-certified board, post-consumer recycled fiber, and printed with water-based inks, these sleeves allow you to tell an authentic environmental story that resonates with today's conscientious consumer.</p>
+          <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+            <a href="/quote" class="btn btn--primary">Get a Free Quote &rarr;</a>
+            <a href="/products" class="btn btn--outline">View All Products</a>
+          </div>
+          <div style="margin-top:2rem;display:flex;flex-direction:column;gap:0.5rem;">
+            <div style="font-size:0.9rem;color:var(--gray);">&#10003;&nbsp; FSC-certified &amp; recycled materials</div>
+            <div style="font-size:0.9rem;color:var(--gray);">&#10003;&nbsp; Water-based, non-toxic inks</div>
+            <div style="font-size:0.9rem;color:var(--gray);">&#10003;&nbsp; Biodegradable coating options</div>
+            <div style="font-size:0.9rem;color:var(--gray);">&#10003;&nbsp; Full-color premium print quality</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container container--narrow">
+      <h2>Sustainability Is Not a Compromise — It's a Competitive Advantage</h2>
+      <p>The modern candle consumer is increasingly informed about the environmental impact of their purchasing decisions. For a significant and growing segment of the market, sustainable packaging is not optional — it is a prerequisite for purchase consideration. Brands that communicate a genuine, credible sustainability commitment through their packaging earn customer loyalty that goes beyond price sensitivity and product comparisons.</p>
+      <p>Our eco-friendly candle sleeves are designed to help your brand make that commitment visible and credible. We source FSC-certified boards from forests managed to rigorous environmental and social standards. Our recycled content options incorporate post-consumer fiber that keeps materials in use and out of landfill. Water-based printing inks eliminate the solvent emissions of conventional printing. Biodegradable coating alternatives reduce plastic content. Together, these choices create packaging that genuinely reflects your brand's environmental values.</p>
+
+      <h2>Natural Aesthetics That Communicate Your Values</h2>
+      <p>Eco-friendly packaging doesn't have to look utilitarian. Our sustainable candle sleeves range from naturally textured uncoated boards with a beautiful raw, organic feel to smooth FSC-certified stocks that support full-color printing with exceptional clarity. Natural kraft tones communicate authenticity and artisanal craft. Earthy palettes and botanical motifs printed in water-based inks create a cohesive visual identity that tells your brand's sustainability story with elegance rather than apology.</p>
+    </div>
+  </section>
+
+  <section class="section section--beige">
+    <div class="container">
+      <h2 class="text-center section-title">Why Eco-Friendly Candle Sleeves Make Business Sense</h2>
+      <div class="grid-3" style="margin-top:2rem;">
+        <div class="icon-box" style="flex-direction:column;background:var(--white);border-radius:var(--radius-lg);padding:1.75rem;box-shadow:var(--shadow);">
+          <div class="icon-box__icon" style="margin-bottom:1rem;">&#127807;</div>
+          <div class="icon-box__title">Meet Consumer Expectations</div>
+          <div class="icon-box__text">A growing majority of consumers, especially in the wellness and lifestyle sectors, actively prefer brands with genuine sustainability credentials. Eco packaging signals alignment with their values.</div>
+        </div>
+        <div class="icon-box" style="flex-direction:column;background:var(--white);border-radius:var(--radius-lg);padding:1.75rem;box-shadow:var(--shadow);">
+          <div class="icon-box__icon" style="margin-bottom:1rem;">&#128196;</div>
+          <div class="icon-box__title">FSC Chain of Custody</div>
+          <div class="icon-box__text">We provide FSC documentation for certified orders, giving you credible, verifiable sustainability claims you can communicate to customers and use in marketing.</div>
+        </div>
+        <div class="icon-box" style="flex-direction:column;background:var(--white);border-radius:var(--radius-lg);padding:1.75rem;box-shadow:var(--shadow);">
+          <div class="icon-box__icon" style="margin-bottom:1rem;">&#127760;</div>
+          <div class="icon-box__title">No Quality Sacrifice</div>
+          <div class="icon-box__text">Our eco-friendly substrates support full-color printing, premium finishes, and custom sizing — the same quality standards as our conventional packaging range.</div>
+        </div>
+        <div class="icon-box" style="flex-direction:column;background:var(--white);border-radius:var(--radius-lg);padding:1.75rem;box-shadow:var(--shadow);">
+          <div class="icon-box__icon" style="margin-bottom:1rem;">&#9855;</div>
+          <div class="icon-box__title">Reduced Carbon Footprint</div>
+          <div class="icon-box__text">Recycled fiber content significantly reduces the carbon footprint of your packaging compared to virgin fiber board — a meaningful contribution to your environmental reporting.</div>
+        </div>
+        <div class="icon-box" style="flex-direction:column;background:var(--white);border-radius:var(--radius-lg);padding:1.75rem;box-shadow:var(--shadow);">
+          <div class="icon-box__icon" style="margin-bottom:1rem;">&#128721;</div>
+          <div class="icon-box__title">Retail Compliance</div>
+          <div class="icon-box__text">Many retailers increasingly require sustainability credentials from their suppliers. FSC-certified packaging helps you meet these requirements and access eco-focused retail channels.</div>
+        </div>
+        <div class="icon-box" style="flex-direction:column;background:var(--white);border-radius:var(--radius-lg);padding:1.75rem;box-shadow:var(--shadow);">
+          <div class="icon-box__icon" style="margin-bottom:1rem;">&#128293;</div>
+          <div class="icon-box__title">Authentic Brand Story</div>
+          <div class="icon-box__text">Packaging sustainability and candle sustainability can be one cohesive brand story — supporting each other to create a powerful and differentiated market position.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--cream">
+    <div class="container container--narrow">
+      <h2>Specifications</h2>
+      <table class="spec-table">
+        <thead>
+          <tr><th>Specification</th><th>Details</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Board Options</td><td>FSC-certified coated board, 100% recycled fiber board, natural kraft</td></tr>
+          <tr><td>Recycled Content</td><td>Up to 100% post-consumer recycled fiber available</td></tr>
+          <tr><td>Printing</td><td>Water-based inks, full-color CMYK</td></tr>
+          <tr><td>Coating Options</td><td>Water-based matte, satin, aqueous, biodegradable lamination</td></tr>
+          <tr><td>Special Effects</td><td>Foil stamping (FSC-compatible options), embossing, die-cut</td></tr>
+          <tr><td>Certifications</td><td>FSC Chain of Custody documentation available</td></tr>
+          <tr><td>Sizing</td><td>Fully custom to your specifications</td></tr>
+          <tr><td>Production Time</td><td>7 – 12 business days after artwork approval</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container container--narrow">
+      <h2>Sustainable Packaging Across Our Range</h2>
+      <p>Eco-friendly credentials can be applied across our full product range. Our <a href="/kraft-candle-sleeves" class="internal-link">kraft candle sleeves</a> are inherently eco-friendly with their natural, uncoated recycled fiber aesthetic. Our <a href="/cardboard-candle-sleeves" class="internal-link">cardboard candle sleeves</a> are available in FSC-certified versions. And our <a href="/printed-candle-sleeves" class="internal-link">printed candle sleeves</a> can use water-based inks on recycled substrates for a fully sustainable printed result. Browse all options at <a href="/products" class="internal-link">The Candle Sleeves products page</a>.</p>
+    </div>
+  </section>
+
+  <section class="section section--cream">
+    <div class="container container--narrow">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-item">
+        <div class="faq-question">What makes candle sleeves eco-friendly?</div>
+        <div class="faq-answer">Our eco-friendly sleeves use FSC-certified board, post-consumer recycled fiber, water-based inks, and biodegradable coating options — minimizing plastic content and prioritizing materials with high recyclability.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Can eco-friendly sleeves still have premium print quality?</div>
+        <div class="faq-answer">Yes. Our eco-friendly substrates support full-color printing with water-based inks that deliver excellent color accuracy and vibrancy. Sustainable does not mean low quality.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Can I get FSC documentation for my order?</div>
+        <div class="faq-answer">Yes. We can provide FSC Chain of Custody documentation for orders using FSC-certified materials, supporting your brand's sustainability claims and certifications.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Are eco-friendly sleeves more expensive?</div>
+        <div class="faq-answer">Eco-friendly substrates are generally comparable in cost to standard cardboard. Specific premium options may carry a modest cost difference, which most brands find worthwhile for the sustainability benefit.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">What finish options are available?</div>
+        <div class="faq-answer">Water-based matte and satin coatings, biodegradable lamination, aqueous coating, and uncoated natural finishes are all available. We recommend options based on your brand aesthetic and sustainability requirements.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-banner">
+    <div class="container text-center">
+      <h2>Package Sustainably Without Compromise</h2>
+      <p>Request a free eco-friendly candle sleeve quote and show the world your brand means business about sustainability.</p>
+      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+        <a href="/quote" class="btn btn--dark" style="background:white;color:var(--gold-dark);">Request Free Quote &rarr;</a>
+        <a href="/contact" class="btn btn--outline">Talk to Our Team</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--cream" id="quote">
+    <div class="container container--narrow">
+      <QuoteForm title="Get Your Eco-Friendly Candle Sleeve Quote" subtitle="Tell us about your sustainability requirements and product specs. Our team will respond within 24 hours." />
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,203 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import QuoteForm from '../components/QuoteForm.astro';
+
+const productSchema = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Cardboard Candle Sleeves",
+  "description": "Durable custom cardboard candle sleeves with excellent printability and structural strength. Available from 300gsm to 450gsm with a full range of premium finishing options.",
+  "brand": { "@type": "Brand", "name": "The Candle Sleeves" },
+  "offers": { "@type": "Offer", "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What cardboard weights are available for candle sleeves?",
+      "acceptedAnswer": { "@type": "Answer", "text": "We offer cardboard candle sleeves from 300gsm to 450gsm. Lighter weights (300–350gsm) are suitable for standard retail sleeves, while heavier weights (400–450gsm) provide additional rigidity for freestanding or premium retail displays." }
+    },
+    {
+      "@type": "Question",
+      "name": "Is cardboard a cost-effective option for custom candle packaging?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Coated cardboard offers an excellent balance of printability, structural performance, and cost-effectiveness. It is one of the most widely used substrates in candle packaging because it accommodates virtually all printing and finishing options at a competitive price point." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can cardboard candle sleeves be recycled?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Our standard cardboard sleeves are recyclable. For brands requiring full sustainability credentials, we also offer FSC-certified cardboard and recycled-content board options." }
+    },
+    {
+      "@type": "Question",
+      "name": "What printing methods work best on cardboard candle sleeves?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Full-color CMYK printing produces excellent results on coated cardboard due to its smooth, consistent surface. We also support spot color printing, white ink on dark substrates, and all standard finishing options including foil stamping, embossing, and lamination." }
+    },
+    {
+      "@type": "Question",
+      "name": "How rigid are cardboard candle sleeves?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Cardboard sleeves at 350–450gsm have excellent structural integrity for retail display and shipping. They hold their shape well under normal handling. For maximum rigidity in premium applications, we recommend our rigid chipboard sleeve option." }
+    }
+  ]
+};
+---
+
+<Layout
+  title="Cardboard Candle Sleeves | Strong & Printable | The Candle Sleeves"
+  description="Custom cardboard candle sleeves in 300–450gsm with full-color printing and premium finishes. Durable, eco-friendly options available. Get a free quote today."
+  canonical="https://thecandlesleeves.com/cardboard-candle-sleeves"
+  schema={[productSchema, faqSchema]}
+>
+  <div class="container section--sm">
+    <Breadcrumbs crumbs={[{label:'Home',href:'/'},{label:'Products',href:'/products'},{label:'Cardboard Candle Sleeves'}]} />
+  </div>
+
+  <section class="section section--cream">
+    <div class="container">
+      <div class="product-layout">
+        <div class="product-image-wrap">
+          <img src="/images/products/cardboard-candle-sleeves.jpg" alt="Custom cardboard candle sleeves with premium print finish" width="600" height="600" />
+        </div>
+        <div class="product-info">
+          <span class="section-label">Custom Packaging</span>
+          <h1>Cardboard Candle Sleeves</h1>
+          <p style="font-size:1.1rem;color:var(--gray);margin-bottom:1.5rem;">The workhorse of premium candle packaging — cardboard candle sleeves deliver the ideal combination of structural strength, print quality, and cost-effectiveness. From 300gsm for lightweight retail wraps to 450gsm for robust, freestanding shelf display, our custom cardboard sleeves are the foundation of countless successful candle brands.</p>
+          <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+            <a href="/quote" class="btn btn--primary">Get a Free Quote &rarr;</a>
+            <a href="/products" class="btn btn--outline">View All Products</a>
+          </div>
+          <div style="margin-top:2rem;display:flex;flex-direction:column;gap:0.5rem;">
+            <div style="font-size:0.9rem;color:var(--gray);">&#10003;&nbsp; Available in 300gsm – 450gsm</div>
+            <div style="font-size:0.9rem;color:var(--gray);">&#10003;&nbsp; Excellent full-color printability</div>
+            <div style="font-size:0.9rem;color:var(--gray);">&#10003;&nbsp; FSC-certified &amp; recycled options</div>
+            <div style="font-size:0.9rem;color:var(--gray);">&#10003;&nbsp; Full range of premium finishes</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container container--narrow">
+      <h2>Why Cardboard Remains the Foundation of Candle Packaging</h2>
+      <p>In the world of custom candle packaging, cardboard has earned its place as the most versatile and widely used substrate — and for very good reason. Coated cardboard offers a smooth, consistent printing surface that brings full-color CMYK designs to life with remarkable accuracy. Its structural properties provide excellent rigidity for retail display while remaining lightweight enough to control shipping costs. And its compatibility with virtually every printing and finishing technique makes it the most flexible substrate available for candle brands.</p>
+      <p>From artisan producers selling at farmers markets to established retail brands with national distribution, cardboard candle sleeves deliver reliable, professional results at every scale. The material is inherently recyclable, supporting your brand's sustainability narrative without compromising on quality or visual appeal.</p>
+
+      <h2>Selecting the Right Cardboard Weight for Your Candle Sleeve</h2>
+      <p>Cardboard weight (measured in grams per square meter, or gsm) directly affects the rigidity, premium feel, and cost of your sleeves. Our 300gsm option is ideal for standard retail sleeves around small-to-medium candle jars. At 350–400gsm, the sleeve gains significant rigidity and is suitable for larger jars or freestanding counter display applications. Our 450gsm option delivers a genuinely substantial, premium feel that bridges the gap between standard cardboard and rigid board packaging — perfect for brands positioned at the upper end of the market.</p>
+    </div>
+  </section>
+
+  <section class="section section--beige">
+    <div class="container">
+      <h2 class="text-center section-title">Benefits of Cardboard Candle Sleeves</h2>
+      <div class="grid-3" style="margin-top:2rem;">
+        <div class="icon-box" style="flex-direction:column;background:var(--white);border-radius:var(--radius-lg);padding:1.75rem;box-shadow:var(--shadow);">
+          <div class="icon-box__icon" style="margin-bottom:1rem;">&#128200;</div>
+          <div class="icon-box__title">Cost-Effective Premium Look</div>
+          <div class="icon-box__text">Cardboard delivers a genuinely premium appearance at a competitive price point — allowing brands to invest in design and finishing without overspending on substrate costs.</div>
+        </div>
+        <div class="icon-box" style="flex-direction:column;background:var(--white);border-radius:var(--radius-lg);padding:1.75rem;box-shadow:var(--shadow);">
+          <div class="icon-box__icon" style="margin-bottom:1rem;">&#127775;</div>
+          <div class="icon-box__title">Exceptional Print Quality</div>
+          <div class="icon-box__text">The smooth coated surface of quality cardboard produces vivid, accurate full-color CMYK printing with sharp detail and consistent color reproduction across the entire print run.</div>
+        </div>
+        <div class="icon-box" style="flex-direction:column;background:var(--white);border-radius:var(--radius-lg);padding:1.75rem;box-shadow:var(--shadow);">
+          <div class="icon-box__icon" style="margin-bottom:1rem;">&#127807;</div>
+          <div class="icon-box__title">Recyclable & Eco-Friendly</div>
+          <div class="icon-box__text">Standard cardboard is recyclable at end of life. FSC-certified and post-consumer recycled content options are available for brands with sustainability commitments.</div>
+        </div>
+        <div class="icon-box" style="flex-direction:column;background:var(--white);border-radius:var(--radius-lg);padding:1.75rem;box-shadow:var(--shadow);">
+          <div class="icon-box__icon" style="margin-bottom:1rem;">&#9881;</div>
+          <div class="icon-box__title">Compatible with All Finishes</div>
+          <div class="icon-box__text">Cardboard works with every printing and finishing technique we offer — including foil stamping, embossing, spot UV, matte and gloss lamination, and soft-touch coating.</div>
+        </div>
+        <div class="icon-box" style="flex-direction:column;background:var(--white);border-radius:var(--radius-lg);padding:1.75rem;box-shadow:var(--shadow);">
+          <div class="icon-box__icon" style="margin-bottom:1rem;">&#128230;</div>
+          <div class="icon-box__title">Structural Integrity</div>
+          <div class="icon-box__text">At weights from 350gsm upward, cardboard sleeves maintain their shape through retail handling, shipping, and customer use — presenting your brand consistently.</div>
+        </div>
+        <div class="icon-box" style="flex-direction:column;background:var(--white);border-radius:var(--radius-lg);padding:1.75rem;box-shadow:var(--shadow);">
+          <div class="icon-box__icon" style="margin-bottom:1rem;">&#128293;</div>
+          <div class="icon-box__title">Scalable Production</div>
+          <div class="icon-box__text">Cardboard sleeves are efficient to produce at any quantity — from small artisan runs to high-volume national production, with consistent quality throughout.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--cream">
+    <div class="container container--narrow">
+      <h2>Specifications</h2>
+      <table class="spec-table">
+        <thead>
+          <tr><th>Specification</th><th>Details</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Substrate</td><td>Coated cardboard (SBS, FBB, recycled content)</td></tr>
+          <tr><td>Weight Range</td><td>300gsm, 350gsm, 400gsm, 450gsm</td></tr>
+          <tr><td>Printing</td><td>Full-color CMYK, Pantone, white ink</td></tr>
+          <tr><td>Finishes</td><td>Matte lamination, gloss lamination, soft-touch, spot UV</td></tr>
+          <tr><td>Special Effects</td><td>Foil stamping, embossing, debossing, die-cut</td></tr>
+          <tr><td>Sustainability</td><td>FSC-certified and recycled options available</td></tr>
+          <tr><td>Sizing</td><td>Fully custom to your specifications</td></tr>
+          <tr><td>Production Time</td><td>7 – 12 business days after artwork approval</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container container--narrow">
+      <h2>How Cardboard Candle Sleeves Compare</h2>
+      <p>Compared to <a href="/kraft-candle-sleeves" class="internal-link">kraft candle sleeves</a>, coated cardboard offers a smoother print surface for more detailed designs and brighter colors. Compared to <a href="/corrugated-candle-sleeves" class="internal-link">corrugated candle sleeves</a>, cardboard is thinner and lighter — better for retail display than heavy-duty shipping. For brands that need the ultimate in rigidity, our <a href="/rigid-candle-sleeves" class="internal-link">rigid candle sleeves</a> offer a step up in thickness and premium feel. Visit our <a href="/products" class="internal-link">products page</a> to compare all sleeve types.</p>
+      <p>Whether you're packaging a single SKU or a full product range, cardboard candle sleeves from <a href="/" class="internal-link">The Candle Sleeves</a> give you the flexibility to create exactly the look and feel your brand deserves.</p>
+    </div>
+  </section>
+
+  <section class="section section--cream">
+    <div class="container container--narrow">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-item">
+        <div class="faq-question">What cardboard weights are available?</div>
+        <div class="faq-answer">We offer 300gsm, 350gsm, 400gsm, and 450gsm coated cardboard. Lighter weights suit standard retail sleeves; heavier weights provide premium rigidity for display or large jar applications.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Is cardboard cost-effective for custom candle packaging?</div>
+        <div class="faq-answer">Yes. Coated cardboard provides an excellent balance of printability, structural performance, and competitive pricing — making it the most popular substrate choice for candle sleeve packaging.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Can cardboard candle sleeves be recycled?</div>
+        <div class="faq-answer">Yes. Standard cardboard sleeves are recyclable. We also offer FSC-certified and recycled-content board for brands with specific sustainability requirements.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">What printing methods work best?</div>
+        <div class="faq-answer">Full-color CMYK printing produces excellent results on coated cardboard's smooth surface. All standard finishing options including foil stamping, embossing, and lamination are also supported.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">How rigid are cardboard candle sleeves?</div>
+        <div class="faq-answer">At 350–450gsm, cardboard sleeves hold their shape well under normal retail handling. For maximum rigidity in premium applications, our rigid chipboard sleeve option offers additional thickness and substance.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-banner">
+    <div class="container text-center">
+      <h2>Start Your Cardboard Candle Sleeve Order</h2>
+      <p>Tell us your specs and we'll provide a competitive, detailed quote within 24 hours.</p>
+      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+        <a href="/quote" class="btn btn--dark" style="background:white;color:var(--gold-dark);">Request Free Quote &rarr;</a>
+        <a href="/contact" class="btn btn--outline">Contact Our Team</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--cream" id="quote">
+    <div class="container container--narrow">
+      <QuoteForm title="Get Your Cardboard Candle Sleeve Quote" subtitle="Fill in your project details and our team will respond with a tailored, competitive quote within 24 hours." />
+    </div>
+  </section>
+</Layout>

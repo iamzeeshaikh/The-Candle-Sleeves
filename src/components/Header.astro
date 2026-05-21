@@ -1,0 +1,215 @@
+---
+const navLinks = [
+  { label: 'Home', href: '/' },
+  { label: 'Products', href: '/products' },
+  { label: 'About Us', href: '/about' },
+  { label: 'Contact', href: '/contact' },
+  { label: 'Get a Quote', href: '/quote', cta: true },
+];
+
+const productLinks = [
+  { label: 'Black Candle Sleeves', href: '/black-candle-sleeves' },
+  { label: 'Candle Gift Sleeves', href: '/candle-gift-sleeves' },
+  { label: 'Candle Jar Sleeves', href: '/candle-jar-sleeves' },
+  { label: 'Cardboard Candle Sleeves', href: '/cardboard-candle-sleeves' },
+  { label: 'Corrugated Candle Sleeves', href: '/corrugated-candle-sleeves' },
+  { label: 'Die Cut Candle Sleeves', href: '/die-cut-candle-sleeves' },
+  { label: 'Eco Friendly Candle Sleeves', href: '/eco-friendly-candle-sleeves' },
+  { label: 'Kraft Candle Sleeves', href: '/kraft-candle-sleeves' },
+  { label: 'Luxury Candle Sleeves', href: '/luxury-candle-sleeves' },
+  { label: 'Printed Candle Sleeves', href: '/printed-candle-sleeves' },
+  { label: 'Rigid Candle Sleeves', href: '/rigid-candle-sleeves' },
+  { label: 'Shipping Candle Sleeves', href: '/shipping-candle-sleeves' },
+  { label: 'White Candle Sleeves', href: '/white-candle-sleeves' },
+  { label: 'Window Candle Sleeves', href: '/window-candle-sleeves' },
+];
+---
+
+<header class="site-header" id="site-header">
+  <div class="container">
+    <nav class="nav">
+      <a href="/" class="nav__logo" aria-label="The Candle Sleeves Home">
+        <span class="nav__logo-icon">&#9670;</span>
+        <span class="nav__logo-text">The Candle<br><em>Sleeves</em></span>
+      </a>
+
+      <ul class="nav__links" id="nav-links">
+        <li><a href="/">Home</a></li>
+        <li class="has-dropdown">
+          <a href="/products">Products <span class="arrow">&#9660;</span></a>
+          <ul class="dropdown">
+            {productLinks.map(p => (
+              <li><a href={p.href}>{p.label}</a></li>
+            ))}
+            <li class="dropdown__all"><a href="/products">&#8594; View All Products</a></li>
+          </ul>
+        </li>
+        <li><a href="/about">About Us</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li><a href="/quote" class="nav__cta btn btn--primary">Get a Quote</a></li>
+      </ul>
+
+      <button class="nav__toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<style>
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 2px 12px rgba(26,26,26,0.06);
+}
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+  gap: 2rem;
+}
+.nav__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+.nav__logo-icon {
+  font-size: 1.6rem;
+  color: var(--gold);
+}
+.nav__logo-text {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--brown);
+  line-height: 1.3;
+}
+.nav__logo-text em {
+  font-style: italic;
+  color: var(--gold-dark);
+}
+.nav__links {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.nav__links > li {
+  position: relative;
+}
+.nav__links > li > a {
+  display: block;
+  padding: 0.5rem 0.9rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--brown);
+  border-radius: var(--radius);
+  transition: background var(--transition), color var(--transition);
+  white-space: nowrap;
+}
+.nav__links > li > a:hover,
+.nav__links > li.has-dropdown:hover > a {
+  background: var(--gray-light);
+  color: var(--gold-dark);
+}
+.nav__cta {
+  padding: 0.6rem 1.4rem !important;
+  font-size: 0.875rem !important;
+}
+.arrow { font-size: 0.6rem; margin-left: 2px; }
+
+/* Dropdown */
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  list-style: none;
+  padding: 0.75rem 0;
+  min-width: 240px;
+  z-index: 100;
+}
+.has-dropdown:hover .dropdown { display: block; }
+.dropdown li a {
+  display: block;
+  padding: 0.55rem 1.25rem;
+  font-size: 0.875rem;
+  color: var(--brown);
+  font-weight: 500;
+  transition: background var(--transition), color var(--transition);
+}
+.dropdown li a:hover { background: var(--gray-light); color: var(--gold-dark); }
+.dropdown__all { border-top: 1px solid var(--border); margin-top: 0.5rem; padding-top: 0.25rem; }
+.dropdown__all a { font-weight: 700; color: var(--gold-dark) !important; }
+
+/* Toggle */
+.nav__toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+.nav__toggle span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--brown);
+  border-radius: 2px;
+  transition: all var(--transition);
+}
+
+@media(max-width:900px) {
+  .nav__toggle { display: flex; }
+  .nav__links {
+    display: none;
+    position: fixed;
+    top: 72px;
+    left: 0; right: 0;
+    background: var(--white);
+    border-top: 1px solid var(--border);
+    flex-direction: column;
+    padding: 1.5rem;
+    gap: 0.25rem;
+    box-shadow: var(--shadow-lg);
+    max-height: calc(100vh - 72px);
+    overflow-y: auto;
+  }
+  .nav__links.open { display: flex; }
+  .nav__links > li > a { padding: 0.75rem 1rem; }
+  .dropdown { position: static; box-shadow: none; border: none; border-top: 1px solid var(--border); border-radius: 0; display: none; }
+  .has-dropdown.open .dropdown { display: block; }
+}
+</style>
+
+<script>
+const toggle = document.getElementById('nav-toggle');
+const links = document.getElementById('nav-links');
+toggle?.addEventListener('click', () => {
+  links?.classList.toggle('open');
+  toggle.setAttribute('aria-expanded', links?.classList.contains('open') ? 'true' : 'false');
+});
+// Mobile dropdown toggle
+document.querySelectorAll('.has-dropdown > a').forEach(el => {
+  el.addEventListener('click', (e) => {
+    if (window.innerWidth <= 900) {
+      e.preventDefault();
+      el.closest('.has-dropdown')?.classList.toggle('open');
+    }
+  });
+});
+</script>

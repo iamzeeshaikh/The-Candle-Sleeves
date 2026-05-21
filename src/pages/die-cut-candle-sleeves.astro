@@ -1,0 +1,202 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import QuoteForm from '../components/QuoteForm.astro';
+
+const productSchema = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Die Cut Candle Sleeves",
+  "description": "Custom die cut candle sleeves with intricate shapes, cutouts, and precision-engineered designs for unique brand expression. Premium finishes and full-color printing.",
+  "brand": { "@type": "Brand", "name": "The Candle Sleeves" },
+  "offers": { "@type": "Offer", "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What shapes can be die cut on candle sleeves?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Nearly any shape can be die cut — including custom silhouettes, ornate curved edges, handle cutouts, window openings, intricate decorative patterns, and unique sleeve profiles that go far beyond standard rectangular packaging." }
+    },
+    {
+      "@type": "Question",
+      "name": "How does die cutting work for candle sleeves?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Die cutting uses a custom-made steel rule die pressed through the board to cut precise shapes and score fold lines. The die is created from your approved dieline file and used to consistently cut every sleeve in the production run to exact specifications." }
+    },
+    {
+      "@type": "Question",
+      "name": "Are die cut candle sleeves more expensive than standard sleeves?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Die cut sleeves have an additional tooling cost for the custom die, which is a one-time setup fee. Per-unit production costs are comparable to standard sleeves. The tooling cost is amortized across the print run, becoming more cost-effective at higher quantities." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can die cut windows be added to candle sleeves?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Die-cut window openings are one of the most popular applications — allowing the candle's color, texture, or fragrance label to be visible through the packaging, creating visual intrigue for retail display." }
+    },
+    {
+      "@type": "Question",
+      "name": "What lead time should I expect for die cut candle sleeves?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Die cut candle sleeves typically require 10 to 14 business days due to the additional die manufacturing step. Once the die is created for your product, reorders are faster at the standard 7 to 12 business day production time." }
+    }
+  ]
+};
+---
+
+<Layout
+  title="Die Cut Candle Sleeves | Custom Shapes & Cutouts | The Candle Sleeves"
+  description="Custom die cut candle sleeves with unique shapes, window cutouts, and precision designs. Perfect for luxury brands. Premium finishing. Get a free quote today."
+  canonical="https://thecandlesleeves.com/die-cut-candle-sleeves"
+  schema={[productSchema, faqSchema]}
+>
+  <div class="container section--sm">
+    <Breadcrumbs crumbs={[{label:'Home',href:'/'},{label:'Products',href:'/products'},{label:'Die Cut Candle Sleeves'}]} />
+  </div>
+
+  <section class="section section--cream">
+    <div class="container">
+      <div class="product-layout">
+        <div class="product-image-wrap">
+          <img src="/images/products/die-cut-candle-sleeves.jpg" alt="Custom die cut candle sleeves with intricate shapes and cutouts" width="600" height="600" />
+        </div>
+        <div class="product-info">
+          <span class="section-label">Custom Packaging</span>
+          <h1>Die Cut Candle Sleeves</h1>
+          <p style="font-size:1.1rem;color:var(--gray);margin-bottom:1.5rem;">Break free from the rectangular box. Our die cut candle sleeves allow you to give your packaging a completely unique shape — from ornate curved silhouettes to custom window cutouts that reveal the candle inside. Die cutting transforms your candle sleeve from a functional wrapper into a distinctive design statement that no competitor can replicate.</p>
+          <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+            <a href="/quote" class="btn btn--primary">Get a Free Quote &rarr;</a>
+            <a href="/products" class="btn btn--outline">View All Products</a>
+          </div>
+          <div style="margin-top:2rem;display:flex;flex-direction:column;gap:0.5rem;">
+            <div style="font-size:0.9rem;color:var(--gray);">&#10003;&nbsp; Any custom shape or silhouette</div>
+            <div style="font-size:0.9rem;color:var(--gray);">&#10003;&nbsp; Window cutouts &amp; decorative patterns</div>
+            <div style="font-size:0.9rem;color:var(--gray);">&#10003;&nbsp; Precision steel rule die tooling</div>
+            <div style="font-size:0.9rem;color:var(--gray);">&#10003;&nbsp; Full-color printing &amp; luxury finishes</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container container--narrow">
+      <h2>Die Cutting: The Craft Behind Distinctive Candle Packaging</h2>
+      <p>Die cutting is one of the most powerful tools available in custom packaging — and one of the most under-utilized by candle brands who default to standard rectangular sleeve formats. The process uses a custom-made steel rule die, engineered precisely from your approved dieline, to cut boards into any shape with consistent precision across every unit in the production run. The result is packaging that is not just a container, but an expression of your brand's creativity and attention to detail.</p>
+      <p>At The Candle Sleeves, our die cut capabilities extend across our full range of cardboard, kraft, and rigid substrates. We begin every die cut project with a detailed consultation to understand your brand aesthetic and product dimensions, then develop a custom dieline that achieves your vision while maintaining structural integrity. Whether you want subtle curved corners on an otherwise standard sleeve, a dramatic scalloped top edge, or intricate decorative cutout patterns that reveal the packaging interior, our team brings that vision to life with precision.</p>
+
+      <h2>Window Die Cuts: Letting Your Candle Speak</h2>
+      <p>One of the most commercially effective die cut applications is the window cutout — an opening in the sleeve that allows customers to see the candle inside. This is particularly powerful for candles with distinctive wax colors, interesting texture, embedded botanicals, or artisan fragrance labels. The window creates visual intrigue that draws customers in, answers their questions about the product without them needing to open the packaging, and adds a layer of trust by demonstrating transparency about what they're purchasing.</p>
+    </div>
+  </section>
+
+  <section class="section section--beige">
+    <div class="container">
+      <h2 class="text-center section-title">Why Die Cut Candle Sleeves Stand Out</h2>
+      <div class="grid-3" style="margin-top:2rem;">
+        <div class="icon-box" style="flex-direction:column;background:var(--white);border-radius:var(--radius-lg);padding:1.75rem;box-shadow:var(--shadow);">
+          <div class="icon-box__icon" style="margin-bottom:1rem;">&#10024;</div>
+          <div class="icon-box__title">Unique Brand Identity</div>
+          <div class="icon-box__text">A distinctive die cut shape makes your product instantly recognizable and impossible to mistake for a competitor's packaging — creating powerful visual brand differentiation.</div>
+        </div>
+        <div class="icon-box" style="flex-direction:column;background:var(--white);border-radius:var(--radius-lg);padding:1.75rem;box-shadow:var(--shadow);">
+          <div class="icon-box__icon" style="margin-bottom:1rem;">&#128269;</div>
+          <div class="icon-box__title">Product Visibility Windows</div>
+          <div class="icon-box__text">Die-cut window openings allow customers to see the candle's color, wax texture, or embedded elements — building trust and driving purchase decisions at point of sale.</div>
+        </div>
+        <div class="icon-box" style="flex-direction:column;background:var(--white);border-radius:var(--radius-lg);padding:1.75rem;box-shadow:var(--shadow);">
+          <div class="icon-box__icon" style="margin-bottom:1rem;">&#127919;</div>
+          <div class="icon-box__title">Premium Perception</div>
+          <div class="icon-box__text">Custom die cut shapes signal craftsmanship and investment in detail — telling customers before they've even touched the product that it comes from a brand that cares about quality.</div>
+        </div>
+        <div class="icon-box" style="flex-direction:column;background:var(--white);border-radius:var(--radius-lg);padding:1.75rem;box-shadow:var(--shadow);">
+          <div class="icon-box__icon" style="margin-bottom:1rem;">&#9881;</div>
+          <div class="icon-box__title">Endless Design Freedom</div>
+          <div class="icon-box__text">From simple curved corners to complex decorative patterns, die cutting gives you complete freedom to create packaging that matches your brand's creative vision.</div>
+        </div>
+        <div class="icon-box" style="flex-direction:column;background:var(--white);border-radius:var(--radius-lg);padding:1.75rem;box-shadow:var(--shadow);">
+          <div class="icon-box__icon" style="margin-bottom:1rem;">&#128200;</div>
+          <div class="icon-box__title">Increased Shelf Dwell Time</div>
+          <div class="icon-box__text">Unusual shapes attract attention and invite customers to pick up and examine the product — increasing the critical shelf dwell time that correlates strongly with purchase conversion.</div>
+        </div>
+        <div class="icon-box" style="flex-direction:column;background:var(--white);border-radius:var(--radius-lg);padding:1.75rem;box-shadow:var(--shadow);">
+          <div class="icon-box__icon" style="margin-bottom:1rem;">&#127760;</div>
+          <div class="icon-box__title">Consistent Precision</div>
+          <div class="icon-box__text">Once a die is created, every unit in the production run is cut to identical precision — ensuring a consistent, professional result across every unit at any quantity.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--cream">
+    <div class="container container--narrow">
+      <h2>Specifications</h2>
+      <table class="spec-table">
+        <thead>
+          <tr><th>Specification</th><th>Details</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Die Type</td><td>Custom steel rule die (bespoke per project)</td></tr>
+          <tr><td>Compatible Materials</td><td>Cardboard, kraft, rigid chipboard, corrugated</td></tr>
+          <tr><td>Die Cut Applications</td><td>Custom shapes, window cutouts, decorative patterns, handle holes</td></tr>
+          <tr><td>Printing</td><td>Full-color CMYK, Pantone, white ink</td></tr>
+          <tr><td>Finishes</td><td>Matte, gloss, soft-touch, spot UV, foil stamping, embossing</td></tr>
+          <tr><td>Sizing</td><td>Custom to your specifications</td></tr>
+          <tr><td>Production Time</td><td>10 – 14 business days (first order); 7 – 12 on reorder</td></tr>
+          <tr><td>Tooling Cost</td><td>One-time die setup fee (quoted per project)</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container container--narrow">
+      <h2>Die Cut Candle Sleeves in Context</h2>
+      <p>Die cut candle sleeves work particularly well for brands positioning at the premium or luxury end of the market. They pair beautifully with our <a href="/luxury-candle-sleeves" class="internal-link">luxury candle sleeve</a> finishes including foil stamping and soft-touch coating. For brands wanting product visibility without a full die cut profile change, a simple window cutout can be applied to any of our standard <a href="/cardboard-candle-sleeves" class="internal-link">cardboard candle sleeves</a> or <a href="/white-candle-sleeves" class="internal-link">white candle sleeves</a>. Visit <a href="/products" class="internal-link">our full products page</a> to explore all options.</p>
+    </div>
+  </section>
+
+  <section class="section section--cream">
+    <div class="container container--narrow">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-item">
+        <div class="faq-question">What shapes can be die cut on candle sleeves?</div>
+        <div class="faq-answer">Nearly any shape — custom silhouettes, ornate curved edges, handle cutouts, window openings, intricate decorative patterns, and unique sleeve profiles that go beyond standard rectangular formats.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">How does die cutting work?</div>
+        <div class="faq-answer">A custom steel rule die is pressed through the board to cut precise shapes and score fold lines. The die is created from your approved dieline file and used to consistently cut every sleeve in the production run.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Are die cut sleeves more expensive?</div>
+        <div class="faq-answer">There is a one-time tooling fee for the custom die. Per-unit production costs are comparable to standard sleeves. On reorders, only production costs apply as the die is already made.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Can I add die cut windows to my candle sleeves?</div>
+        <div class="faq-answer">Yes. Die-cut windows are one of the most popular applications, allowing customers to see the candle inside — building trust and adding visual intrigue for retail display.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">What lead time should I expect?</div>
+        <div class="faq-answer">First orders typically require 10 to 14 business days due to die manufacturing. Reorders use the existing die and run at the standard 7 to 12 business day production time.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-banner">
+    <div class="container text-center">
+      <h2>Create Something Truly Distinctive</h2>
+      <p>Tell us about your die cut candle sleeve concept and our design specialists will help bring your vision to life.</p>
+      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+        <a href="/quote" class="btn btn--dark" style="background:white;color:var(--gold-dark);">Request Free Quote &rarr;</a>
+        <a href="/contact" class="btn btn--outline">Talk to a Specialist</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--cream" id="quote">
+    <div class="container container--narrow">
+      <QuoteForm title="Get Your Die Cut Candle Sleeve Quote" subtitle="Share your die cut concept and dimensions. Our team will provide a detailed quote including any tooling costs." />
+    </div>
+  </section>
+</Layout>

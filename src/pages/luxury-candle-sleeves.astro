@@ -1,0 +1,202 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import QuoteForm from '../components/QuoteForm.astro';
+
+const productSchema = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Luxury Candle Sleeves",
+  "description": "Ultra-premium luxury candle sleeves featuring foil stamping, embossing, soft-touch coating and rigid construction. For high-end candle brands that demand the best.",
+  "brand": { "@type": "Brand", "name": "The Candle Sleeves" },
+  "offers": { "@type": "Offer", "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What finish options make candle sleeves look truly luxury?",
+      "acceptedAnswer": { "@type": "Answer", "text": "The most impactful luxury finishes are hot foil stamping (gold, silver, or custom metallic), soft-touch matte lamination for a velvety tactile feel, embossing or debossing for raised or recessed texture, and spot UV coating for selective gloss accents on a matte background. Combining two or more of these creates unmistakably premium packaging." }
+    },
+    {
+      "@type": "Question",
+      "name": "What board thickness is recommended for luxury candle sleeves?",
+      "acceptedAnswer": { "@type": "Answer", "text": "For luxury applications, we recommend 400–450gsm coated board or rigid chipboard at 1.5mm to 2.5mm thickness. The substantial weight and rigidity communicates premium quality when a customer picks up the product." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can luxury candle sleeves include magnetic closures?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Magnetic strip closures, ribbon pull tabs, and premium structural closure mechanisms can be incorporated into luxury candle sleeve designs — creating a premium gift-like opening experience that adds to the perceived value." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the typical lead time for luxury candle sleeves?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Due to the additional processing steps involved in luxury finishing (foil application, embossing), luxury candle sleeves typically require 10 to 15 business days after artwork approval. We recommend discussing your timeline early in the process." }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you provide design consultation for luxury candle packaging?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Our packaging specialists offer detailed design consultation for luxury projects — including material selection, finish combination recommendations, structural design, and pre-production proofing to ensure the result exceeds your expectations." }
+    }
+  ]
+};
+---
+
+<Layout
+  title="Luxury Candle Sleeves | Premium Foil & Embossed Packaging | The Candle Sleeves"
+  description="Ultra-premium luxury candle sleeves with foil stamping, embossing, and spot UV. Elevate your high-end candle collection. Request a custom luxury packaging quote today."
+  canonical="https://thecandlesleeves.com/luxury-candle-sleeves"
+  schema={[productSchema, faqSchema]}
+>
+  <div class="container section--sm">
+    <Breadcrumbs crumbs={[{label:'Home',href:'/'},{label:'Products',href:'/products'},{label:'Luxury Candle Sleeves'}]} />
+  </div>
+
+  <section class="section section--cream">
+    <div class="container">
+      <div class="product-layout">
+        <div class="product-image-wrap">
+          <img src="/images/products/candle-gift-sleeves.jpg" alt="Ultra-premium luxury candle sleeves with foil stamping and embossing" width="600" height="600" />
+        </div>
+        <div class="product-info">
+          <span class="section-label">Ultra-Premium Packaging</span>
+          <h1>Luxury Candle Sleeves</h1>
+          <p style="font-size:1.1rem;color:var(--gray);margin-bottom:1.5rem;">For candle brands positioned at the pinnacle of the market, only the finest packaging will do. Our luxury candle sleeves combine the thickest boards, the most exquisite finishes, and meticulous attention to structural detail to create packaging that is itself an object of desire — packaging that customers keep long after the candle is finished.</p>
+          <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+            <a href="/quote" class="btn btn--primary">Get a Free Quote &rarr;</a>
+            <a href="/products" class="btn btn--outline">View All Products</a>
+          </div>
+          <div style="margin-top:2rem;display:flex;flex-direction:column;gap:0.5rem;">
+            <div style="font-size:0.9rem;color:var(--gray);">&#10003;&nbsp; Hot foil stamping (gold, silver, custom)</div>
+            <div style="font-size:0.9rem;color:var(--gray);">&#10003;&nbsp; Embossing &amp; debossing</div>
+            <div style="font-size:0.9rem;color:var(--gray);">&#10003;&nbsp; Soft-touch &amp; spot UV coating</div>
+            <div style="font-size:0.9rem;color:var(--gray);">&#10003;&nbsp; Rigid chipboard &amp; premium boards</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container container--narrow">
+      <h2>What Defines Truly Luxury Candle Packaging</h2>
+      <p>Luxury packaging is not simply expensive packaging — it is packaging that communicates worth through every sensory dimension. When a customer picks up a luxury candle sleeve, they should feel the weight and substance of a thick rigid board. When they run a finger across the surface, they should feel the velvety resistance of soft-touch coating or the raised topography of an embossed logo. When they look at the gold foil stamping catch the light, they should see a product that justifies its price tag without needing to read a single word of copy.</p>
+      <p>Our luxury candle sleeve program is built around the science and craft of these sensory moments. We work with the finest finishing house partners to deliver hot foil stamping with perfect metallic density, embossing with precise depth and crisp edge definition, and spot UV coating with sharp boundaries that create dramatic contrast against matte backgrounds. Every luxury sleeve is produced with the understanding that even a single imperfect unit could undermine your brand's positioning — which is why every luxury order receives enhanced quality inspection protocols.</p>
+
+      <h2>The Luxury Finish Combinations That Define Premium Brands</h2>
+      <p>Our most sought-after luxury candle sleeve configurations combine multiple finishing techniques in complementary ways. A matte black sleeve with gold foil brand mark and soft-touch coating creates an austere, museum-quality aesthetic favored by niche luxury houses. A deep navy sleeve with silver foil typography, spot UV pattern work, and debossed borders projects cool sophistication. A pure white sleeve with blind embossed logo and ribbon pull closure communicates quiet confidence in the product's quality alone. We work with you to develop the specific combination that best expresses your brand's luxury narrative.</p>
+    </div>
+  </section>
+
+  <section class="section section--beige">
+    <div class="container">
+      <h2 class="text-center section-title">The Elements of Luxury Candle Packaging</h2>
+      <div class="grid-3" style="margin-top:2rem;">
+        <div class="icon-box" style="flex-direction:column;background:var(--white);border-radius:var(--radius-lg);padding:1.75rem;box-shadow:var(--shadow);">
+          <div class="icon-box__icon" style="margin-bottom:1rem;">&#11088;</div>
+          <div class="icon-box__title">Hot Foil Stamping</div>
+          <div class="icon-box__text">Gold, silver, rose gold, copper, and custom metallic foils pressed into the board surface at precise heat and pressure — creating the signature metallic sheen of luxury packaging.</div>
+        </div>
+        <div class="icon-box" style="flex-direction:column;background:var(--white);border-radius:var(--radius-lg);padding:1.75rem;box-shadow:var(--shadow);">
+          <div class="icon-box__icon" style="margin-bottom:1rem;">&#128073;</div>
+          <div class="icon-box__title">Embossing & Debossing</div>
+          <div class="icon-box__text">Raised or recessed areas in the board surface that create tactile texture — a logo that rises from the surface or a border that recedes into it adds a tactile luxury dimension that photography cannot convey.</div>
+        </div>
+        <div class="icon-box" style="flex-direction:column;background:var(--white);border-radius:var(--radius-lg);padding:1.75rem;box-shadow:var(--shadow);">
+          <div class="icon-box__icon" style="margin-bottom:1rem;">&#127775;</div>
+          <div class="icon-box__title">Soft-Touch Coating</div>
+          <div class="icon-box__text">A specialized matte coating that creates a distinctly velvety, suede-like surface feel — the tactile equivalent of luxury apparel materials, unmistakably premium to the touch.</div>
+        </div>
+        <div class="icon-box" style="flex-direction:column;background:var(--white);border-radius:var(--radius-lg);padding:1.75rem;box-shadow:var(--shadow);">
+          <div class="icon-box__icon" style="margin-bottom:1rem;">&#127773;</div>
+          <div class="icon-box__title">Spot UV Coating</div>
+          <div class="icon-box__text">Selective high-gloss coating applied to specific design elements on a matte background — creating a striking visual contrast that draws attention to logos, patterns, or key brand elements.</div>
+        </div>
+        <div class="icon-box" style="flex-direction:column;background:var(--white);border-radius:var(--radius-lg);padding:1.75rem;box-shadow:var(--shadow);">
+          <div class="icon-box__icon" style="margin-bottom:1rem;">&#128293;</div>
+          <div class="icon-box__title">Rigid Premium Construction</div>
+          <div class="icon-box__text">Thick 1.5mm–2.5mm chipboard provides substantial weight and rigidity — the physical experience of holding a premium product that justifies a luxury price point.</div>
+        </div>
+        <div class="icon-box" style="flex-direction:column;background:var(--white);border-radius:var(--radius-lg);padding:1.75rem;box-shadow:var(--shadow);">
+          <div class="icon-box__icon" style="margin-bottom:1rem;">&#128873;</div>
+          <div class="icon-box__title">Design Consultation Included</div>
+          <div class="icon-box__text">Every luxury sleeve project includes detailed specialist consultation to guide material selection, finish combinations, and structural design for optimal premium impact.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--cream">
+    <div class="container container--narrow">
+      <h2>Specifications</h2>
+      <table class="spec-table">
+        <thead>
+          <tr><th>Specification</th><th>Details</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Board Options</td><td>400–450gsm premium coated; rigid chipboard 1.5–2.5mm</td></tr>
+          <tr><td>Printing</td><td>Full-color CMYK, Pantone, white ink, metallic inks</td></tr>
+          <tr><td>Foil Stamping</td><td>Gold, silver, rose gold, copper, holographic, custom foils</td></tr>
+          <tr><td>Embossing</td><td>Blind emboss, foil emboss, deboss, multi-level emboss</td></tr>
+          <tr><td>Coating</td><td>Soft-touch matte, spot UV, gloss, satin, aqueous</td></tr>
+          <tr><td>Closures</td><td>Magnetic, ribbon pull, tuck-end, bespoke structural</td></tr>
+          <tr><td>Sizing</td><td>Fully custom; structural design consultation included</td></tr>
+          <tr><td>Production Time</td><td>10 – 15 business days after artwork approval</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container container--narrow">
+      <h2>Luxury Packaging in the Context of Your Full Range</h2>
+      <p>Luxury candle sleeves from <a href="/" class="internal-link">The Candle Sleeves</a> are the flagship of our product range — the full expression of what custom candle packaging can achieve when quality is the only priority. They are the natural complement to our <a href="/rigid-candle-sleeves" class="internal-link">rigid candle sleeves</a> for structural substance, our <a href="/black-candle-sleeves" class="internal-link">black candle sleeves</a> for dramatic base color, and our <a href="/candle-gift-sleeves" class="internal-link">candle gift sleeves</a> for gift-season premium collections. Browse all products at <a href="/products" class="internal-link">our complete product range</a>.</p>
+    </div>
+  </section>
+
+  <section class="section section--cream">
+    <div class="container container--narrow">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-item">
+        <div class="faq-question">What finishes make candle sleeves truly look luxury?</div>
+        <div class="faq-answer">The most impactful luxury finishes are hot foil stamping, soft-touch matte lamination, embossing or debossing, and spot UV coating. Combining two or more of these creates unmistakably premium packaging.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">What board thickness is recommended for luxury sleeves?</div>
+        <div class="faq-answer">We recommend 400–450gsm coated board or rigid chipboard at 1.5mm to 2.5mm. The physical weight and rigidity communicates premium quality immediately when customers pick up the product.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Can luxury sleeves include magnetic closures?</div>
+        <div class="faq-answer">Yes. Magnetic closures, ribbon pulls, and premium structural closures can be incorporated — creating a gift-like opening experience that adds to perceived value.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">What is the typical lead time?</div>
+        <div class="faq-answer">Luxury finishing requires additional processing steps, so lead times are typically 10 to 15 business days after artwork approval. We recommend discussing timelines early in the process.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Do you provide design consultation?</div>
+        <div class="faq-answer">Yes. Every luxury sleeve project includes detailed specialist consultation covering material selection, finish combinations, structural design, and pre-production proofing.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-banner">
+    <div class="container text-center">
+      <h2>Elevate Your Brand to Luxury</h2>
+      <p>Request a free luxury candle sleeve consultation and let our specialists help you design packaging worthy of your premium product.</p>
+      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+        <a href="/quote" class="btn btn--dark" style="background:white;color:var(--gold-dark);">Request Free Quote &rarr;</a>
+        <a href="/contact" class="btn btn--outline">Book a Consultation</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--cream" id="quote">
+    <div class="container container--narrow">
+      <QuoteForm title="Request Your Luxury Candle Sleeve Quote" subtitle="Tell us about your luxury candle packaging project. Our specialists will guide you through every detail." />
+    </div>
+  </section>
+</Layout>

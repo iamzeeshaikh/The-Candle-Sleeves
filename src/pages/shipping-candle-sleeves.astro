@@ -1,0 +1,202 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import QuoteForm from '../components/QuoteForm.astro';
+
+const productSchema = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Shipping Candle Sleeves",
+  "description": "Engineered shipping candle sleeves designed to protect candles in transit while delivering a branded unboxing experience. Ideal for e-commerce and DTC candle brands.",
+  "brand": { "@type": "Brand", "name": "The Candle Sleeves" },
+  "offers": { "@type": "Offer", "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How are shipping candle sleeves different from retail candle sleeves?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Shipping candle sleeves are specifically engineered for transit protection — featuring reinforced structures, crush-resistant materials, and secure closure mechanisms designed to withstand the challenges of courier delivery. Retail sleeves prioritize visual presentation for shelf display." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can shipping candle sleeves be branded?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Absolutely. Custom branded shipping sleeves transform a functional shipping container into a brand touchpoint. Full-color printing, logos, brand messages, and even unboxing instructions can be printed on the exterior and interior of shipping sleeves." }
+    },
+    {
+      "@type": "Question",
+      "name": "What level of protection do shipping candle sleeves provide for glass jars?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Our shipping candle sleeves use double-wall corrugated or heavy-gauge cardboard structures with custom-formed inserts to hold glass jars securely in position. This combination of structural containment and cushioning significantly reduces breakage during courier transit." }
+    },
+    {
+      "@type": "Question",
+      "name": "Are shipping candle sleeves suitable for direct-to-consumer brands?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Shipping candle sleeves are ideal for direct-to-consumer (DTC) e-commerce brands — combining the protection needed for courier delivery with the branded presentation that creates a memorable first customer touchpoint." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can multiple candle jars ship in one shipping sleeve?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. We design custom multi-unit shipping sleeves that safely accommodate 2, 3, 4, or more candle jars in a single shipping structure, with secure compartmentalization to prevent jars from impacting each other during transit." }
+    }
+  ]
+};
+---
+
+<Layout
+  title="Shipping Candle Sleeves | Protective Transit Packaging | The Candle Sleeves"
+  description="Custom shipping candle sleeves designed to protect candles during transit. Ideal for e-commerce and direct-to-consumer brands. Branded and protective. Free quote."
+  canonical="https://thecandlesleeves.com/shipping-candle-sleeves"
+  schema={[productSchema, faqSchema]}
+>
+  <div class="container section--sm">
+    <Breadcrumbs crumbs={[{label:'Home',href:'/'},{label:'Products',href:'/products'},{label:'Shipping Candle Sleeves'}]} />
+  </div>
+
+  <section class="section section--cream">
+    <div class="container">
+      <div class="product-layout">
+        <div class="product-image-wrap">
+          <img src="/images/products/candle-gift-sleeves.jpg" alt="Custom shipping candle sleeves for safe e-commerce transit" width="600" height="600" />
+        </div>
+        <div class="product-info">
+          <span class="section-label">E-Commerce Packaging</span>
+          <h1>Shipping Candle Sleeves</h1>
+          <p style="font-size:1.1rem;color:var(--gray);margin-bottom:1.5rem;">The journey from your candle studio to your customer's doorstep is full of risks for fragile glass jars — drops, compression, rough handling, and stacking. Our shipping candle sleeves are engineered specifically to eliminate those risks, keeping your candles safe through every stage of transit while creating a branded unboxing experience that turns a delivery into a memorable brand moment.</p>
+          <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+            <a href="/quote" class="btn btn--primary">Get a Free Quote &rarr;</a>
+            <a href="/products" class="btn btn--outline">View All Products</a>
+          </div>
+          <div style="margin-top:2rem;display:flex;flex-direction:column;gap:0.5rem;">
+            <div style="font-size:0.9rem;color:var(--gray);">&#10003;&nbsp; Engineered for courier transit</div>
+            <div style="font-size:0.9rem;color:var(--gray);">&#10003;&nbsp; Custom branded printing</div>
+            <div style="font-size:0.9rem;color:var(--gray);">&#10003;&nbsp; Single &amp; multi-unit configurations</div>
+            <div style="font-size:0.9rem;color:var(--gray);">&#10003;&nbsp; Reduces breakage &amp; returns</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container container--narrow">
+      <h2>The Real Cost of Inadequate Shipping Packaging</h2>
+      <p>A broken candle in transit is never just a broken candle. It is a disappointed customer who may not reorder. It is a replacement product shipped at your cost. It is a potential negative review that others will read. It is the erosion of the trust and brand experience you worked hard to build. The investment in properly engineered shipping candle sleeves is not a cost — it is protection for your customer relationships, your reputation, and your margins.</p>
+      <p>Our shipping candle sleeves are designed by engineers who understand the specific challenges of candle e-commerce. Glass jars are heavy and rigid, which means they transmit impact forces directly rather than absorbing them. They are smooth-sided, which means they can slide within loose packaging. They are fragile at the base and neck, where concentrated stress from compression or impact is most likely to cause cracking. Our sleeves address all of these vulnerabilities through intelligent structural design — securing the jar in position, distributing impact forces, and providing cushioning where it is most needed.</p>
+
+      <h2>Branded Shipping: Turning Transit into Marketing</h2>
+      <p>An unmarked brown box is a missed opportunity. Every shipping package your brand sends is a touchpoint with a real customer — and that customer's first physical experience of your brand. Our custom-printed shipping candle sleeves allow you to transform this moment from an anonymous delivery into a branded experience that communicates your brand values, product story, and care for the customer before the box is even opened. Interior printing can add an unboxing message, care instructions, or a brand story that deepens the customer connection at the most receptive moment — when they are opening something they ordered and anticipated receiving.</p>
+    </div>
+  </section>
+
+  <section class="section section--beige">
+    <div class="container">
+      <h2 class="text-center section-title">Why E-Commerce Candle Brands Choose Our Shipping Sleeves</h2>
+      <div class="grid-3" style="margin-top:2rem;">
+        <div class="icon-box" style="flex-direction:column;background:var(--white);border-radius:var(--radius-lg);padding:1.75rem;box-shadow:var(--shadow);">
+          <div class="icon-box__icon" style="margin-bottom:1rem;">&#128272;</div>
+          <div class="icon-box__title">Engineered Protection</div>
+          <div class="icon-box__text">Structural designs tested against the real-world conditions of courier transit — compression, drops, stacking — to keep glass candle jars intact from dispatch to doorstep.</div>
+        </div>
+        <div class="icon-box" style="flex-direction:column;background:var(--white);border-radius:var(--radius-lg);padding:1.75rem;box-shadow:var(--shadow);">
+          <div class="icon-box__icon" style="margin-bottom:1rem;">&#128293;</div>
+          <div class="icon-box__title">Branded Unboxing Experience</div>
+          <div class="icon-box__text">Full-color exterior and interior printing turns your shipping sleeve into a brand statement that customers photograph, share on social media, and remember.</div>
+        </div>
+        <div class="icon-box" style="flex-direction:column;background:var(--white);border-radius:var(--radius-lg);padding:1.75rem;box-shadow:var(--shadow);">
+          <div class="icon-box__icon" style="margin-bottom:1rem;">&#128230;</div>
+          <div class="icon-box__title">Reduce Breakage & Returns</div>
+          <div class="icon-box__text">Better transit protection means fewer broken products, fewer customer service cases, lower replacement costs, and a higher net satisfaction rate for your e-commerce operation.</div>
+        </div>
+        <div class="icon-box" style="flex-direction:column;background:var(--white);border-radius:var(--radius-lg);padding:1.75rem;box-shadow:var(--shadow);">
+          <div class="icon-box__icon" style="margin-bottom:1rem;">&#128200;</div>
+          <div class="icon-box__title">Multi-Unit Configurations</div>
+          <div class="icon-box__text">Custom multi-unit shipping sleeves safely accommodate 2, 3, or more candle jars with secure compartmentalization — ideal for bundle orders and gift sets.</div>
+        </div>
+        <div class="icon-box" style="flex-direction:column;background:var(--white);border-radius:var(--radius-lg);padding:1.75rem;box-shadow:var(--shadow);">
+          <div class="icon-box__icon" style="margin-bottom:1rem;">&#9855;</div>
+          <div class="icon-box__title">Eco-Friendly Options</div>
+          <div class="icon-box__text">Corrugated and cardboard shipping sleeves are inherently recyclable. FSC-certified and recycled content options extend your sustainability credentials to your e-commerce packaging.</div>
+        </div>
+        <div class="icon-box" style="flex-direction:column;background:var(--white);border-radius:var(--radius-lg);padding:1.75rem;box-shadow:var(--shadow);">
+          <div class="icon-box__icon" style="margin-bottom:1rem;">&#9889;</div>
+          <div class="icon-box__title">Fast Setup, Easy Assembly</div>
+          <div class="icon-box__text">Our shipping sleeves are designed for efficient assembly at your dispatch station — minimizing packaging time while maintaining consistent, secure candle protection.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--cream">
+    <div class="container container--narrow">
+      <h2>Specifications</h2>
+      <table class="spec-table">
+        <thead>
+          <tr><th>Specification</th><th>Details</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Primary Materials</td><td>Corrugated (single/double wall), heavy cardboard</td></tr>
+          <tr><td>Insert Options</td><td>Custom formed inserts, dividers, foam padding, tissue compartments</td></tr>
+          <tr><td>Printing</td><td>Full-color exterior &amp; interior printing</td></tr>
+          <tr><td>Configurations</td><td>Single unit, 2-pack, 3-pack, 4-pack, custom multi-unit</td></tr>
+          <tr><td>Closure</td><td>Tuck-end, RSC, easy-tear, custom closure options</td></tr>
+          <tr><td>Sustainability</td><td>Recyclable, FSC &amp; recycled options available</td></tr>
+          <tr><td>Sizing</td><td>Custom engineered to your candle jar dimensions</td></tr>
+          <tr><td>Production Time</td><td>7 – 12 business days after artwork approval</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container container--narrow">
+      <h2>Shipping Solutions Within the Candle Sleeves Range</h2>
+      <p>Our shipping candle sleeves complement our <a href="/corrugated-candle-sleeves" class="internal-link">corrugated candle sleeves</a> for heavy-duty transit applications, and pair beautifully with our retail <a href="/cardboard-candle-sleeves" class="internal-link">cardboard candle sleeves</a> for brands that need both retail and e-commerce packaging. Many brands choose a premium retail sleeve for their product presentation combined with a custom shipping sleeve for their online sales channel. <a href="/" class="internal-link">The Candle Sleeves</a> can help you design a cohesive packaging system across both channels — visit <a href="/products" class="internal-link">our products page</a> for the complete range.</p>
+    </div>
+  </section>
+
+  <section class="section section--cream">
+    <div class="container container--narrow">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-item">
+        <div class="faq-question">How are shipping candle sleeves different from retail sleeves?</div>
+        <div class="faq-answer">Shipping sleeves are engineered for transit protection — with reinforced structures, crush-resistant materials, and secure closures for courier delivery. Retail sleeves prioritize visual presentation for shelf display.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Can shipping candle sleeves be branded?</div>
+        <div class="faq-answer">Absolutely. Custom full-color printing on the exterior and interior of shipping sleeves creates a branded unboxing experience that communicates your brand values from the first contact.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">What protection do shipping sleeves provide for glass jars?</div>
+        <div class="faq-answer">Our shipping sleeves use double-wall corrugated or heavy-gauge cardboard with custom-formed inserts that hold glass jars securely in position, significantly reducing breakage risk during transit.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Are they suitable for direct-to-consumer brands?</div>
+        <div class="faq-answer">Yes. Shipping candle sleeves are ideal for DTC e-commerce brands — combining courier protection with branded presentation that creates a memorable first physical customer touchpoint.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Can multiple jars ship in one sleeve?</div>
+        <div class="faq-answer">Yes. We design multi-unit shipping sleeves for 2, 3, 4, or more candle jars with secure compartmentalization to prevent jars from impacting each other in transit.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-banner">
+    <div class="container text-center">
+      <h2>Ship Your Candles Safely, Beautifully</h2>
+      <p>Request a free shipping candle sleeve quote engineered for your specific product and e-commerce needs.</p>
+      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+        <a href="/quote" class="btn btn--dark" style="background:white;color:var(--gold-dark);">Request Free Quote &rarr;</a>
+        <a href="/contact" class="btn btn--outline">Talk to Our Team</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--cream" id="quote">
+    <div class="container container--narrow">
+      <QuoteForm title="Get Your Shipping Candle Sleeve Quote" subtitle="Share your candle jar dimensions and shipping requirements for a custom-engineered transit solution." />
+    </div>
+  </section>
+</Layout>

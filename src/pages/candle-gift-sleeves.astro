@@ -1,0 +1,210 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import QuoteForm from '../components/QuoteForm.astro';
+
+const productSchema = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Candle Gift Sleeves",
+  "description": "Premium custom candle gift sleeves for retail gifting, holiday packaging, and special occasion presentation. Luxury finishes, full-color printing, fast USA delivery.",
+  "brand": { "@type": "Brand", "name": "The Candle Sleeves" },
+  "offers": { "@type": "Offer", "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What makes candle gift sleeves different from regular candle sleeves?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Candle gift sleeves are specifically designed to elevate the presentation of a candle as a gift. They typically feature premium finishes such as foil stamping, ribbon pull tabs, magnetic closures, or window panels that create a memorable unboxing experience designed for gifting occasions." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can candle gift sleeves include a ribbon or closure?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Our candle gift sleeves can be produced with ribbon pull tabs, magnetic strip closures, tuck-end flaps, and other closure mechanisms that enhance the gift-opening experience and keep the candle secure." }
+    },
+    {
+      "@type": "Question",
+      "name": "Are candle gift sleeves suitable for holiday retail displays?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Absolutely. Our custom candle gift sleeves are a top choice for holiday collections, including Christmas, Valentine's Day, Mother's Day, and other gifting seasons. Custom seasonal designs, foil, and special print effects make them ideal for retail gift displays." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I order candle gift sleeves in small quantities?",
+      "acceptedAnswer": { "@type": "Answer", "text": "We work with candle brands of all sizes. Contact us with your quantity needs and we will provide a quote tailored to your project. Smaller runs are possible, particularly for boutique and artisan brands." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the production lead time for candle gift sleeves?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Standard production is 7 to 12 business days after artwork approval. For holiday or seasonal deadlines, we recommend ordering early and can discuss rush options if needed." }
+    }
+  ]
+};
+---
+
+<Layout
+  title="Candle Gift Sleeves | Premium Gift Packaging | The Candle Sleeves"
+  description="Custom candle gift sleeves for premium presentation. Perfect for retail, holiday gifting, and special occasions. Luxury finishes, fast turnaround. Free quote today."
+  canonical="https://thecandlesleeves.com/candle-gift-sleeves"
+  schema={[productSchema, faqSchema]}
+>
+  <div class="container section--sm">
+    <Breadcrumbs crumbs={[{label:'Home',href:'/'},{label:'Products',href:'/products'},{label:'Candle Gift Sleeves'}]} />
+  </div>
+
+  <section class="section section--cream">
+    <div class="container">
+      <div class="product-layout">
+        <div class="product-image-wrap">
+          <img src="/images/products/candle-gift-sleeves.jpg" alt="Custom candle gift sleeves for premium presentation" width="600" height="600" />
+        </div>
+        <div class="product-info">
+          <span class="section-label">Custom Packaging</span>
+          <h1>Candle Gift Sleeves</h1>
+          <p style="font-size:1.1rem;color:var(--gray);margin-bottom:1.5rem;">Turn every candle into a gift worth giving. Our custom candle gift sleeves are crafted with the gifting experience at the heart of the design — from the first visual impression to the satisfying moment of opening. Premium materials, luxury finishes, and thoughtful structural details create packaging that elevates your product into something truly special.</p>
+          <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+            <a href="/quote" class="btn btn--primary">Get a Free Quote &rarr;</a>
+            <a href="/products" class="btn btn--outline">View All Products</a>
+          </div>
+          <div style="margin-top:2rem;display:flex;flex-direction:column;gap:0.5rem;">
+            <div style="font-size:0.9rem;color:var(--gray);">&#10003;&nbsp; Gift-ready structural designs</div>
+            <div style="font-size:0.9rem;color:var(--gray);">&#10003;&nbsp; Luxury foil &amp; embossing options</div>
+            <div style="font-size:0.9rem;color:var(--gray);">&#10003;&nbsp; Seasonal &amp; holiday customization</div>
+            <div style="font-size:0.9rem;color:var(--gray);">&#10003;&nbsp; Full-color CMYK printing</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Detailed Description -->
+  <section class="section">
+    <div class="container container--narrow">
+      <h2>Packaging That Makes Every Candle a Gift</h2>
+      <p>A candle purchased as a gift travels a different emotional journey than a candle bought for personal use. The giver chooses it with intention; the recipient experiences it as an expression of care. Our candle gift sleeves are designed to honor that journey — creating packaging that communicates thoughtfulness, quality, and delight at every touchpoint from shelf to unwrapping.</p>
+      <p>The gift sleeve format gives candle brands a powerful tool for retail and e-commerce differentiation. When your candle is shelf-ready in a beautifully designed gift sleeve, it removes the purchaser's need to separately gift-wrap or present the product — your packaging does that work elegantly on their behalf. This convenience premium translates directly into higher perceived value and willingness to pay.</p>
+
+      <h2>Design Features That Define a Great Candle Gift Sleeve</h2>
+      <p>Our candle gift sleeves can incorporate a wide range of premium design elements that set them apart from standard retail packaging. Magnetic or tuck-end closures provide a satisfying, secure fit. Die-cut window panels let the candle's color or texture show through, adding intrigue. Ribbon pull tabs create a delightful unboxing moment. Interior tissue paper guides and inserts can be added for additional presentation value. We work with you to select the features that best match your brand positioning and price point.</p>
+    </div>
+  </section>
+
+  <!-- Benefits -->
+  <section class="section section--beige">
+    <div class="container">
+      <h2 class="text-center section-title">Why Candle Gift Sleeves Boost Brand Value</h2>
+      <div class="grid-3" style="margin-top:2rem;">
+        <div class="icon-box" style="flex-direction:column;background:var(--white);border-radius:var(--radius-lg);padding:1.75rem;box-shadow:var(--shadow);">
+          <div class="icon-box__icon" style="margin-bottom:1rem;">&#127873;</div>
+          <div class="icon-box__title">Instant Gift-Ready Appeal</div>
+          <div class="icon-box__text">Customers can purchase and give without additional wrapping. Your packaging delivers a complete, premium gifting experience straight from the shelf or the courier's box.</div>
+        </div>
+        <div class="icon-box" style="flex-direction:column;background:var(--white);border-radius:var(--radius-lg);padding:1.75rem;box-shadow:var(--shadow);">
+          <div class="icon-box__icon" style="margin-bottom:1rem;">&#127775;</div>
+          <div class="icon-box__title">Premium Brand Positioning</div>
+          <div class="icon-box__text">Luxury gift sleeve packaging allows you to position your candle at a higher price point. The packaging communicates the value of the product before it is ever opened.</div>
+        </div>
+        <div class="icon-box" style="flex-direction:column;background:var(--white);border-radius:var(--radius-lg);padding:1.75rem;box-shadow:var(--shadow);">
+          <div class="icon-box__icon" style="margin-bottom:1rem;">&#128197;</div>
+          <div class="icon-box__title">Perfect for Seasonal Campaigns</div>
+          <div class="icon-box__text">Create limited-edition Christmas, Valentine's Day, Mother's Day, and other seasonal designs that drive urgency and excitement around gifting occasions.</div>
+        </div>
+        <div class="icon-box" style="flex-direction:column;background:var(--white);border-radius:var(--radius-lg);padding:1.75rem;box-shadow:var(--shadow);">
+          <div class="icon-box__icon" style="margin-bottom:1rem;">&#128230;</div>
+          <div class="icon-box__title">Unboxing Experience</div>
+          <div class="icon-box__text">Well-designed gift sleeves create memorable unboxing moments that get shared on social media, extending your brand's reach far beyond the initial purchase.</div>
+        </div>
+        <div class="icon-box" style="flex-direction:column;background:var(--white);border-radius:var(--radius-lg);padding:1.75rem;box-shadow:var(--shadow);">
+          <div class="icon-box__icon" style="margin-bottom:1rem;">&#127760;</div>
+          <div class="icon-box__title">Retail & E-Commerce Ready</div>
+          <div class="icon-box__text">Our gift sleeves are engineered for both physical retail display and e-commerce shipping — maintaining their structural integrity and visual appeal throughout delivery.</div>
+        </div>
+        <div class="icon-box" style="flex-direction:column;background:var(--white);border-radius:var(--radius-lg);padding:1.75rem;box-shadow:var(--shadow);">
+          <div class="icon-box__icon" style="margin-bottom:1rem;">&#9881;</div>
+          <div class="icon-box__title">Fully Customizable Design</div>
+          <div class="icon-box__text">Every element is customizable — size, shape, printing, finish, closure type, and structural features — to create a unique gift packaging solution for your brand.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Spec Table -->
+  <section class="section section--cream">
+    <div class="container container--narrow">
+      <h2>Product Specifications</h2>
+      <table class="spec-table">
+        <thead>
+          <tr><th>Specification</th><th>Details</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Materials</td><td>Premium coated cardboard, rigid chipboard, kraft</td></tr>
+          <tr><td>Printing</td><td>Full-color CMYK, white ink, pantone matching available</td></tr>
+          <tr><td>Finishes</td><td>Matte, gloss, soft-touch, spot UV lamination</td></tr>
+          <tr><td>Special Effects</td><td>Gold/silver foil, embossing, debossing, die-cut windows</td></tr>
+          <tr><td>Closure Options</td><td>Tuck-end, magnetic strip, ribbon pull tab</td></tr>
+          <tr><td>Sizing</td><td>Fully custom to your jar or candle dimensions</td></tr>
+          <tr><td>Production Time</td><td>7 – 12 business days after artwork approval</td></tr>
+          <tr><td>Delivery</td><td>Nationwide USA shipping</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Related + Why Us -->
+  <section class="section">
+    <div class="container container--narrow">
+      <h2>Explore Related Products</h2>
+      <p>Our candle gift sleeves pair beautifully with other products in our range. Consider <a href="/luxury-candle-sleeves" class="internal-link">luxury candle sleeves</a> for premium collections with foil and embossing, <a href="/window-candle-sleeves" class="internal-link">window candle sleeves</a> to let the product show through the packaging, or <a href="/printed-candle-sleeves" class="internal-link">printed candle sleeves</a> for vibrant full-color brand expression. Visit our <a href="/products" class="internal-link">full products page</a> to browse all sleeve types.</p>
+
+      <h2 style="margin-top:2rem;">Why The Candle Sleeves for Your Gift Packaging?</h2>
+      <p>At <a href="/" class="internal-link">The Candle Sleeves</a>, candle packaging is all we do — which means our expertise is entirely focused on what works for candle brands in the real world. Our design consultants understand the seasonal demand patterns, retail presentation requirements, and e-commerce delivery challenges unique to candle gifting. We bring that specialized knowledge to every project, helping you create gift sleeves that not only look stunning but perform across every sales channel.</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section--cream">
+    <div class="container container--narrow">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-item">
+        <div class="faq-question">What makes candle gift sleeves different from regular candle sleeves?</div>
+        <div class="faq-answer">Candle gift sleeves are specifically designed to elevate the presentation of a candle as a gift. They feature premium finishes, structural gift-oriented details like ribbon pulls or magnetic closures, and designs focused on the gifting experience and unboxing moment.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Can candle gift sleeves include a ribbon or closure?</div>
+        <div class="faq-answer">Yes. Our gift sleeves can include ribbon pull tabs, magnetic strip closures, tuck-end flaps, and other mechanisms that enhance the gift-opening experience and keep the candle secure in transit.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Are candle gift sleeves suitable for holiday retail?</div>
+        <div class="faq-answer">Absolutely. Custom seasonal designs with holiday-specific artwork, foil stamping, and special print effects make our candle gift sleeves ideal for Christmas, Valentine's Day, Mother's Day, and other retail gifting seasons.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Can I order in small quantities?</div>
+        <div class="faq-answer">We work with brands of all sizes. Contact us with your quantity requirements for a tailored quote — small-batch runs are possible, especially for boutique and artisan brands.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">What is the production lead time?</div>
+        <div class="faq-answer">Standard production is 7 to 12 business days after artwork approval. For seasonal deadlines, we recommend ordering early. Rush options may be available — contact us to discuss.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-banner">
+    <div class="container text-center">
+      <h2>Create Gift-Ready Candle Packaging Today</h2>
+      <p>Request your free quote and let our specialists help you design the perfect candle gift sleeve for your brand.</p>
+      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+        <a href="/quote" class="btn btn--dark" style="background:white;color:var(--gold-dark);">Request Free Quote &rarr;</a>
+        <a href="/contact" class="btn btn--outline">Talk to a Specialist</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--cream" id="quote">
+    <div class="container container--narrow">
+      <QuoteForm title="Get Your Candle Gift Sleeve Quote" subtitle="Share your project details and our packaging team will respond with a full quote within 24 hours." />
+    </div>
+  </section>
+</Layout>

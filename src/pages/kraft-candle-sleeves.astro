@@ -1,0 +1,202 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import QuoteForm from '../components/QuoteForm.astro';
+
+const productSchema = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Kraft Candle Sleeves",
+  "description": "Natural kraft candle sleeves with warm, artisan texture for rustic and handcrafted candle brands. Printable, recyclable, and beautifully authentic.",
+  "brand": { "@type": "Brand", "name": "The Candle Sleeves" },
+  "offers": { "@type": "Offer", "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does printing look good on natural kraft candle sleeves?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes, though with some important considerations. The natural brown tone of kraft affects ink colors — warm tones look excellent, while very light colors may require white underprinting for maximum vibrancy. Earth tones, black, and deep colors print beautifully on kraft without modification." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between kraft and standard cardboard for candle sleeves?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Kraft paper is made from wood pulp processed to retain the natural lignin, giving it a characteristic brown color, rough texture, and organic appearance. It is generally stronger per gsm than standard cardboard and has excellent tear resistance. The unbleached, natural aesthetic is its defining characteristic." }
+    },
+    {
+      "@type": "Question",
+      "name": "Are kraft candle sleeves recyclable?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Kraft paper is fully recyclable and biodegradable. It is one of the most environmentally friendly packaging materials available, particularly when paired with water-based inks and natural coatings." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I get kraft candle sleeves with a window cutout?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Die-cut window openings can be incorporated into kraft candle sleeves, creating a beautiful combination of the natural material aesthetic with product visibility that works particularly well for artisan candle brands." }
+    },
+    {
+      "@type": "Question",
+      "name": "What weight of kraft paper is available for candle sleeves?",
+      "acceptedAnswer": { "@type": "Answer", "text": "We offer kraft board from 270gsm to 400gsm for candle sleeve applications. Lighter weights create a more flexible, paper-like feel; heavier weights provide significant rigidity and structural substance." }
+    }
+  ]
+};
+---
+
+<Layout
+  title="Kraft Candle Sleeves | Natural Artisan Style | The Candle Sleeves"
+  description="Custom kraft candle sleeves for a natural, rustic aesthetic. Ideal for artisan candle brands. Printable, recyclable, and beautifully authentic. Free quote available."
+  canonical="https://thecandlesleeves.com/kraft-candle-sleeves"
+  schema={[productSchema, faqSchema]}
+>
+  <div class="container section--sm">
+    <Breadcrumbs crumbs={[{label:'Home',href:'/'},{label:'Products',href:'/products'},{label:'Kraft Candle Sleeves'}]} />
+  </div>
+
+  <section class="section section--cream">
+    <div class="container">
+      <div class="product-layout">
+        <div class="product-image-wrap">
+          <img src="/images/products/candle-gift-sleeves.jpg" alt="Natural kraft candle sleeves for artisan brands" width="600" height="600" />
+        </div>
+        <div class="product-info">
+          <span class="section-label">Natural Packaging</span>
+          <h1>Kraft Candle Sleeves</h1>
+          <p style="font-size:1.1rem;color:var(--gray);margin-bottom:1.5rem;">There is something inherently honest and warm about kraft packaging — and for artisan candle brands, that honesty is everything. Our custom kraft candle sleeves bring the natural, tactile beauty of unbleached paper to your product presentation, communicating handcrafted quality and genuine care at a glance. The warm brown tones and natural texture create an aesthetic that no synthetic material can replicate.</p>
+          <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+            <a href="/quote" class="btn btn--primary">Get a Free Quote &rarr;</a>
+            <a href="/products" class="btn btn--outline">View All Products</a>
+          </div>
+          <div style="margin-top:2rem;display:flex;flex-direction:column;gap:0.5rem;">
+            <div style="font-size:0.9rem;color:var(--gray);">&#10003;&nbsp; Natural, unbleached kraft fiber</div>
+            <div style="font-size:0.9rem;color:var(--gray);">&#10003;&nbsp; Available 270gsm – 400gsm</div>
+            <div style="font-size:0.9rem;color:var(--gray);">&#10003;&nbsp; Fully printable &amp; recyclable</div>
+            <div style="font-size:0.9rem;color:var(--gray);">&#10003;&nbsp; Ideal for artisan &amp; natural brands</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container container--narrow">
+      <h2>The Timeless Appeal of Kraft in Candle Packaging</h2>
+      <p>Kraft paper's natural brown color and slightly rough surface texture communicate a very specific set of values: authenticity, craft, simplicity, and care for the environment. In the crowded candle market, where many brands compete on the same shelf, kraft packaging immediately signals to the shopper that what's inside is hand-made, natural, and worth a second look. This is why craft candle makers, natural wax specialists, and artisan fragrance houses overwhelmingly choose kraft as their packaging material of choice.</p>
+      <p>The material itself has excellent physical properties beyond its aesthetic. Kraft paper is notably strong for its weight — the natural lignin content that gives it its color also contributes to exceptional tear resistance and structural integrity. Kraft board at 350gsm provides a sleeve that holds its shape firmly and communicates substance when customers pick up the product.</p>
+
+      <h2>Printing on Kraft: Working with the Material's Character</h2>
+      <p>The warm, natural tone of kraft is a feature, not a limitation — and working with it rather than against it produces the most authentic results. Black and dark brown inks print with exceptional contrast and sharpness on kraft. Earth tones, deep greens, and warm reds harmonize beautifully with the substrate's natural color. For brands wanting to print lighter colors or white elements, we offer white underprinting that creates a bright foundation over the kraft for full-color work to sit on. Foil stamping in gold, copper, or silver on kraft creates a stunning combination of rustic texture and metallic luxury.</p>
+    </div>
+  </section>
+
+  <section class="section section--beige">
+    <div class="container">
+      <h2 class="text-center section-title">Benefits of Kraft Candle Sleeves</h2>
+      <div class="grid-3" style="margin-top:2rem;">
+        <div class="icon-box" style="flex-direction:column;background:var(--white);border-radius:var(--radius-lg);padding:1.75rem;box-shadow:var(--shadow);">
+          <div class="icon-box__icon" style="margin-bottom:1rem;">&#127807;</div>
+          <div class="icon-box__title">Authentic Natural Aesthetic</div>
+          <div class="icon-box__text">The warm, textured surface of kraft communicates handcrafted authenticity and natural product quality — perfectly aligned with artisan and wellness candle brand values.</div>
+        </div>
+        <div class="icon-box" style="flex-direction:column;background:var(--white);border-radius:var(--radius-lg);padding:1.75rem;box-shadow:var(--shadow);">
+          <div class="icon-box__icon" style="margin-bottom:1rem;">&#9855;</div>
+          <div class="icon-box__title">Eco-Friendly Credentials</div>
+          <div class="icon-box__text">Kraft is biodegradable, recyclable, and often made with recycled content — giving your brand genuine environmental credentials that resonate with eco-conscious consumers.</div>
+        </div>
+        <div class="icon-box" style="flex-direction:column;background:var(--white);border-radius:var(--radius-lg);padding:1.75rem;box-shadow:var(--shadow);">
+          <div class="icon-box__icon" style="margin-bottom:1rem;">&#127775;</div>
+          <div class="icon-box__title">Unique Print Character</div>
+          <div class="icon-box__text">The natural tone creates beautiful print results with dark inks, foils, and earthy color palettes — a distinctive visual style no coated board can replicate.</div>
+        </div>
+        <div class="icon-box" style="flex-direction:column;background:var(--white);border-radius:var(--radius-lg);padding:1.75rem;box-shadow:var(--shadow);">
+          <div class="icon-box__icon" style="margin-bottom:1rem;">&#128293;</div>
+          <div class="icon-box__title">Strong & Durable</div>
+          <div class="icon-box__text">Kraft's natural fiber structure provides excellent tear resistance and structural strength, maintaining sleeve integrity through retail handling and customer use.</div>
+        </div>
+        <div class="icon-box" style="flex-direction:column;background:var(--white);border-radius:var(--radius-lg);padding:1.75rem;box-shadow:var(--shadow);">
+          <div class="icon-box__icon" style="margin-bottom:1rem;">&#128200;</div>
+          <div class="icon-box__title">Cost-Effective Material</div>
+          <div class="icon-box__text">Natural kraft board is generally cost-competitive with standard coated cardboard, making it an accessible choice for brands at any production scale.</div>
+        </div>
+        <div class="icon-box" style="flex-direction:column;background:var(--white);border-radius:var(--radius-lg);padding:1.75rem;box-shadow:var(--shadow);">
+          <div class="icon-box__icon" style="margin-bottom:1rem;">&#128073;</div>
+          <div class="icon-box__title">Gold Foil Compatibility</div>
+          <div class="icon-box__text">Gold and copper foil stamping on natural kraft creates a stunning rustic-luxury contrast that is uniquely compelling in the premium artisan candle market.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--cream">
+    <div class="container container--narrow">
+      <h2>Specifications</h2>
+      <table class="spec-table">
+        <thead>
+          <tr><th>Specification</th><th>Details</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Material</td><td>Natural kraft board, recycled kraft, white-top kraft</td></tr>
+          <tr><td>Weight Range</td><td>270gsm, 300gsm, 350gsm, 400gsm</td></tr>
+          <tr><td>Printing</td><td>Full-color CMYK, white underprint, dark ink direct print</td></tr>
+          <tr><td>Finishes</td><td>Uncoated natural, water-based matte, aqueous satin</td></tr>
+          <tr><td>Special Effects</td><td>Gold/copper/silver foil stamping, embossing, die-cut windows</td></tr>
+          <tr><td>Sustainability</td><td>Biodegradable, recyclable, FSC options available</td></tr>
+          <tr><td>Sizing</td><td>Fully custom to your specifications</td></tr>
+          <tr><td>Production Time</td><td>7 – 12 business days after artwork approval</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container container--narrow">
+      <h2>Related Products Worth Considering</h2>
+      <p>Kraft candle sleeves pair naturally with our <a href="/eco-friendly-candle-sleeves" class="internal-link">eco-friendly candle sleeves</a> for brands wanting to combine natural aesthetics with specific sustainability certifications. If you love the natural look but need window visibility, our <a href="/window-candle-sleeves" class="internal-link">window candle sleeves</a> can incorporate die-cut panels into any sleeve including kraft. For the rustic charm of kraft combined with additional structural protection, consider our <a href="/corrugated-candle-sleeves" class="internal-link">corrugated candle sleeves</a> with kraft liner. Explore all options at <a href="/" class="internal-link">thecandlesleeves.com</a>.</p>
+    </div>
+  </section>
+
+  <section class="section section--cream">
+    <div class="container container--narrow">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-item">
+        <div class="faq-question">Does printing look good on kraft candle sleeves?</div>
+        <div class="faq-answer">Yes, with the right design approach. Earth tones, black, and dark colors print beautifully directly on kraft. For lighter colors, white underprinting can be added. Foil stamping on kraft is particularly stunning.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">What is the difference between kraft and standard cardboard?</div>
+        <div class="faq-answer">Kraft retains natural lignin from wood pulp, giving it its brown color, rough texture, and excellent tear resistance. It has a distinctly organic aesthetic compared to the bleached, coated surface of standard cardboard.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Are kraft candle sleeves recyclable?</div>
+        <div class="faq-answer">Yes. Kraft paper is fully recyclable and biodegradable — one of the most environmentally friendly packaging materials available.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Can I get kraft sleeves with a window cutout?</div>
+        <div class="faq-answer">Yes. Die-cut window openings can be incorporated into kraft sleeves — a beautiful combination of natural texture and product visibility popular with artisan candle brands.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">What weights of kraft are available?</div>
+        <div class="faq-answer">We offer kraft board from 270gsm to 400gsm for candle sleeves. Lighter weights create a paper-like feel; heavier weights provide substantial rigidity for premium retail applications.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-banner">
+    <div class="container text-center">
+      <h2>Bring Natural Warmth to Your Candle Brand</h2>
+      <p>Request a free kraft candle sleeve quote and let our specialists help you create packaging as authentic as your product.</p>
+      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+        <a href="/quote" class="btn btn--dark" style="background:white;color:var(--gold-dark);">Request Free Quote &rarr;</a>
+        <a href="/contact" class="btn btn--outline">Contact Our Team</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--cream" id="quote">
+    <div class="container container--narrow">
+      <QuoteForm title="Get Your Kraft Candle Sleeve Quote" subtitle="Share your project details and our team will respond with a tailored quote within 24 hours." />
+    </div>
+  </section>
+</Layout>
